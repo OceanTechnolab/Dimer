@@ -22,7 +22,7 @@ const Header = () => {
             <div className="col-md-4 col-10">
               <div className="tp-mob-logo">
                 <Link href="/">
-                  <img src="/assets/img/logo/logo.png" alt="logo" />
+                  <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
                 </Link>
               </div>
             </div>
@@ -75,7 +75,7 @@ const Header = () => {
               <div className="col-xxl-2 col-lg-3">
                 <div className="logo">
                   <Link href="/">
-                    <img src="/assets/img/logo/logo.png" alt="logo" />
+                    <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
                   </Link>
                 </div>
               </div>

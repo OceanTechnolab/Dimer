@@ -48,7 +48,7 @@ const Sidebar = ({ isActive, setIsActive }) => {
         </button>
         <div className="tpsideinfo__logo mb-40">
           <Link href="/">
-            <img src="/assets/img/logo/white-logo.png" alt="logo" />
+            <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
           </Link>
         </div>
 

@@ -66,7 +66,7 @@ const Footer = () => {
                 >
                   <h4 className="footer-widget__title mb-30">
                     <a href="index">
-                      <img src="/assets/img/logo/white-logo.png" alt="logo" />
+                      <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
                     </a>
                   </h4>
                   <p>
