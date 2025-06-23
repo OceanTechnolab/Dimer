@@ -7,7 +7,7 @@ import HomeTwo from "@/components/home/home-2/hometwo";
 const index = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="Home Main" />
+      <SEO pageTitle="Home" />
       <Layout>
         <HomeTwo />
       </Layout>

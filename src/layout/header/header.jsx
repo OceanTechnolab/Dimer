@@ -29,7 +29,7 @@ const Header = () => {
             <div className="col-md-8 col-2">
               <div className="tp-mobile-bar d-flex align-items-center justify-content-end">
                 <div className="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                  <a className="tp-bt-btn" href="tel:123456">
+                  <a className="tp-bt-btn" href="tel:+916358848151">
                     <svg
                       width="14"
                       height="19"
@@ -88,7 +88,7 @@ const Header = () => {
               </div>
               <div className="col-xxl-3 col-lg-3 d-flex align-items-center justify-content-end">
                 <div className="tp-bt-btn-banner">
-                  <a className="tp-bt-btn" href="tel:123456">
+                  <a className="tp-bt-btn" href="tel:+916358848151">
                     <svg
                       width="14"
                       height="19"
