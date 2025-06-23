@@ -14,7 +14,6 @@ import React from "react";
       />
     </div>
 
-  
     <div>
       <h2 style="font-size: 2rem; font-weight: bold; color: #1f2937; margin-bottom: 1rem;">Our Mission</h2>
       <p style="color: #4b5563; font-size: 1.125rem; line-height: 1.75;">
