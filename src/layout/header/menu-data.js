@@ -25,7 +25,6 @@ const menu_data = [
       { link: "/team-2", title: "Team 02" },
       { link: "/team-details", title: "Team Details" },
       { link: "/pricing-plan", title: "Pricing Plan" },
-      { link: "/shop", title: "Shop" },
       { link: "/product-details", title: "Product Details" },
       { link: "/project-details", title: "Project Details" },
       { link: "/faq", title: "FAQ's" },
