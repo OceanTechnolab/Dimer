@@ -17,9 +17,9 @@ const FooterTwo = () => {
                     <div className="tp-footer-widget__content mb-95">
                       <i>FEEL FREE TO CONTACT US</i>
                       <h4 className="tp-footer-widget__contact mb-20">
-                        <a href="tel:61383766284">61 383 766 284</a>
+                        <a href="tel:+916358848151">+91 635 884 8151</a>
                       </h4>
-                      <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                      <a href="mailto:Info@dimerscientific.com">Info@dimerscientific.com</a>
                     </div>
                     <div className="tp-footer-widget__sub-sec">
                       <span className="tp-footer-widget__sub-title mb-5">
