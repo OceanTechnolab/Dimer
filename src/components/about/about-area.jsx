@@ -22,7 +22,7 @@ const AboutArea = () => {
                     <div className="about__exprience tp-ab-counter">
                       <h3 className="counter">
 
-                        <Count add_style={true} number={12} />
+                        <Count add_style={true} number={10} />
                       </h3>
                       <i>
                         Years of <br />
