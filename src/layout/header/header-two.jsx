@@ -47,7 +47,7 @@ const HeaderTwo = () => {
                       <circle cx="2" cy="7" r="2" fill="#0E63FF" />
                       <circle cx="2" cy="12" r="2" fill="#0E63FF" />
                     </svg>
-                    <span>Help Desk :</span>info@dimerscientific.com
+                    <span>Help Desk :</span><a href="mailto:info@dimerscientific.com">info@dimerscientific.com</a>
                   </a>
                 </div>
                 <button
