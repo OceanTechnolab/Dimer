@@ -8,6 +8,7 @@ const Banner = () => {
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
           //backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+          backgroundColor:  "blue"
         }}
       >
         <div className="container">
