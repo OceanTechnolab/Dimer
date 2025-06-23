@@ -1,6 +1,10 @@
 import Count from "@/common/count";
 import Link from "next/link";
 import React from "react";
+  
+  <a>Dimer Scientific has become a big name in R & D area with more than 10 years of experience in synthesis and development of different compound by using innovative chemistry. Dimer Scientific having more than 12,000 products of different segments, provides most cost effective & qualitative products to meet the need of customer.
+
+With our advance manufacturing facilities and crucial channel partner, Dimer Scientific provides wide range of R&D chemicals, Analytical chemicals and Building blocks chemicals include Catalyst, Metal science compound, Amino acids, Fatty acids, Nucleic acids & their derivatives. Some Organic and Inorganic Salts and Compound are in bulk or semi bulk stock which can supplied with attractive cost. Our ready stock materials and full range of research chemicals enable us to give quick response to our customer along with good services.</a>
 
 const AboutArea = () => {
   return (
