@@ -180,11 +180,10 @@ const FooterFour = ({ style_2 = false }) => {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div className="footer-widget__copyright copyright-white">
-                    <span>
-                     
-                      © Copyright © {new Date().getFullYear()}
-                      <a href="index"> Theme_pure</a>.
-                      <i> All Rights Reserved Copyright</i>
+                  <span>
+                      © Copyright ©{new Date().getFullYear()}
+                      <Link href="/"> Dimer Scientific</Link>.
+                      <i> All Rights Reserved</i>
                     </span>
                   </div>
                 </div>
@@ -198,7 +197,7 @@ const FooterFour = ({ style_2 = false }) => {
                         <a href="#">Privacy policy</a>
                       </li>
                       <li>
-                        <a href="#">Pricing</a>
+                        <Link href="https://www.oceantechnolab.com/"> Digital Alchemy by Ocean Technolab</Link>
                       </li>
                     </ul>
                   </div>

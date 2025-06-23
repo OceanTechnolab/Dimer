@@ -178,8 +178,8 @@ const FooterTwo = () => {
                   <div className="footer-widget__copyright copyright-white">
                     <span>
                       © Copyright ©{new Date().getFullYear()}
-                      <Link href="/"> Theme_pure</Link>.
-                      <i> All Rights Reserved Copyright</i>
+                      <Link href="/"> Dimer Scientific</Link>.
+                      <i> All Rights Reserved</i>
                     </span>
                   </div>
                 </div>
@@ -193,7 +193,7 @@ const FooterTwo = () => {
                         <a href="#">Privacy policy</a>
                       </li>
                       <li>
-                        <a href="#">Pricing</a>
+                        <Link href="https://www.oceantechnolab.com/"> Digital Alchemy by Ocean Technolab</Link>
                       </li>
                     </ul>
                   </div>
