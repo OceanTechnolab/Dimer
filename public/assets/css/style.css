@@ -693,7 +693,7 @@ input[type=color] {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(23, 17, 81, 0.7);
+  background-color: #56a9af;
   z-index: -1;
 }
 
