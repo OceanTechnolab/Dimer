@@ -105,7 +105,7 @@ const HeaderTwo = () => {
                       <i className="fa-light fa-clock-ten"></i> Monday - Friday
                       09:00 am - 05:00 Pm
                     </span>
-                    {/* <span>Monday - Friday 09:00 am - 05:00 Pm</span> */}
+                    
                   </div>
                 </div>
               </div>
