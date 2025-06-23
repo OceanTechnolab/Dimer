@@ -21,6 +21,7 @@ const About = () => {
       <NavTab />
       <Team />
       <FooterFour />
+      <Form />
     </>
   );
 };
