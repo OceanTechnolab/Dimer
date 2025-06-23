@@ -67,11 +67,11 @@ const Sidebar = ({ isActive, setIsActive }) => {
           <a href="#">
             <i className="fa-solid fa-star"></i>Ta-134/A, Gulshan Badda Link
           </a>
-          <a href="tel:61383766284">
-            <i className="fa-solid fa-star"></i>61 383 766 284
+          <a href="tel:+916358848151">
+            <i className="fa-solid fa-star"></i>+91 635 884 8151
           </a>
-          <a href="mailto:noreply@envato.com">
-            <i className="fa-solid fa-star"></i>noreply@envato.com
+          <a href="mailto:Info@dimerscientific.com">
+            <i className="fa-solid fa-star"></i>Info@dimerscientific.com
           </a>
         </div>
         <div className="tpsideinfo__content-inputarea mb-60 d-none d-xl-block">

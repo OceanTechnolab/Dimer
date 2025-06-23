@@ -1,5 +1,5 @@
 import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Header from "@/layout/header/header";
 import React from "react";
 import Banner from "./banner";
 import ProductDetailsArea from "./product-details-area";
@@ -7,7 +7,7 @@ import ProductDetailsArea from "./product-details-area";
 const ProductDetails = () => {
   return (
     <>
-      <HeaderTwo />
+      <Header />
       <Banner />
       <ProductDetailsArea />
       <FooterFour />

@@ -11,6 +11,7 @@ import Service from "./service";
 import Team from "./team";
 import Testimonial from "../../../common/testimonial";
 import Blog from "./blog";
+import HeaderTwo from "@/layout/header/header-two";
 
 const HomeTwo = () => {
   return (

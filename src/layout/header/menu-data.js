@@ -1,16 +1,16 @@
 const menu_data = [
   {
     id: 1,
-    mega_menu: false,
-    has_dropdown: true,
+    mega_menu: true,
+    has_dropdown: false,
     title: "Home",
     link: "/",
     active: "active",
-    sub_menus: [
-      { link: "/", title: "Home Style 1" },
-      { link: "/home-2", title: "Home Style 2" },
-      { link: "/home-3", title: "Home Style 3" },
-    ],
+    // sub_menus: [
+    //   { link: "/", title: "Home Style 1" },
+    //   { link: "/home-2", title: "Home Style 2" },
+    //   { link: "/home-3", title: "Home Style 3" },
+    // ],
   },
   {
     id: 2,
@@ -27,8 +27,6 @@ const menu_data = [
       { link: "/pricing-plan", title: "Pricing Plan" },
       { link: "/shop", title: "Shop" },
       { link: "/product-details", title: "Product Details" },
-      { link: "/cart", title: "cart" },
-      { link: "/checkout", title: "Checkout" },
       { link: "/project-details", title: "Project Details" },
       { link: "/faq", title: "FAQ's" },
     ],

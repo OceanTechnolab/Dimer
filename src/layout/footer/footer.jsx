@@ -46,7 +46,7 @@ const footer_content = {
   copy_right_text: (
     <>
       © Copyright © {new Date().getFullYear()}
-      <Link href="/"> Theme_pure</Link>.<i> All Rights Reserved Copyright</i>
+      <Link href="/"> Dimer Scientific</Link>.<i> All Rights Reserved Copyright</i>
     </>
   ),
 };
@@ -198,8 +198,8 @@ const Footer = () => {
                       <a href="#">Privacy policy</a>
                     </li>
                     <li>
-                      <a href="shop">Pricing</a>
-                    </li>
+                        <Link href="https://www.oceantechnolab.com/"> Digital Alchemy by Ocean Technolab</Link>
+                      </li>
                   </ul>
                 </div>
               </div>
