@@ -94,6 +94,26 @@ const AboutArea = () => {
           </div>
         </div>
       </section>
+      <section className="description-area py-70">
+  <div className="container">
+    <div className="row justify-content-center">
+      <div className="col-xl-10">
+        <h3 className="text-2xl font-bold mb-4">
+          Dimer Scientific – Advancing Chemistry with Innovation and Integrity
+        </h3>
+        <ul className="list-disc list-inside text-lg leading-relaxed text-gray-700 space-y-2">
+          <li>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.</li>
+          <li>12,000+ products across different chemical segments.</li>
+          <li>Advanced manufacturing facilities and trusted channel partners.</li>
+          <li>Quick logistics and ready stock for fast service delivery.</li>
+          <li>Serving pharma, agriculture, petrochemical, research, paint, plastic, and other industries.</li>
+          <li>Continuous innovation and SOP upgrades to create important new compounds.</li>
+          <li>Commitment to ethical business, customer respect, and long-term relationships.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
     </>
   );
 };
