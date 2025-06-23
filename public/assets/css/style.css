@@ -8284,28 +8284,43 @@ p.checkout-coupon input[type=text]:focus {
   color: var(--tp-text-1);
 }
 .description-area {
-  padding: 70px 0;
-  background-color: #f9f9f9; /* light background for contrast */
-}
-
-.description-area h3 {
-  font-size: 28px;
-  font-weight: 700;
-  color: #1f2937; /* gray-800 */
-  margin-bottom: 20px;
+  padding: 80px 20px;
+  background-color: #ffffff; /* or #f9f9f9 if you want light contrast */
   text-align: center;
 }
 
+.description-area h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a1a4e; /* dark navy or deep blue for brand identity */
+  margin-bottom: 30px;
+  line-height: 1.3;
+}
+
 .description-area ul {
-  list-style-type: disc;
-  padding-left: 1.5rem;
-  color: #4b5563; /* gray-700 */
-  font-size: 18px;
-  line-height: 1.8;
+  list-style-type: none;
+  padding-left: 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .description-area ul li {
-  margin-bottom: 12px;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 25px;
+  text-align: left;
+}
+
+.description-area ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #009688; /* teal or brand color */
+  font-size: 22px;
+  line-height: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
