@@ -9,7 +9,7 @@ const feedback = [
         Dimer Scientific is another theme that is beautiful and professionally constructed
         by the Developers. The price for the template is cheap but not quality
         of product. What a bargain! This theme works for many types of web sites
-        and seems to be durble dows nt break and it.
+        and seems to be durable and does not break.
       </>
     ),
   },
