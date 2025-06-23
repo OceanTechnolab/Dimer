@@ -41,6 +41,7 @@ const menu_data = [
       { link: "/service", title: "Service 1" },
       { link: "/service-2", title: "Service 2" },
       { link: "/service-3", title: "Service 3" },
+      { link: "/coa", title: "COA" },
       { link: "/service-details", title: "Service Details" },
     ],
   },
