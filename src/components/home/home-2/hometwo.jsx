@@ -16,7 +16,6 @@ import HeaderTwo from "@/layout/header/header-two";
 const HomeTwo = () => {
   return (
     <>
-      {/* <HeaderTwo /> */}
       <HeroBanner />
       <About />
       <Service />
