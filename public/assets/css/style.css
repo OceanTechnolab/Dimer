@@ -8283,5 +8283,29 @@ p.checkout-coupon input[type=text]:focus {
 .tp-footer-white-content .footer-widget__copyright-info a {
   color: var(--tp-text-1);
 }
+.description-area {
+  padding: 70px 0;
+  background-color: #f9f9f9; /* light background for contrast */
+}
+
+.description-area h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.description-area ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #4b5563; /* gray-700 */
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.description-area ul li {
+  margin-bottom: 12px;
+}
 
 /*# sourceMappingURL=style.css.map */
