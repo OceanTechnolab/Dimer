@@ -20,7 +20,7 @@ const Banner = () => {
             <div className="col-lg-6 col-md-6 col-12">
               <div className="tp-breadcrumb__link d-flex">
                 <span>
-                  Bioxlab : <Link href="/research"> Project</Link>
+                  Dimer Scientific : <Link href="/research"> Project</Link>
                 </span>
               </div>
             </div>
