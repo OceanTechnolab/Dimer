@@ -1,3 +1,4 @@
+import Count from "@/common/count";
 import Link from "next/link";
 import React from "react";
 
