@@ -7,6 +7,8 @@ import Specialists from "@/common/specialists";
 import NavTab from "@/common/nav-tab";
 import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
+import ContactUs from "../contact/contact";
+import ContactForm from "../contact/contact-form";
 
 const About = () => {
   return (

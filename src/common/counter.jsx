@@ -24,7 +24,7 @@ const counter_text = [
   {
     id: 4,
     color: "green-hard",
-    counter: 24332,
+    counter: 24333,
     text: "Patients diagnosed in 2022",
   },
 ];
