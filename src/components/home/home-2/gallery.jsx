@@ -60,7 +60,7 @@ const Gallery = () => {
                     Work Gallery
                   </span>
                   <h3 className="tp-section__title title-white mb-80">
-                    Bioxlab Gallery
+                    Dimer Scientific Gallery
                   </h3>
                 </div>
               </div>
