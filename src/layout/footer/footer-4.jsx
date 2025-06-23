@@ -21,9 +21,9 @@ const FooterFour = ({ style_2 = false }) => {
                     <div className="tp-footer-widget__content mb-95">
                       <i>FEEL FREE TO CONTACT US</i>
                       <h4 className="tp-footer-widget__contact mb-20">
-                        <a href="tel:61383766284">61 383 766 284</a>
+                        <a href="tel:+916358848151">+91 635 884 8151</a>
                       </h4>
-                      <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                      <a href="mailto:Info@dimerscientific.com">Info@dimerscientific.com</a>
                     </div>
                     <div className="tp-footer-widget__sub-sec">
                       <span className="tp-footer-widget__sub-title mb-5">
@@ -180,11 +180,10 @@ const FooterFour = ({ style_2 = false }) => {
               <div className="row">
                 <div className="col-xl-6 col-lg-6 col-md-12 col-12">
                   <div className="footer-widget__copyright copyright-white">
-                    <span>
-                     
-                      © Copyright © {new Date().getFullYear()}
-                      <a href="index"> Theme_pure</a>.
-                      <i> All Rights Reserved Copyright</i>
+                  <span>
+                      © Copyright ©{new Date().getFullYear()}
+                      <Link href="/"> Dimer Scientific</Link>.
+                      <i> All Rights Reserved</i>
                     </span>
                   </div>
                 </div>
@@ -198,7 +197,7 @@ const FooterFour = ({ style_2 = false }) => {
                         <a href="#">Privacy policy</a>
                       </li>
                       <li>
-                        <a href="#">Pricing</a>
+                        <Link href="https://www.oceantechnolab.com/"> Digital Alchemy by Ocean Technolab</Link>
                       </li>
                     </ul>
                   </div>

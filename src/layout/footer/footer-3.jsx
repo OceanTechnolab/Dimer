@@ -93,11 +93,11 @@ const FooterThree = () => {
                 <div className="row">
                   <div className="col-xxl-6 col-xl-7 col-lg-6 col-md-12 col-12">
                     <div className="footer-widget__copyright cpy-white-content">
-                      <span>
-                        © Copyright © {new Date().getFullYear()}
-                        <Link href="/">  Theme_pure</Link>.
-                        <i> All Rights Reserved Copyright</i>
-                      </span>
+                    <span>
+                      © Copyright ©{new Date().getFullYear()}
+                      <Link href="/"> Ocean Technolab</Link>.
+                      <i> All Rights Reserved</i>
+                    </span>
                     </div>
                   </div>
                   <div className="col-xxl-6 col-xl-5 col-lg-6 col-md-12 col-12">
@@ -110,8 +110,8 @@ const FooterThree = () => {
                           <a href="#">Privacy policy</a>
                         </li>
                         <li>
-                          <a href="#">Pricing</a>
-                        </li>
+                        <Link href="https://www.oceantechnolab.com/"> Digital Alchemy by Ocean Technolab</Link>
+                      </li>
                       </ul>
                     </div>
                   </div>
