@@ -9,6 +9,7 @@ import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
 import ContactUs from "../contact/contact";
 import ContactForm from "../contact/contact-form";
+import { Form } from "antd";
 
 const About = () => {
   return (
