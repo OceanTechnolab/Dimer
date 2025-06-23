@@ -6,10 +6,10 @@ const feedback = [
     title: " Secretary of (FlaxStudio)",
     des: (
       <>
-        BIoxlab is another theme that is beautiful and professinally constructed
-        by the Developers. The price for the template is checp but not qualityh
-        of product.what a bargain , This theme works for many types of web sites
-        and seems to be durble dows nt break and it.
+        Dimer Scientific is another theme that is beautiful and professionally constructed
+        by the Developers. The price for the template is cheap but not quality
+        of product. What a bargain! This theme works for many types of web sites
+        and seems to be durable and does not break.
       </>
     ),
   },
@@ -20,7 +20,7 @@ const feedback = [
     title: "CEO of (FlaxStudio)",
     des: (
       <>
-        BIoxlab is another theme that is beautiful and professinally constructed
+        Dimer Scientific is another theme that is beautiful and professionally constructed
         by the Developers. The price for the template is checp but not qualityh
         of product.what a bargain , This theme works for many types of web sites
         and seems to be durble dows nt break and it.
@@ -34,8 +34,8 @@ const feedback = [
     title: "Manager of (FlaxStudio)",
     des: (
       <>
-        BIoxlab is another theme that is beautiful and professinally constructed
-        by the Developers. The price for the template is checp but not qualityh
+        Dimer Scientific is another theme that is beautiful and professionally constructed
+        by the Developers. The price for the template is cheap but not quality
         of product.what a bargain , This theme works for many types of web sites
         and seems to be durble dows nt break and it.
       </>
@@ -48,10 +48,10 @@ const feedback = [
     title: "Programmer of (FlaxStudio)",
     des: (
       <>
-        BIoxlab is another theme that is beautiful and professinally constructed
+        Dimer Scientific is another theme that is beautiful and professinally constructed
         by the Developers. The price for the template is checp but not qualityh
         of product.what a bargain , This theme works for many types of web sites
-        and seems to be durble dows nt break and it.
+        and seems to be durable does not break and it.
       </>
     ),
   },

@@ -21,7 +21,7 @@ const FaqBanner = () => {
               <div className="col-xl-5 col-lg-12 col-md-12 col-12">
                 <div className="tp-breadcrumb__link text-xl-end">
                   <span>
-                    Bioxlab : <Link href="/faq">Asking Question</Link>
+                    Dimer Scientific : <Link href="/faq">Asking Question</Link>
                   </span>
                 </div>
               </div>

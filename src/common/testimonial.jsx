@@ -27,7 +27,7 @@ const ts_text = [
   {
     des: (
       <>
-        “Bioxlab is another theme that is beautiful and professionally
+        “Dimer Scientific is another theme that is beautiful and professionally
         constructed by the developers. The price for the template is cheap but
         not the quality of the product. What a bargain. This theme works for
         many types of web sites and seems to be durable. Does not break and its
@@ -40,7 +40,7 @@ const ts_text = [
   {
     des: (
       <>
-        “Bioxlab is another theme that is beautiful and professionally
+        “Dimer Scientific is another theme that is beautiful and professionally
         constructed by the developers. The price for the template is cheap but
         not the quality of the product. What a bargain. This theme works for
         many types of web sites and seems to be durable. Does not break and its
@@ -53,7 +53,7 @@ const ts_text = [
   {
     des: (
       <>
-        “Bioxlab is another theme that is beautiful and professionally
+        “Dimer Scientific is another theme that is beautiful and professionally
         constructed by the developers. The price for the template is cheap but
         not the quality of the product. What a bargain. This theme works for
         many types of web sites and seems to be durable. Does not break and its
@@ -66,7 +66,7 @@ const ts_text = [
   {
     des: (
       <>
-        “Bioxlab is another theme that is beautiful and professionally
+        “Dimer Scientific is another theme that is beautiful and professionally
         constructed by the developers. The price for the template is cheap but
         not the quality of the product. What a bargain. This theme works for
         many types of web sites and seems to be durable. Does not break and its
