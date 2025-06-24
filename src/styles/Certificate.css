@@ -1,0 +1,35 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.7s ease-out both;
+}
+
+.bounce-in {
+  animation: bounceIn 0.5s ease-out both;
+}
+
+.btn-hover-scale:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease-in-out;
+}
