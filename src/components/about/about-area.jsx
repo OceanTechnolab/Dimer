@@ -40,7 +40,7 @@ const AboutArea = () => {
                   </ul>
                 </div>
                 <div>
-                  <button onClick={/Team01/}>Read More...</button>
+                  <button onClick={/Team 01/}>Read More...</button>
                 </div>
       </div>
     </div>
