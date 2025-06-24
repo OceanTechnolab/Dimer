@@ -33,7 +33,7 @@ const AboutArea = () => {
                   <div className="tp-ab-shape d-none d-md-block d-lg-none d-xl-block">
                     <img
                       className="ab-shape-one"
-                      src="/assets/img/about/our mission.jpg.webp"
+                      src="/assets/img/about/about-bg-05.jpg"
                       alt="about-shape"
                     />
                     <img
