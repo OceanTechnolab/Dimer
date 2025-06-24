@@ -6,26 +6,26 @@ const counter_text = [
   {
     id: 1,
     color: "blue-hard",
-    counter: 1492,
-    text: "Laboratories in 100+ states",
+    counter: <h2>10+</h2>,
+    text: "of R&D Excellence in Fine & Specialty Chemicals",
   },
   {
     id: 2,
     color: "pink-hard",
-    counter: 152,
-    text: "Laboratory specialists",
+    counter: <h2>25,000+</h2>,
+    text: "Research & Industrial Chemicals in Our Portfolio",
   },
   {
     id: 3,
     color: "sky-hard",
-    counter: 1022,
-    text: "Material collection points",
+    counter: <h2>24-48 Hours</h2>,
+    text: "Average Dispatch Time with Ready Stock & Quick Logistics",
   },
   {
     id: 4,
     color: "green-hard",
-    counter: 24333,
-    text: "Patients diagnosed in 2022",
+    counter: <h2> 12+ </h2>,
+    text: "Industries Served Across Pharma, Agriculture, Petrochemicals, and More2 ",
   },
 ];
 
