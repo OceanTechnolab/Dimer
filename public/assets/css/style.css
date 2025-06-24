@@ -8327,4 +8327,8 @@ p.checkout-coupon input[type=text]:focus {
 .star-icon {
   color: #0b7d82;
 }
+
+.text-2xl font-bold mb-4{
+  background-color: #154462;
+}
 /*# sourceMappingURL=style.css.map */
