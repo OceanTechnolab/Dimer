@@ -9,7 +9,7 @@ const AboutArea = () => {
   <div className="container">
     <div className="row justify-content-center">
       <div className="col-xl-10">
-        <h3 className="text-2xl font-bold mb-4">
+        <h3 className="about-heading">
           Dimer Scientific – Advancing Chemistry with Innovation and Integrity
         </h3>
          <div className="tp-about__info-list ">
