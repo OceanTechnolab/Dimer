@@ -9,7 +9,7 @@ import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
 import ContactUs from "../contact/contact";
 import ContactForm from "../contact/contact-form";
-import { Form } from "antd";
+import AboutFirst from "./about-first";
 
 const About = () => {
   return (
@@ -22,7 +22,7 @@ const About = () => {
       <NavTab />
       <Team />
       <FooterFour />
-      <Form />
+      <AboutFirst />
     </>
   );
 };
