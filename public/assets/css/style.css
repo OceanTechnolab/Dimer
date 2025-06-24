@@ -8327,6 +8327,9 @@ p.checkout-coupon input[type=text]:focus {
 .star-icon {
   color: #0b7d82;
 }
+.star:hover{
+  color: #007ba0;
+}
 
 .about-heading1 {
   background-color: #f3f4f6; /* Light gray background */
