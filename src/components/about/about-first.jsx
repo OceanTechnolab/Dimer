@@ -5,6 +5,7 @@ import React from "react";
 
 
 // content
+const AboutFirst = () => {
 const content = {
   left_img: "assets/img/about/about-bg-01.png",
   experience_count: 12,
@@ -115,5 +116,5 @@ const AboutFirst = () => {
     </>
   );
 };
-
+}
 export default AboutFirst;
