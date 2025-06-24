@@ -1,4 +1,5 @@
 import Count from "@/common/count";
+import Team from "@/common/team";
 import Link from "next/link";
 import React from "react";
 
@@ -37,6 +38,9 @@ const AboutArea = () => {
                       <i className="fa-solid fa-star"></i>Commitment to ethical business, customer respect, and long-term relationships.
                     </li>
                   </ul>
+                </div>
+                <div>
+                  <button onClick={/Team01/}>Read More...</button>
                 </div>
       </div>
     </div>
