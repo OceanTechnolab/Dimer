@@ -1,23 +1,20 @@
-import Counter from "@/common/counter";
-import HeaderTwo from "@/layout/header/header-two";
 import React from "react";
-import AboutArea from "./about-area";
-import AboutFirst from "./about-first";
+import HeaderTwo from "@/layout/header/header-two";
 import Banner from "./banner";
+import Aboutfirst from "./about-first"; 
+import AboutArea from "./about-area";
+import Counter from "@/common/counter";
 import Specialists from "@/common/specialists";
 import NavTab from "@/common/nav-tab";
 import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
-import ContactUs from "../contact/contact";
-import ContactForm from "../contact/contact-form";
-
 
 const About = () => {
   return (
     <>
       <HeaderTwo />
-      <Aboutfirst />
       <Banner />
+      <Aboutfirst />
       <AboutArea />
       <Counter />
       <Specialists />
