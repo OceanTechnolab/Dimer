@@ -39,18 +39,21 @@ const AboutArea = () => {
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div Read-more-button>
                   <button onClick={/Team 01/}>Read More...</button>
                 </div>
-      </div>
-    </div>
-  </div>
-</section>
-      <section className="about-area pt-130 pb-70">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-6 col-lg-4 col-12">
-              <div
+                 <div className="about-image">
+                  <img src="/images/about-right.png" alt="About Us" />
+                 </div>
+                </div>
+              </div>
+             </div>
+            </section>
+              <section className="about-area pt-130 pb-70">
+                 <div className="container">
+                  <div className="row">
+                     <div className="col-xl-6 col-lg-4 col-12">
+                     <div
                 className="tp-about-thumb mb-60 wow fadeInLeft"
                 data-wow-delay=".3s"
               >
