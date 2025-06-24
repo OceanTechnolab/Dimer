@@ -8355,7 +8355,7 @@ p.checkout-coupon input[type=text]:focus {
   min-width: 300px;
 }
 
-.about-image img {
+.about-image  {
   width: 100%;
   height: auto;
   border-radius: 8px;
