@@ -15,32 +15,29 @@ const AboutArea = () => {
          <div className="tp-about__info-list ab-check-list mb-55">
                   <ul>
                     <li>
-                      <i className="fa-solid fa-check"></i>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.
+                      <i className="fa-solid fa-star"></i>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>12,000+ products across different chemical segments.
+                      <i className="fa-solid fa-star"></i>12,000+ products across different chemical segments.
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>Advanced manufacturing facilities and trusted channel partners.
+                      <i className="fa-solid fa-star"></i>Advanced manufacturing facilities and trusted channel partners.
                       euismod
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>Quick logistics and ready stock for fast service delivery.
+                      <i className="fa-solid fa-star"></i>Quick logistics and ready stock for fast service delivery.
                     </li>
                     <li>
-                      <i className="fa-solid fa-check"></i>Serving pharma, agriculture, petrochemical, research, paint, plastic, and other industries.
+                      <i className="fa-solid fa-star"></i>Serving pharma, agriculture, petrochemical, research, paint, plastic, and other industries.
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-star"></i>Continuous innovation and SOP upgrades to create important new compounds.
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-star"></i>Commitment to ethical business, customer respect, and long-term relationships.
                     </li>
                   </ul>
                 </div>
-        <ul className="list-disc list-inside text-lg leading-relaxed text-gray-700 space-y-2">
-          <li>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.</li>
-          <li>12,000+ products across different chemical segments.</li>
-          <li>Advanced manufacturing facilities and trusted channel partners.</li>
-          <li>Quick logistics and ready stock for fast service delivery.</li>
-          <li>Serving pharma, agriculture, petrochemical, research, paint, plastic, and other industries.</li>
-          <li>Continuous innovation and SOP upgrades to create important new compounds.</li>
-          <li>Commitment to ethical business, customer respect, and long-term relationships.</li>
-        </ul>
       </div>
     </div>
   </div>
