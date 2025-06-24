@@ -21,11 +21,11 @@ const Banner = () => {
               <div className="tp-breadcrumb__link text-xl-end">
                 <span>
                   Dimer Scientific : 
-                   <div className="breadcrumb">
-  <a href="/" className="breadcrumb-link">Home</a>
-  <span className="breadcrumb-separator">›</span>
-  <span className="breadcrumb-current">About Us</span>
-</div>
+                      <div className="breadcrumb">
+                          <a href="/" className="breadcrumb-link">Home</a>
+                                  <span className="breadcrumb-separator">›</span>
+                                  <span className="breadcrumb-current">About Us</span>
+                      </div>
                 </span>
               </div>
             </div>
