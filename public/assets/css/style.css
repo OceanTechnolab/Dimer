@@ -8328,7 +8328,7 @@ p.checkout-coupon input[type=text]:focus {
   color: #0b7d82;
 }
 
-.about-heading {
+.about-heading1 {
   background-color: #f3f4f6; /* Light gray background */
   padding: 15px 20px;
   border-radius: 8px;
@@ -8336,10 +8336,10 @@ p.checkout-coupon input[type=text]:focus {
   transition: color 0.3s ease;
 }
 
-.about-heading:hover {
+.about-heading1:hover {
   color: #2563eb; /* Blue on hover */
 }
-.about-heading {
+.about-heading1:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 /*# sourceMappingURL=style.css.map */
