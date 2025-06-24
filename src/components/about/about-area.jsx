@@ -6,6 +6,12 @@ import React from "react";
 const AboutArea = () => {
   return (
     <>
+    <div className="breadcrumb">
+  <a href="/" className="breadcrumb-link">Home</a>
+  <span className="breadcrumb-separator">›</span>
+  <span className="breadcrumb-current">About Us</span>
+</div>
+
      <section className="description-area py-70">
   <div className="container">
     <div className="row justify-content-center">
