@@ -8324,7 +8324,7 @@ p.checkout-coupon input[type=text]:focus {
   line-height: 1;
 }
 
-.tp-about__info-list ab-check-list mb-55{
-  color: #009688;
+.star-icon {
+  color: #0b7d82; /* golden yellow */
 }
 /*# sourceMappingURL=style.css.map */
