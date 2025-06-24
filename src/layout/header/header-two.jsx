@@ -112,14 +112,14 @@ const HeaderTwo = () => {
             </div>
             <div className="header-menu-bottom">
               <div className="row">
-                <div className="col-lg-7">
+                <div className="col-lg-9">
                   <div className="main-menu main-menu-second">
                     <nav id="mobile-menu">
                       <NavMenu />
                     </nav>
                   </div>
                 </div>
-                <div className="col-lg-5">
+                <div className="col-lg-3">
                   <div className="header-cart-order d-flex align-items-center justify-content-end">
                     <div className="header-cart-list  d-flex align-items-center justify-content-end mr-50">
                       <button
