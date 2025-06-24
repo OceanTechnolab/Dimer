@@ -12,6 +12,26 @@ const AboutArea = () => {
         <h3 className="text-2xl font-bold mb-4">
           Dimer Scientific – Advancing Chemistry with Innovation and Integrity
         </h3>
+         <div className="tp-about__info-list ab-check-list mb-55">
+                  <ul>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>12,000+ products across different chemical segments.
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Advanced manufacturing facilities and trusted channel partners.
+                      euismod
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Quick logistics and ready stock for fast service delivery.
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Serving pharma, agriculture, petrochemical, research, paint, plastic, and other industries.
+                    </li>
+                  </ul>
+                </div>
         <ul className="list-disc list-inside text-lg leading-relaxed text-gray-700 space-y-2">
           <li>Over 10 years of R&D expertise in synthesis and development using innovative chemistry.</li>
           <li>12,000+ products across different chemical segments.</li>
