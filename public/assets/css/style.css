@@ -8328,7 +8328,15 @@ p.checkout-coupon input[type=text]:focus {
   color: #0b7d82;
 }
 
-.text-2xl font-bold mb-4{
-  background-color: #154462;
+.text-2xl font-bold mb-4 {
+  background-color: #f3f4f6; /* Light gray background */
+  padding: 15px 20px;
+  border-radius: 8px;
+  color: #1f2937; /* Default text color */
+  transition: color 0.3s ease;
+}
+
+.text-2xl font-bold mb-4g:hover {
+  color: #2563eb; /* Blue on hover */
 }
 /*# sourceMappingURL=style.css.map */
