@@ -34,13 +34,10 @@ const AboutArea = () => {
                   <div className="tp-ab-shape d-none d-md-block d-lg-none d-xl-block">
                     <img
                       className="ab-shape-one"
-<<<<<<< HEAD
-                      src="/assets/img/about/our-mission.png"
-=======
                       src="/assets/img/about/about-bg-05.jpg"
->>>>>>> main
+            
                       alt="about-shape"
-                    />
+                      />
                     <img
                       className="ab-shape-two"
                       src="/assets/img/about/about-bg-06.jpg"
