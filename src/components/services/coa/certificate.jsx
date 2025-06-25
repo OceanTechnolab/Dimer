@@ -128,20 +128,7 @@ function Certificate() {
               handleSearch();
             }}
           >
-            <div className="mb-3">
-              <label htmlFor="sapCode" className="form-label fw-medium">
-                Product Code
-              </label>
-              <input
-                id="sapCode"
-                type="text"
-                placeholder="e.g., 1001001"
-                value={sapCode}
-                onChange={(e) => setSapCode(e.target.value)}
-                className="form-control form-control-lg border-2 rounded-3"
-                disabled={isLoading}
-              />
-            </div>
+     
 
             <div className="mb-4">
               <label htmlFor="batchNumber" className="form-label fw-medium">
@@ -153,6 +140,21 @@ function Certificate() {
                 placeholder="e.g., #AB1235"
                 value={batchNumber}
                 onChange={(e) => setBatchNumber(e.target.value)}
+                className="form-control form-control-lg border-2 rounded-3"
+                disabled={isLoading}
+              />
+            </div>
+
+                   <div className="mb-3">
+              <label htmlFor="sapCode" className="form-label fw-medium">
+                Product Code
+              </label>
+              <input
+                id="sapCode"
+                type="text"
+                placeholder="e.g., 1001001"
+                value={sapCode}
+                onChange={(e) => setSapCode(e.target.value)}
                 className="form-control form-control-lg border-2 rounded-3"
                 disabled={isLoading}
               />
