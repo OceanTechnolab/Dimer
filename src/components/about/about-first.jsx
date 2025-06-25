@@ -7,25 +7,21 @@ const Aboutfirst = () => {
   const about_content = {
     about_bg: "/assets/img/shape/shape-bg-05.png",
     about_img: "/assets/img/about/about-bg-02.png",
-    popup_video: "https://www.youtube.com/watch?v=-BpXNPHiB2U",
+    popup_video: "https://www.youtube.com/shorts/WeMXeXlkSN0",
     about_thumb: "/assets/img/about/about-bg-03.png",
-    title: "Best Laboratory For Testing And Research",
+    title: "Driving Innovation in Research & Development Chemistry",
     sub_title: "About",
     des_1: (
       <>
-        Your full service lab for clinical trials. Our mission is to ensure the
-        generation of accurate and precise findings
+        With over a decade of expertise, Dimer Scientific is at the forefront of synthesizing and developing specialized compounds using breakthrough chemistry.
       </>
     ),
     dex_2: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        We deliver more than 25,000+ products across key segments—including analytical solvents, building blocks, specialty chemicals, and metal science compounds—supporting industries from pharmaceuticals to petrochemicals.
       </>
     ),
-    btn: "Talk with Expart",
+    btn: "CONTACT US",
 
     // booking data
     booking_bg: "/assets/img/shape/shape-bg-04.png",

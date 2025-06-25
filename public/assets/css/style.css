@@ -8360,4 +8360,19 @@ p.checkout-coupon input[type=text]:focus {
   height: auto;
   border-radius: 8px;
 }
+
+.breadcrumb-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* aligns both items to the right */
+}
+
+.company-name {
+  font-size: 16px;
+}
+
+.breadcrumb-nav {
+  font-size: 14px;
+}
+
 /*# sourceMappingURL=style.css.map */
