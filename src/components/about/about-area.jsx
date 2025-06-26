@@ -1,23 +1,30 @@
 import Count from "@/common/count";
-import Team from "@/common/team";
 import Link from "next/link";
 import React from "react";
 
 const AboutArea = () => {
   return (
     <>
-        <section className="about-area pt-130 pb-70">
-                 <div className="container">
-                  <div className="row">
-                     <div className="col-xl-6 col-lg-8 col-12">
+      <section className="about-area pt-130 pb-70">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-lg-4 col-12">
               <div
+                className="tp-about-thumb mb-60 wow fadeInLeft"
+                data-wow-delay=".3s"
+              >
+                <div
                 className="about-content about-align mb-60 wow fadeInRight"
                 data-wow-delay=".3s"
               >
                 <div className="tp-section">
                   <h3 className="tp-section__title ab-title mb-25">
-                    Trusted by Scientists, Powered by Innovation.
+                   Trusted by Scientists, Powered by Innovation.
                   </h3>
+                  <a className="tp-section__link" href="#">
+                    Read our MIssion & Vission{" "}
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </a>
                   <p className=" mr-20 mb-40">
                     Our extensive product range, expert team, and agile
                     logistics make us a preferred partner for research
@@ -28,13 +35,14 @@ const AboutArea = () => {
                 <div className="tp-about__info-list ab-check-list mb-55">
                   <ul>
                     <li>
-                      <i className="fa-solid fa-check"></i> Specialized in R&D, Analytical & Custom Synthesis
+                      <i className="fa-solid fa-check"></i>Specialized in R&D, Analytical & Custom Synthesis
                     </li>
                     <li>
                       <i className="fa-solid fa-check"></i>Advanced Manufacturing Facilities with GMP & ISO certifications
                     </li>
                     <li>
                       <i className="fa-solid fa-check"></i>Serving 10+ Industries including pharma, agro, petrochemical
+                      euismod
                     </li>
                     <li>
                       <i className="fa-solid fa-check"></i>Rapid Logistics & Ready Inventory for quick turnaround
@@ -46,11 +54,11 @@ const AboutArea = () => {
                   <Link href="/about" className="tp-btn">
                     About us
                   </Link>
-                     <div className="col-xl-6 col-lg-4 col-12">
-                     <div
-                        className="tp-about-thumb mb-60 wow fadeInLeft"
-                        data-wow-delay=".3s"
-                     >
+                </div>
+              </div>
+              </div>
+            </div>
+            <div className="col-xl-6 col-lg-8 col-12">
                 <div className="tp-ab-img d-flex">
                   <div className="tp-ab-main-img p-relative">
                     <img
@@ -72,9 +80,8 @@ const AboutArea = () => {
                     <img
                       className="ab-shape-one"
                       src="/assets/img/about/about-us-2.png"
-            
                       alt="about-shape"
-                      />
+                    />
                     <img
                       className="ab-shape-two"
                       src="/assets/img/about/about-us-3.png"
@@ -82,16 +89,10 @@ const AboutArea = () => {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-           
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
-     
     </>
   );
 };
