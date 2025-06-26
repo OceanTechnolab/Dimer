@@ -136,7 +136,7 @@ const NavTab = () => {
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUr Vission
+                Our Vision
               </button>
             </li>
             <li className="nav-item" role="presentation">
