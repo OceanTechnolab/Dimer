@@ -121,7 +121,7 @@ const NavTab = () => {
                 aria-selected="true"
                 tabIndex="-1"
               >
-                Our Process
+                Our Mission
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -136,7 +136,7 @@ const NavTab = () => {
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUr Mission
+                OUr Vission
               </button>
             </li>
             <li className="nav-item" role="presentation">

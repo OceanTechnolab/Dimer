@@ -8363,16 +8363,20 @@ p.checkout-coupon input[type=text]:focus {
 
 .breadcrumb-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* aligns both items to the right */
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  gap: 5px;
+  color: #fff;
+}
+.breadcrumb-link {
+  text-decoration: underline;
+  color: #fff;
+}
+.breadcrumb-separator {
+  margin: 0 4px;
 }
 
-.company-name {
-  font-size: 16px;
-}
-
-.breadcrumb-nav {
-  font-size: 14px;
-}
 
 /*# sourceMappingURL=style.css.map */
