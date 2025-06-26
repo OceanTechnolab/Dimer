@@ -34,13 +34,16 @@ function Certificate() {
       formData.append("sap_code", sapCode);
       formData.append("batch_number", batchNumber);
 
+      // Replace hard-coded API endpoint with an environment variable
+      const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "http://localhost/hasmukh";
+
       const response = await axios.post(
-        "http://localhost/hasmukh/search.php",
+        `${apiEndpoint}/search.php`,
         formData
       );
 
       if (response.data.status === "success") {
-        setPdfUrl(`http://localhost/hasmukh/${response.data.pdf_url}`);
+        setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
         setError("");
       } else {
         setError(response.data.message || "PDF not found.");
