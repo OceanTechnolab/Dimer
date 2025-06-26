@@ -50,7 +50,7 @@ const AboutArea = () => {
                      <div
                 className="tp-about-thumb mb-60 wow fadeInLeft"
                 data-wow-delay=".3s"
-              >
+                     >
                 <div className="tp-ab-img d-flex">
                   <div className="tp-ab-main-img p-relative">
                     <img
