@@ -14,49 +14,49 @@ function Certificate() {
     setAnimateCard(true);
   }, []);
 
-  const handleSearch = async () => {
-    if (!sapCode.trim()) {
-      setError("Please enter a Product Code");
+const handleSearch = async () => {
+  // Input validation
+  if (!sapCode.trim()) {
+    setError("Please enter a Product Code");
+    setPdfUrl(null);
+    return;
+  }
+
+  if (!batchNumber.trim()) {
+    setError("Please enter a Batch Number");
+    setPdfUrl(null);
+    return;
+  }
+
+  setIsLoading(true); // Optional: show loader
+
+  try {
+    const formData = new FormData();
+    formData.append("sap_code", sapCode);
+    formData.append("batch_number", batchNumber);
+
+    // Use .env API or fallback to Hostinger live URL
+    // const apiEndpoint =
+    // process.env.REACT_APP_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
+    const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
+
+    const response = await axios.post(`${apiEndpoint}/search.php`, formData);
+
+    if (response.data.status === "success") {
+      setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
+      setError("");
+    } else {
+      setError(response.data.message || "PDF not found.");
       setPdfUrl(null);
-      return;
     }
-
-    if (!batchNumber.trim()) {
-      setError("Please enter a Batch Number");
-      setPdfUrl(null);
-      return;
-    }
-
-    setIsLoading(true);
-
-    try {
-      const formData = new FormData();
-      formData.append("sap_code", sapCode);
-      formData.append("batch_number", batchNumber);
-
-      // Replace hard-coded API endpoint with an environment variable
-      const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "http://localhost/hasmukh";
-
-      const response = await axios.post(
-        `${apiEndpoint}/search.php`,
-        formData
-      );
-
-      if (response.data.status === "success") {
-        setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
-        setError("");
-      } else {
-        setError(response.data.message || "PDF not found.");
-        setPdfUrl(null);
-      }
-    } catch (err) {
-      console.error("Error occurred during search:", err.message);
-      setError("An unexpected error occurred. Please try again later.");
-      setPdfUrl(null);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+  } catch (error) {
+    console.error("Error:", error);
+    setError("An error occurred while fetching the PDF.");
+    setPdfUrl(null);
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <div
