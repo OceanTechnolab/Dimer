@@ -20,8 +20,6 @@ const counter_text = [
   {
     id: 3,
     color: "sky-hard",
-    counter: 24,
-    suffix: "-",
     counter: 48,
     text: "Average Dispatch Time with Ready Stock & Quick Logistics",
   },
@@ -54,12 +52,7 @@ const Counter = ({ cls = "pt-40 pb-100"  }) => {
                       <span className="counter">
                         <Count  number={item.counter} />
                       </span>
-                      <h4 className="counter__title">
-                           <span className="counter">
-                            <Count number={item.counter} />
-                             <span className="suffix">{item.suffix}</span>
-                          </span>
-                    </h4>
+                       <span className="suffix">{item.suffix}</span>
                     </h4>
                     <p>{item.text}</p>
                   </div>

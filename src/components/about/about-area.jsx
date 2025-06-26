@@ -41,11 +41,11 @@ const AboutArea = () => {
                       lectus
                     </li>
                   </ul>
-                </div>
-                <div className="about-content__btn">
+                   <div className="about-content__btn">
                   <Link href="/about" className="tp-btn">
                     About us
                   </Link>
+                </div>
                      <div className="col-xl-6 col-lg-4 col-12">
                      <div
                 className="tp-about-thumb mb-60 wow fadeInLeft"
