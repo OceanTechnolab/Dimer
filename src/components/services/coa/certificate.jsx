@@ -47,8 +47,8 @@ function Certificate() {
         setPdfUrl(null);
       }
     } catch (err) {
-      console.error(err);
-      setError("Server error. Check PHP or XAMPP.");
+      console.error("Error occurred during search:", err.message);
+      setError("An unexpected error occurred. Please try again later.");
       setPdfUrl(null);
     } finally {
       setIsLoading(false);
