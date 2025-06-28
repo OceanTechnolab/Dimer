@@ -32,8 +32,8 @@ const handleSearch = async () => {
 
   try {
     const formData = new FormData();
-    formData.append("sap_code", sapCode);
-    formData.append("batch_number", batchNumber);
+    formData.append("CASNo", sapCode);
+    formData.append("ProductCode", batchNumber);
 
     // Use .env API or fallback to Hostinger live URL
     // const apiEndpoint =
@@ -43,7 +43,7 @@ const handleSearch = async () => {
     const response = await axios.post(`${apiEndpoint}/search.php`, formData);
 
     if (response.data.status === "success") {
-      setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
+      setPdfUrl(`${apiEndpoint}/${response.data.MSDS}`);
       setError("");
     } else {
       setError(response.data.message || "PDF not found.");
