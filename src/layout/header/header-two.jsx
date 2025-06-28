@@ -145,79 +145,6 @@ const HeaderTwo = () => {
           onClick={() => setMenuOpen(true)}
           aria-label="Open menu"
         >
-<<<<<<< HEAD
-          <div className="header-logo-box">
-            <Link href="/">
-              <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
-            </Link>
-          </div>
-          <div className="header-menu-box">
-            <div className="header-menu-top">
-              <div className="row align-items-center">
-                <div className="col-lg-4">
-                  <div className="header-top-mob">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2  000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Help Desk :</span>
-                    <a href="mailto:info@dimerscientific.com"> info@dimerscientific.com </a>
-                  </div>
-                </div>
-                <div className="col-lg-8">
-                  <div className="header-time">
-                    <span>
-                      <i className="fa-light fa-clock-ten"></i> Monday - Friday
-                      09:00 am - 05:00 Pm
-                    </span>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="header-menu-bottom">
-              <div className="row">
-                <div className="col-lg-7">
-                  <div className="main-menu main-menu-second">
-                    <nav id="mobile-menu">
-                      <NavMenu />
-                    </nav>
-                  </div>
-                </div>
-                <div className="col-lg-5">
-                  <div className="header-cart-order d-flex align-items-center justify-content-end">
-                    <div className="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                      <button
-                        onClick={() => setIsActive(true)}
-                        className="tp-menu-toggle mr-40"
-                      >
-                        <i className="fa-solid fa-list"></i>
-                      </button>
-                    </div>
-                    <Link className="header-bottom-btn" href="/contact">
-                      Contact Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-=======
           <span className="menu-icon">
             <svg width="32" height="32" viewBox="0 0 32 32">
               <rect y="7" width="32" height="3" rx="1.5" fill="#2d3748" />
@@ -226,7 +153,6 @@ const HeaderTwo = () => {
             </svg>
           </span>
         </button>
->>>>>>> main
       </header>
 
       {menuOpen && (
