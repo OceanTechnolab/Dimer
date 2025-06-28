@@ -36,16 +36,16 @@ const HeaderTwo = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
+                      <circle cx="2" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="12" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="12" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="17" r="2" fill="#f27e01" />
+                      <circle cx="2" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="2" cy="12" r="2" fill="#f27e01" />
                     </svg>
                     <span>Help Desk :</span><a href="mailto:info@dimerscientific.com">info@dimerscientific.com</a>
                   </a>
@@ -84,16 +84,16 @@ const HeaderTwo = () => {
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
+                      <circle cx="2" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="2" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="12" cy="12" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="12" r="2" fill="#f27e01" />
+                      <circle cx="7" cy="17" r="2" fill="#f27e01" />
+                      <circle cx="2" cy="7" r="2" fill="#f27e01" />
+                      <circle cx="2" cy="12" r="2" fill="#f27e01" />
                     </svg>
                     <span>Help Desk :</span>
                     <a href="mailto:info@dimerscientific.com"> info@dimerscientific.com </a>
