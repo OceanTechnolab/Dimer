@@ -21,10 +21,6 @@ const AboutArea = () => {
                   <h3 className="tp-section__title ab-title mb-25">
                    Trusted by Scientists, Powered by Innovation.
                   </h3>
-                  <a className="tp-section__link" href="#">
-                    Read our MIssion & Vission{" "}
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
                   <p className=" mr-20 mb-40">
                     Our extensive product range, expert team, and agile
                     logistics make us a preferred partner for research

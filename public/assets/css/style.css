@@ -33,6 +33,7 @@
     20. CART CSS START
     21. PORTFOLIO CSS START
     22. FOOTER CSS START
+    23. PERIODIC TABLE CSS START
 
 
 **********************************************/
@@ -8377,6 +8378,21 @@ p.checkout-coupon input[type=text]:focus {
 .breadcrumb-separator {
   margin: 0 4px;
 }
+
+.counter-number {
+  display: inline-flex;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d084d; /* adjust for your theme */
+}
+
+.plus-icon {
+  font-size: 1.6rem;
+  margin-left: 4px;
+  line-height: 1;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */

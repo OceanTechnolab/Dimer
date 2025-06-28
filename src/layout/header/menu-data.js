@@ -72,5 +72,13 @@ const menu_data = [
     link: "/contact",
     active: "",
   },
+  {
+    id: 7,
+    mega_menu: true,
+    has_dropdown: false,
+    title: "PeriodicTable ",
+    link: "/periodictable",
+    active: "",
+  },
 ];
 export default menu_data;

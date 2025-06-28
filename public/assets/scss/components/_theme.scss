@@ -49,6 +49,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+.img.rounded-md.shadow-md {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -128,6 +136,7 @@ li {
 ul {
   margin: 0px;
   padding: 0px;
+  display: inline-flex;
 }
 
 p {

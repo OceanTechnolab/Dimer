@@ -6,9 +6,10 @@ const counter_text = [
   {
     id: 1,
     color: "blue-hard",
-    counter: 10,
-    suffix: "+",
+    counter: 10, 
+    
     text: "of R&D Excellence in Fine & Specialty Chemicals",
+    suffix: "+",
   },
   {
     id: 2,
@@ -28,7 +29,7 @@ const counter_text = [
     color: "green-hard",
     counter:  12,
     suffix: "+",
-    text: "Industries Served Across Pharma, Agriculture, Petrochemicals, and More2 ",
+    text: "Industries Served Across Pharma, Agriculture, and Petrochemicals. ",
   },
 ];
 

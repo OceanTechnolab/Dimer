@@ -82,7 +82,7 @@ const HeaderTwo = () => {
                       height="19"
                       viewBox="0 0 14 19"
                       fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns="http://www.w3.org/2  000/svg"
                     >
                       <circle cx="2" cy="2" r="2" fill="#0E63FF" />
                       <circle cx="7" cy="2" r="2" fill="#0E63FF" />
