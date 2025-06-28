@@ -239,6 +239,7 @@ html, body {
   padding: 60px 40px 40px;
   animation: menuSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .menu-columns {
@@ -260,6 +261,7 @@ html, body {
   margin: 0;
   min-width: 280px;
   box-sizing: border-box;
+  text-align: left;
 }
 
 .menu-column:nth-child(1) {
@@ -303,6 +305,7 @@ html, body {
 .menu-item-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 8px 0;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -315,6 +318,18 @@ html, body {
 .menu-item-header:hover {
   background: rgba(255, 255, 255, 0.05);
   padding-left: 16px;
+}
+
+/* Mobile specific menu item centering */
+@media (max-width: 768px) {
+  .menu-item-header {
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .menu-item-header:hover {
+    padding-left: 0;
+  }
 }
 
 .menu-link {
@@ -369,6 +384,15 @@ html, body {
   border-left: 2px solid rgba(148, 163, 184, 0.3);
 }
 
+/* Mobile dropdown centering */
+@media (max-width: 768px) {
+  .dropdown-list {
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
+  }
+}
+
 .dropdown-item {
   margin-bottom: 16px;
 }
@@ -376,6 +400,7 @@ html, body {
 .dropdown-item-header {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 6px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -387,6 +412,14 @@ html, body {
 
 .dropdown-item-header:hover {
   background: rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile dropdown item centering */
+@media (max-width: 768px) {
+  .dropdown-item-header {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .dropdown-link {
@@ -432,6 +465,15 @@ html, body {
   padding-left: 24px;
   margin-top: 8px;
   border-left: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+/* Mobile sub-dropdown centering */
+@media (max-width: 768px) {
+  .sub-dropdown-list {
+    padding-left: 0;
+    border-left: none;
+    text-align: center;
+  }
 }
 
 .sub-dropdown-item {
@@ -597,6 +639,7 @@ html, body {
     width: 100%;
     max-width: 100%;
     min-width: unset;
+    text-align: center;
   }
 }
 
