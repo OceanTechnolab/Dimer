@@ -1,148 +1,279 @@
 import Sidebar from "@/common/sidebar";
 import useSticky from "hooks/use-sticky";
 import Link from "next/link";
-import React, { useState } from "react";
-import NavMenu from "./nav-menu";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import menu_data from "./menu-data";
+import { FaSearch } from "react-icons/fa";
 
 const HeaderTwo = () => {
   const { sticky } = useSticky();
-  const [isActive, setIsActive] = useState(false);
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdowns, setOpenDropdowns] = useState({});
+  const [searchFocused, setSearchFocused] = useState(false);
+
+  const toggleDropdown = (id) => {
+    setOpenDropdowns((prev) => {
+      const isCurrentlyOpen = !!prev[id];
+      const newState = {};
+      Object.keys(prev).forEach((key) => {
+        newState[key] = false;
+      });
+      newState[id] = !isCurrentlyOpen;
+      return newState;
+    });
+  };
+
+  const isActiveLink = (link) => {
+    return link === "/"
+      ? router.pathname === "/"
+      : router.pathname.startsWith(link);
+  };
+
+  const isActiveParent = (menu) => {
+    if (isActiveLink(menu.link)) return true;
+    if (menu.sub_menus) {
+      return menu.sub_menus.some((sub) => {
+        if (isActiveLink(sub.link)) return true;
+        if (sub.sub_menus) {
+          return sub.sub_menus.some((sub2) => isActiveLink(sub2.link));
+        }
+        return false;
+      });
+    }
+    return false;
+  };
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && menuOpen) {
+        setMenuOpen(false);
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, [menuOpen]);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "unset";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setMenuOpen(false);
+      setOpenDropdowns({});
+    };
+    router.events.on("routeChangeStart", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, [router]);
+
+  useEffect(() => {
+    if (!menuOpen) {
+      setOpenDropdowns({});
+    }
+  }, [menuOpen]);
+
+  const columns = 3;
+  const menuColumns = Array.from({ length: columns }, (_, i) =>
+    menu_data.filter((_, idx) => idx % columns === i)
+  );
+
+  const handleMenuItemClick = (menu, e) => {
+    if (menu.has_dropdown) {
+      e.preventDefault();
+      toggleDropdown(menu.id);
+    } else {
+      router.push(menu.link);
+    }
+  };
+
+  const handleSubMenuItemClick = (menu, sub, i, e) => {
+    if (sub.has_dropdown) {
+      e.preventDefault();
+      e.stopPropagation();
+      const id = `${menu.id}-${i}`;
+      setOpenDropdowns((prev) => {
+        const newState = { ...prev };
+        newState[id] = !prev[id];
+        return newState;
+      });
+    } else {
+      router.push(sub.link);
+    }
+  };
 
   return (
     <>
-      <div
-        id="header-mob-sticky"
-        className={`tp-mobile-header-area pt-15 pb-15 d-xl-none ${
+      <header
+        className={`header-bar d-flex align-items-center justify-content-between px-4 py-2 ${
           sticky ? "header-sticky" : ""
-        } `}
+        }`}
       >
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-4 col-10">
-              <div className="tp-mob-logo">
-                <Link href="/">
-                  <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
-                </Link>
-              </div>
-            </div>
-            <div className="col-md-8 col-2">
-              <div className="tp-mobile-bar d-flex align-items-center justify-content-end">
-                <div className="tp-bt-btn-banner d-none d-md-block d-xl-none mr-30">
-                  <a className="tp-bt-btn" href="tel:+916358848151">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Help Desk :</span><a href="mailto:info@dimerscientific.com">info@dimerscientific.com</a>
-                  </a>
-                </div>
-                <button
-                  onClick={() => setIsActive(true)}
-                  className="tp-menu-toggle"
-                >
-                  <i className="far fa-bars"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+        <div className="header-logo-box ">
+          <Link href="/">
+            <img src="/assets/img/logo/dimerlogo.png" alt="Dimer Logo" />
+          </Link>
         </div>
-      </div>
 
-      <header className="d-none d-xl-block">
-        <div
-          className={`header-custom ${sticky ? "header-sticky" : ""}`}
-          id="header-sticky"
+        <form className="header-search-bar d-flex align-items-center flex-grow-1 mx-4">
+          <div className={`search-container ${searchFocused ? "focused" : ""}`}>
+            <div className="search-input-wrapper">
+              <input
+                type="text"
+                className={`search-input form-control ${
+                  searchFocused ? "focused" : ""
+                }`}
+                placeholder="Search product..."
+                onFocus={() => setSearchFocused(true)}
+                onBlur={() => setSearchFocused(false)}
+              />
+            </div>
+            <button type="button" className="category-button btn">
+              <FaSearch />
+            </button>
+          </div>
+        </form>
+
+        <button
+          className="menu-button btn p-0 ms-2"
+          onClick={() => setMenuOpen(true)}
+          aria-label="Open menu"
         >
-          <div className="header-logo-box">
-            <Link href="/">
-              <img src="/assets/img/logo/dimerlogo.png" alt="logo" />
-            </Link>
-          </div>
-          <div className="header-menu-box">
-            <div className="header-menu-top">
-              <div className="row align-items-center">
-                <div className="col-lg-4">
-                  <div className="header-top-mob">
-                    <svg
-                      width="14"
-                      height="19"
-                      viewBox="0 0 14 19"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle cx="2" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="2" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="12" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="12" r="2" fill="#0E63FF" />
-                      <circle cx="7" cy="17" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="7" r="2" fill="#0E63FF" />
-                      <circle cx="2" cy="12" r="2" fill="#0E63FF" />
-                    </svg>
-                    <span>Help Desk :</span>
-                    <a href="mailto:info@dimerscientific.com"> info@dimerscientific.com </a>
-                  </div>
-                </div>
-                <div className="col-lg-8">
-                  <div className="header-time">
-                    <span>
-                      <i className="fa-light fa-clock-ten"></i> Monday - Friday
-                      09:00 am - 05:00 Pm
-                    </span>
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="header-menu-bottom">
-              <div className="row">
-                <div className="col-lg-7">
-                  <div className="main-menu main-menu-second">
-                    <nav id="mobile-menu">
-                      <NavMenu />
-                    </nav>
-                  </div>
-                </div>
-                <div className="col-lg-5">
-                  <div className="header-cart-order d-flex align-items-center justify-content-end">
-                    <div className="header-cart-list  d-flex align-items-center justify-content-end mr-50">
-                      <button
-                        onClick={() => setIsActive(true)}
-                        className="tp-menu-toggle mr-40"
-                      >
-                        <i className="fa-solid fa-list"></i>
-                      </button>
-                    </div>
-                    <Link className="header-bottom-btn" href="/contact">
-                      Contact Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <span className="menu-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32">
+              <rect y="7" width="32" height="3" rx="1.5" fill="#2d3748" />
+              <rect y="15" width="32" height="3" rx="1.5" fill="#2d3748" />
+              <rect y="23" width="24" height="3" rx="1.5" fill="#2d3748" />
+            </svg>
+          </span>
+        </button>
       </header>
 
-      {/* side bar start */}
-      <Sidebar isActive={isActive} setIsActive={setIsActive} />
-      {/* side bar end */}
+      {menuOpen && (
+        <div className="menu-overlay">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="menu-close-button"
+            aria-label="Close menu"
+          >
+            ×
+          </button>
+
+          <nav className="menu-nav">
+            <div className="menu-columns">
+              {menuColumns.map((col, colIdx) => (
+                <ul key={colIdx} className="menu-column">
+                  {col.map((menu) => (
+                    <li key={menu.id} className="menu-item">
+                      <div
+                        className={`menu-item-header ${
+                          menu.has_dropdown ? "clickable" : ""
+                        }`}
+                        onClick={(e) => handleMenuItemClick(menu, e)}
+                        tabIndex={0}
+                      >
+                        <span
+                          className={`menu-link ${
+                            isActiveParent(menu) ? "active" : ""
+                          }`}
+                        >
+                          {menu.title}
+                        </span>
+                        {menu.has_dropdown && (
+                          <span
+                            className={`dropdown-arrow ${
+                              openDropdowns[menu.id] ? "open" : ""
+                            }`}
+                          >
+                            ▶
+                          </span>
+                        )}
+                      </div>
+                      {menu.has_dropdown && menu.sub_menus && (
+                        <div
+                          className={`dropdown-container ${
+                            openDropdowns[menu.id] ? "open" : ""
+                          }`}
+                        >
+                          <ul className="dropdown-list">
+                            {menu.sub_menus.map((sub, i) => (
+                              <li key={i} className="dropdown-item">
+                                <div
+                                  className={`dropdown-item-header ${
+                                    sub.has_dropdown ? "clickable" : ""
+                                  }`}
+                                  onClick={(e) =>
+                                    handleSubMenuItemClick(menu, sub, i, e)
+                                  }
+                                  tabIndex={0}
+                                >
+                                  <span
+                                    className={`dropdown-link ${
+                                      isActiveLink(sub.link) ? "active" : ""
+                                    }`}
+                                  >
+                                    {sub.title}
+                                  </span>
+                                  {sub.has_dropdown && (
+                                    <span
+                                      className={`sub-dropdown-arrow ${
+                                        openDropdowns[menu.id + "-" + i]
+                                          ? "open"
+                                          : ""
+                                      }`}
+                                    >
+                                      ▶
+                                    </span>
+                                  )}
+                                </div>
+                                {sub.has_dropdown && sub.sub_menus && (
+                                  <div
+                                    className={`sub-dropdown-container ${
+                                      openDropdowns[menu.id + "-" + i]
+                                        ? "open"
+                                        : ""
+                                    }`}
+                                  >
+                                    <ul className="sub-dropdown-list">
+                                      {sub.sub_menus.map((sub2, j) => (
+                                        <li
+                                          key={j}
+                                          className="sub-dropdown-item"
+                                        >
+                                          <Link
+                                            href={sub2.link}
+                                            className={`sub-dropdown-link ${
+                                              isActiveLink(sub2.link)
+                                                ? "active"
+                                                : ""
+                                            }`}
+                                          >
+                                            {sub2.title}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
+                                )}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              ))}
+            </div>
+          </nav>
+        </div>
+      )}
     </>
   );
 };
