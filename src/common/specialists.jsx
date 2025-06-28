@@ -11,13 +11,13 @@ const choose = [
     title: (
       <>
         High Quality <br />
-        Services
+        Products & Services
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        25,000+ research-grade chemicals with <br />
+         certified quality and consistent performance. 
       </>
     ),
   },
@@ -27,14 +27,14 @@ const choose = [
     icon: "flaticon-thinking",
     title: (
       <>
-        Fast Working <br />
-        Process
+        Efficient Development  <br />
+       & Delivery
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Fast, reliable chemical solutions through<br />
+         optimized SOPs and ready stock availability. 
       </>
     ),
   },
@@ -44,13 +44,13 @@ const choose = [
     icon: "flaticon-24-hours-1",
     title: (
       <>
-        24/7 Customer <br /> Support
+        24/7 Support &  <br /> Customer Partnership
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Round-the-clock assistance and <br />
+         a customer-first approach that goes beyond delivery. 
       </>
     ),
   },
@@ -60,13 +60,13 @@ const choose = [
     icon: "flaticon-team",
     title: (
       <>
-        We have <br /> Expert Team
+        Skilled & <br /> Experienced Team
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Driven by expert chemists and technical<br />
+         professionals committed to excellence. 
       </>
     ),
   },
