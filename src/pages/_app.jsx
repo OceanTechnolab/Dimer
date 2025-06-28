@@ -1,5 +1,6 @@
 import "../styles/index.scss";
 import '../styles/Certificate.css';
+import '../styles/HeaderTwo.css';
 
 
 if (typeof window !== "undefined") {
