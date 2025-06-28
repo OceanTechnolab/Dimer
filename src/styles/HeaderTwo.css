@@ -144,6 +144,7 @@
   border: none;
   font-size: 32px;
   border-radius: 8px;
+  cursor: pointer;
   padding: 8px;
   transition: all 0.2s ease;
   position: relative;
@@ -244,6 +245,7 @@
 
 .menu-item {
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .menu-item:nth-child(1) {
