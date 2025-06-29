@@ -74,7 +74,7 @@ const handleSearch = async () => {
         className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${
           animateCard ? "fade-in" : ""
         }`}
-        style={{  
+        style={{
           maxWidth: "800px",
           backgroundColor: "#fff",
           borderColor: "#d4af37",
