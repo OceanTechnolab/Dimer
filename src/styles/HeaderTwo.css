@@ -760,3 +760,27 @@ html, body {
     font-size: 14px;
   }
 }
+/* Hide search bar on mobile devices */
+@media (max-width: 768px) {
+  .header-search-bar {
+    display: none !important;
+  }
+  
+  /* Adjust header layout when search bar is hidden */
+  .header-bar {
+    justify-content: space-between;
+    gap: 16px;
+  }
+  
+  /* Give logo more space when search is hidden */
+  .header-logo-box {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Keep menu button on the right */
+  .menu-button {
+    flex-shrink: 0;
+  }
+}
