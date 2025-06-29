@@ -32,8 +32,8 @@ const handleSearch = async () => {
 
   try {
     const formData = new FormData();
-    formData.append("CASNo", sapCode);
-    formData.append("ProductCode", batchNumber);
+    formData.append("sap_code", sapCode);
+    formData.append("batch_number", batchNumber);
 
     // Use .env API or fallback to Hostinger live URL
     // const apiEndpoint =
@@ -43,7 +43,7 @@ const handleSearch = async () => {
     const response = await axios.post(`${apiEndpoint}/search.php`, formData);
 
     if (response.data.status === "success") {
-      setPdfUrl(`${apiEndpoint}/${response.data.MSDS}`);
+      setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
       setError("");
     } else {
       setError(response.data.message || "PDF not found.");
@@ -74,7 +74,7 @@ const handleSearch = async () => {
         className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${
           animateCard ? "fade-in" : ""
         }`}
-        style={{  
+        style={{
           maxWidth: "800px",
           backgroundColor: "#fff",
           borderColor: "#d4af37",
