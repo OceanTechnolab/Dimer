@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Certificate() {
-  const [sapCode, setSapCode] = useState("");
-  const [batchNumber, setBatchNumber] = useState("");
-  const [pdfUrl, setPdfUrl] = useState(null);
+  const [productCode, setProductCode] = useState("");
+  const [casNo, setCasNo] = useState("");
+  const [msdsList, setMsdsList] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [animateCard, setAnimateCard] = useState(false);
@@ -14,49 +14,38 @@ function Certificate() {
     setAnimateCard(true);
   }, []);
 
-const handleSearch = async () => {
-  // Input validation
-  if (!sapCode.trim()) {
-    setError("Please enter a Product Code");
-    setPdfUrl(null);
-    return;
-  }
-
-  if (!batchNumber.trim()) {
-    setError("Please enter a Batch Number");
-    setPdfUrl(null);
-    return;
-  }
-
-  setIsLoading(true); // Optional: show loader
-
-  try {
-    const formData = new FormData();
-    formData.append("sap_code", sapCode);
-    formData.append("batch_number", batchNumber);
-
-    // Use .env API or fallback to Hostinger live URL
-    // const apiEndpoint =
-    // process.env.REACT_APP_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
-    const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
-
-    const response = await axios.post(`${apiEndpoint}/search.php`, formData);
-
-    if (response.data.status === "success") {
-      setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
-      setError("");
-    } else {
-      setError(response.data.message || "PDF not found.");
-      setPdfUrl(null);
+  const handleSearch = async () => {
+    if (!productCode.trim() || !casNo.trim()) {
+      setError("Both Product Code and CAS Number are required.");
+      setMsdsList([]);
+      return;
     }
-  } catch (error) {
-    console.error("Error:", error);
-    setError("An error occurred while fetching the PDF.");
-    setPdfUrl(null);
-  } finally {
-    setIsLoading(false);
-  }
-};
+
+    setIsLoading(true);
+    setError("");
+    setMsdsList([]);
+
+    try {
+      const formData = new FormData();
+      formData.append("ProductCode", productCode.trim().toLowerCase());
+      formData.append("CASNo", casNo.trim().toLowerCase());
+
+const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "https://dev.dimerscientific.com";
+const response = await axios.post(`${apiEndpoint}/search.php`, formData);
+
+
+      if (response.data.status === "success" && Array.isArray(response.data.data) && response.data.data.length > 0) {
+        setMsdsList(response.data.data); // List of results
+      } else {
+        setError(response.data.message || "No matching certificates found.");
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      setError("An error occurred while fetching the MSDS.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div
@@ -81,16 +70,12 @@ const handleSearch = async () => {
           overflow: "hidden",
         }}
       >
-        {/* Optional Seal */}
+        {/* Seal */}
         <div style={{ position: "absolute", top: 20, right: 20, zIndex: 2 }}>
-          <img
-            src="/images/seal.png"
-            alt="Seal"
-            style={{ height: "80px", width: "80px" }}
-          />
+          <img src="/images/seal.png" alt="Seal" style={{ height: "80px", width: "80px" }} />
         </div>
 
-        {/* Optional Watermark */}
+        {/* Watermark */}
         <div
           style={{
             position: "absolute",
@@ -100,64 +85,53 @@ const handleSearch = async () => {
             zIndex: 0,
           }}
         >
-          <img
-            src="/images/molecule-watermark.png"
-            alt="Watermark"
-            width="300"
-          />
+          <img src="/images/molecule-watermark.png" alt="Watermark" width="300" />
         </div>
 
-        {/* Header */}
         <div style={{ zIndex: 2, position: "relative" }}>
-          <h2
-            className="text-center fw-bold mb-3"
-            style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}
-          >
+          <h2 className="text-center fw-bold mb-3" style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}>
             Certificate of Analysis
           </h2>
           <p className="text-center text-muted fst-italic mb-4">
             Please enter the product details to find your certificate.
           </p>
 
-          {/* Sample Formula */}
+          {/* Chemical formula */}
           <p className="text-center text-muted small mb-4">
             <em>C₈H₉NO₂ + H₂O → Medical Base Compound</em>
           </p>
 
-          {/* Form */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
               handleSearch();
             }}
           >
-     
-
             <div className="mb-4">
-              <label htmlFor="batchNumber" className="form-label fw-medium">
-                Batch Number
+              <label htmlFor="casNo" className="form-label fw-medium">
+                CAS Number
               </label>
               <input
-                id="batchNumber"
+                id="casNo"
                 type="text"
-                placeholder="e.g., #AB1235"
-                value={batchNumber}
-                onChange={(e) => setBatchNumber(e.target.value)}
+                placeholder="e.g., 50-00-0"
+                value={casNo}
+                onChange={(e) => setCasNo(e.target.value)}
                 className="form-control form-control-lg border-2 rounded-3"
                 disabled={isLoading}
               />
             </div>
 
-                   <div className="mb-3">
-              <label htmlFor="sapCode" className="form-label fw-medium">
+            <div className="mb-3">
+              <label htmlFor="productCode" className="form-label fw-medium">
                 Product Code
               </label>
               <input
-                id="sapCode"
+                id="productCode"
                 type="text"
                 placeholder="e.g., 1001001"
-                value={sapCode}
-                onChange={(e) => setSapCode(e.target.value)}
+                value={productCode}
+                onChange={(e) => setProductCode(e.target.value)}
                 className="form-control form-control-lg border-2 rounded-3"
                 disabled={isLoading}
               />
@@ -196,27 +170,29 @@ const handleSearch = async () => {
             </div>
           )}
 
-          {/* Success Alert */}
-          {pdfUrl && (
+          {/* Success / Result Alert */}
+          {msdsList.length > 0 && (
             <div className="alert alert-success mt-3 fade-in">
               <div className="d-flex align-items-center mb-2">
                 <i className="bi bi-check-circle-fill me-2"></i>
-                <strong>Certificate Found Successfully!</strong>
+                <strong>{msdsList.length} Certificate(s) Found!</strong>
               </div>
-              <p className="mb-2 small">
-                Your certificate is ready for download.
-              </p>
-              <div className="d-grid">
-                <a
-                  href={pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-success bounce-in btn-hover-scale"
-                >
-                  <i className="bi bi-file-earmark-pdf me-2"></i>
-                  Open Certificate PDF
-                </a>
-              </div>
+              <p className="mb-2 small">Your certificate(s) are ready for download:</p>
+              <ul className="list-unstyled small">
+                {msdsList.map((item, index) => (
+                  <li key={index} className="mb-2">
+                    <a
+                      href={item.msds_url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-outline-success btn-sm w-100"
+                    >
+                      <i className="bi bi-file-earmark-pdf me-2"></i>
+                      View PDF {index + 1}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 
