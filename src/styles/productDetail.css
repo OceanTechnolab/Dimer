@@ -1,0 +1,91 @@
+/* ProductDetail.css */
+
+/* Decorative Background Circles */
+.pd-bg-circle-1 {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.pd-bg-circle-2 {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Feature Card */
+.pd-feature-card {
+  display: flex;
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.pd-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Check Circle */
+.pd-check-circle {
+  width: 24px;
+  height: 24px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pd-check-mark {
+  color: #f27e01;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Section Title Underline */
+.pd-section-underline {
+  width: 80px;
+  height: 4px;
+  background: white;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Arrow Bullet Points */
+.pd-arrow-point {
+  display: flex;
+  align-items: flex-start;
+}
+
+.pd-arrow-icon {
+  color: #f27e01;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 10px;
+  line-height: 1.4;
+}
+
+.pd-arrow-text {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
