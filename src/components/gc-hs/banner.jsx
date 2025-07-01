@@ -8,6 +8,8 @@ const Banner = () => {
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
           backgroundImage: `url("/assets/img/banner/gchs-banner.png")`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <div className="container">

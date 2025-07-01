@@ -89,3 +89,8 @@
   font-size: 15px;
   font-weight: 500;
 }
+
+.pd-table-header th {
+  background-color: #f27e01;
+  color: #fff; /* Optional: make text white for contrast */
+}

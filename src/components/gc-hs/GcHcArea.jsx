@@ -325,7 +325,7 @@ const GcHcArea = () => {
               </div>
               <div className="table-responsive">
                 <table className="table table-bordered">
-                  <thead>
+                  <thead className="pd-table-header">
                     <tr>
                       <th>Code</th>
                       <th>Product Description</th>
