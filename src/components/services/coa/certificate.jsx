@@ -37,8 +37,8 @@ const handleSearch = async () => {
 
     // Use .env API or fallback to Hostinger live URL
     // const apiEndpoint =
-    // process.env.REACT_APP_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
-    const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
+    // process.env.NEXT_PUBLIC_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
+    const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
 
     const response = await axios.post(`${apiEndpoint}/search.php`, formData);
 
