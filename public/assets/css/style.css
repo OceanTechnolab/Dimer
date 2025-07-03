@@ -33,6 +33,7 @@
     20. CART CSS START
     21. PORTFOLIO CSS START
     22. FOOTER CSS START
+    23. table CSS START
 
 
 **********************************************/
@@ -4213,6 +4214,7 @@ div.tp-srv-link a {
   padding: 40px 45px 45px 45px;
   background-color: var(--tp-common-white);
   border-radius: 0 0 5px 5px;
+  background-color: #F27E01;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tp-team__content {
@@ -4235,6 +4237,7 @@ div.tp-srv-link a {
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.4s linear;
+  padding-left: 90px;
 }
 .tp-team__social a {
   margin-right: 12px;
@@ -7702,6 +7705,7 @@ p.checkout-coupon input[type=text]:focus {
 .tpprothumb img {
   border-radius: 10px;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tpprothumb img {
     max-width: 100%;
@@ -8283,5 +8287,13 @@ p.checkout-coupon input[type=text]:focus {
 .tp-footer-white-content .footer-widget__copyright-info a {
   color: var(--tp-text-1);
 }
+
+.highlight-box {
+  background-color: #f9f3dc;
+  border: 2px solid #f27e01;
+  border-radius: 8px;
+  padding: 20px;
+}
+
 
 /*# sourceMappingURL=style.css.map */
