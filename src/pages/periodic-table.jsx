@@ -1,23 +1,14 @@
 import React from "react";
 import Table from "@/components/periodic-table/table";
 import Wrapper from "@/layout/wrapper";
-import LayoutTwo from "@/layout/layout-2";
 import SEO from "@/components/seo";
-import { Info } from "lucide-react";
-import Infor from "@/components/periodic-table/infor";
-import { Breadcrumb } from "antd";
-import Banner from "@/components/about/banner";
-import FooterFour from "@/layout/footer/footer-4";
-import HeaderTwo from "@/layout/header/header-two";
+import Periodic from "@/components/periodic-table/periodic";
 
 const index = () => {
   return (
     <Wrapper>
-      <HeaderTwo />
-        <SEO pageTitle="Periodic-table" />
-        < Table />
-        < Infor />
-      <FooterFour />
+        <Periodic />
+      <SEO pageTitle="Periodic Table" />
     </Wrapper>
   );
 };

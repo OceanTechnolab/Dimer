@@ -24,33 +24,7 @@ const Table = () => {
 
     return (
       <>
-      <section
-        className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
-        style={{
-        backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
-        }}
-      >
-        <div className="container">
-        <div className="row">
-          <div className="col-12">
-          <div className="breadcrumb__content text-center">
-            <h2 className="breadcrumb__title">Periodic Table</h2>
-            <nav aria-label="breadcrumb">
-            <ol className="breadcrumb justify-content-center">
-              <li className="breadcrumb-item">
-              <a href="/">Home</a>
-              </li>
-              <li className="breadcrumb-item active" aria-current="page">
-              Periodic Table
-              </li>
-            </ol>
-            </nav>
-          </div>
-          </div>
-        </div>
-        </div>
-      </section>
-      
+
       <section className="project-area pt-10 pr-200">
         <div className="container">
         <div className="row">
