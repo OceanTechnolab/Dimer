@@ -7,7 +7,7 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+          backgroundImage: `url(/assets/img/banner/breadcrumb-background.png)`,
         }}
       >
         <div className="container">
@@ -20,7 +20,12 @@ const Banner = () => {
             <div className="col-xl-5 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb__link text-xl-end">
                 <span>
-                  Dimer Scientific : <Link href="/team-details"> About us</Link>
+                   <li className="breadcrumb-item">
+              <a href="/">Home</a>
+              </li>
+              <li className="breadcrumb-item active" aria-current="page">
+              Periodic Table
+              </li>
                 </span>
               </div>
             </div>
