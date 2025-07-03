@@ -150,7 +150,7 @@ const menu_data = [
       { link: "/blog", title: "Product literature" },
       { link: "/coa", title: "COA" },
       { link: "/blog-details", title: "Certificates " },
-      { link: "/blog-details", title: "Periodic table " },
+      { link: "/periodic-table", title: "Periodic table " },
       { link: "/blog-details", title: "Terms & conditions" },
       { link: "/blog-details", title: "Applications " },
       { link: "/blog-details", title: "Custom synthesis" },
