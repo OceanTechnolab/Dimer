@@ -2,7 +2,8 @@
 
 .breadcrumb {
   &__area {
-    padding: 200px 0;
+   // padding: 200px 0;
+   height: 120px;
   }
   &__overlay {
     position: relative;
@@ -15,7 +16,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgb(23, 17, 81, 0.7);
+      //background-color: rgb(23, 17, 81, 0.7);
       z-index: -1;
     }
   }
@@ -76,4 +77,5 @@
 
 .breadcrumb-item.active {
     color: #F27E01;
+     display: inline-flex;
 }

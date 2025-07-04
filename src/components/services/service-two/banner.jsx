@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
-        style={{ backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)` }}
+        style={{ backgroundImage: `url(/assets/img/banner/breadcrumb-background.png)` }}
       >
         <div className="container">
           <div className="row align-items-center">

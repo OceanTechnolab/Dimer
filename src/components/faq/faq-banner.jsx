@@ -8,7 +8,7 @@ const FaqBanner = () => {
           className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
           data-background=""
           style={{
-            backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+            backgroundImage: `url(/assets/img/banner/breadcrumb-background.png)`,
           }}
         >
           <div className="container">
