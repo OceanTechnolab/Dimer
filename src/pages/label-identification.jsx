@@ -7,7 +7,7 @@ const index = () => {
   return (
     <Wrapper>
       <LabelIde />
-      <SEO pageTitle="Periodic Table" />
+      <SEO pageTitle="Label Identification Guide" />
     </Wrapper>
   );
 };
