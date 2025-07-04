@@ -20,7 +20,7 @@ const Banner = () => {
             <div className="col-lg-6 col-md-5 col-12">
               <div className="tp-breadcrumb__link d-flex align-items-center">
                 <span>
-                  Dimer Scientific : <Link href="/service"> Services</Link>
+                 <a href="/">Home</a>/<li className="breadcrumb-item active" aria-current="page">service</li>
                 </span>
               </div>
             </div>
