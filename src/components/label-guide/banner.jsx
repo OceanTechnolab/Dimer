@@ -19,9 +19,16 @@ const Banner = () => {
             </div>
             <div className="col-lg-6 col-md-5 col-12">
               <div className="tp-breadcrumb__link d-flex align-items-center">
-                <span>
-                 <a href="/">Home</a> /  <li className="breadcrumb-item active" aria-current="page">label-identification</li>
-                </span>
+                <nav aria-label="breadcrumb">
+                  <ul className="breadcrumb">
+                    <li className="breadcrumb-item">
+                      <a href="/">Home</a>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page">
+                      label-identification
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </div>
           </div>
