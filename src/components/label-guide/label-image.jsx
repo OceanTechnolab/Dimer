@@ -16,7 +16,7 @@ const LabelImage = () => {
           >
             <img
             src="/assets/img/label/label.png"
-            alt="projrct-thumb"
+            alt="label thumbnail"
             />
           </div>
           </div>
