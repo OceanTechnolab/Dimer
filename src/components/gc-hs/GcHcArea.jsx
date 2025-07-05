@@ -39,6 +39,41 @@ const GcHcArea = () => {
       selector: (row) => row.PackSize,
       sortable: true,
     },
+    {
+      name: "PDF",
+      selector: (row) =>
+        row.msds_url ? (
+          <a
+            href={row.msds_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download PDF"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              style={{ width: "24px", height: "24px", color: "#2e7d32" }}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3m-6-6h6"
+              />
+            </svg>
+          </a>
+        ) : (
+          "N/A"
+        ),
+      sortable: false,
+    },
   ];
 
   useEffect(() => {
@@ -51,10 +86,13 @@ const GcHcArea = () => {
     formData.append("category", "GC-HS Solvents");
 
     try {
-      const response = await fetch("https://dev.dimerscientific.com/get_category_products.php", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://dev.dimerscientific.com/get_category_products.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
       if (data.status === "success") {
@@ -76,18 +114,31 @@ const GcHcArea = () => {
           <div className="row">
             {/* Left - Product Image */}
             <div className="col-lg-6 col-md-6">
-              <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
-                <img src="/assets/img/productdetails/gchc.png" alt="product-thumb" />
+              <div
+                className="productthumb mb-40 wow fadeInRighLeft"
+                data-wow-delay=".4s"
+              >
+                <img
+                  src="/assets/img/productdetails/gchc.png"
+                  alt="product-thumb"
+                />
               </div>
             </div>
 
             {/* Right - Description */}
             <div className="col-lg-6 col-md-6">
-              <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
+              <div
+                className="product mb-40 ml-20 wow fadeInRighRight"
+                data-wow-delay=".4s"
+              >
                 <div className="product__details-content mb-40">
                   <h5 className="product-dtitle mb-30">HEAD-SPACE SOLVENTS</h5>
                   <p className="pd-description">
-                    GC-Headspace (GC-HS) is the technique used to determine Organic Volatile Impurities (OVIs) in pharmaceutical products. Our specialized solvents are designed to be free from volatile impurities that may interfere with GC-HS analysis, following USP 467 and EP 2.4.24 guidelines.
+                    GC-Headspace (GC-HS) is the technique used to determine
+                    Organic Volatile Impurities (OVIs) in pharmaceutical
+                    products. Our specialized solvents are designed to be free
+                    from volatile impurities that may interfere with GC-HS
+                    analysis, following USP 467 and EP 2.4.24 guidelines.
                   </p>
 
                   <div className="row">
