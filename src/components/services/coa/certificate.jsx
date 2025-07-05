@@ -33,9 +33,9 @@ function Certificate() {
     // Use .env API or fallback to Hostinger live URL
     // const apiEndpoint =
     // process.env.NEXT_PUBLIC_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
-    const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
+    const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT || "https://api.dimerscientific.com";
 
-    const response = await axios.post(`${apiEndpoint}/search.php`, formData);
+    const response = await axios.post(`${apiEndpoint}/coa_search.php`, formData);
 
 
       if (response.data.status === "success" && Array.isArray(response.data.data) && response.data.data.length > 0) {
