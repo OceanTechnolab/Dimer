@@ -29,6 +29,16 @@ const GcHcArea = () => {
       selector: (row) => row.CASNo,
       sortable: true,
     },
+    {
+      name: "Grade",
+      selector: (row) => row.Grade,
+      sortable: true,
+    },
+    {
+      name: "Pack Size",
+      selector: (row) => row.PackSize,
+      sortable: true,
+    },
   ];
 
   useEffect(() => {
