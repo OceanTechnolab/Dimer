@@ -24,13 +24,13 @@
 .tp-breadcrumb {
   &__title {
     color: var(--tp-common-white);
-    font-weight: 400;
-    font-size: 55px;
+    //font-weight: 400;
+   // font-size: 55px;
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 0;
     @media #{$lg} {
-      font-size: 46px;
+      font-size: 30px;
     }
     @media #{$md} {
       font-size: 44px;

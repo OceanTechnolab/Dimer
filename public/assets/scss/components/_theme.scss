@@ -103,6 +103,16 @@ h1 {
 h2 {
   font-size: 32px;
 }
+.label-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label-heading:hover {
+  color: #f27e01;
+}
 
 h3 {
   font-size: 28px;
