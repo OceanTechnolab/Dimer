@@ -1,29 +1,10 @@
-import React, { useState } from "react";
-import DataTable from '../../common/DataTable';
+"use client";
+import React, { useState, useEffect } from "react";
+import DataTable from "../../common/DataTable";
 
 const GcHcArea = () => {
-  const [productData] = useState([
-    {
-      code: "D10455",
-      description: "N,N-DIMETHYLFORMAMIDE",
-      cas: "68-12-2",
-    },
-    {
-      code: "D10456",
-      description: "DIMETHYL SULPHOXIDE",
-      cas: "67-68-5",
-    },
-    {
-      code: "M10289",
-      description: "N-METHYL-2-PYRROLIDONE",
-      cas: "872-50-4",
-    },
-    {
-      code: "D10476",
-      description: "N,N-DIMETHYLACETAMIDE",
-      cas: "127-19-5",
-    },
-  ]);
+  const [productData, setProductData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const features = [
     "Each batch is subjected to GC-HS analysis to ensure suitability for residual analysis in excipients or API.",
@@ -34,21 +15,49 @@ const GcHcArea = () => {
 
   const columns = [
     {
-      name: 'Code',
-      selector: row => row.code,
-      sortable: false,
+      name: "Code",
+      selector: (row) => row.ProductCode,
+      sortable: true,
     },
     {
-      name: 'Product Description',
-      selector: row => row.description,
-      sortable: false,
+      name: "Product Description",
+      selector: (row) => row.product_name,
+      sortable: true,
     },
     {
-      name: 'CAS No.',
-      selector: row => row.cas,
-      sortable: false,
+      name: "CAS No.",
+      selector: (row) => row.CASNo,
+      sortable: true,
     },
   ];
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = async () => {
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("category", "GC-HS Solvents");
+
+    try {
+      const response = await fetch("https://dev.dimerscientific.com/get_category_products.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.status === "success") {
+        setProductData(data.data);
+      } else {
+        console.error("Error fetching products:", data.message);
+      }
+    } catch (error) {
+      console.error("Fetch error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="shop-area pt-120 pb-70">
@@ -72,30 +81,14 @@ const GcHcArea = () => {
                   </p>
 
                   <div className="row">
-                    <div className="col-sm-6 mb-3">
-                      <div className="pd-arrow-point">
-                        <span className="pd-arrow-icon">➤</span>
-                        <p className="pd-arrow-text">GC-HS analysis for excipients & APIs</p>
+                    {features.map((feature, index) => (
+                      <div key={index} className="col-sm-6 mb-3">
+                        <div className="pd-arrow-point">
+                          <span className="pd-arrow-icon">➤</span>
+                          <p className="pd-arrow-text">{feature}</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="col-sm-6 mb-3">
-                      <div className="pd-arrow-point">
-                        <span className="pd-arrow-icon">➤</span>
-                        <p className="pd-arrow-text">Glass-distilled solvents with low residue</p>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 mb-3">
-                      <div className="pd-arrow-point">
-                        <span className="pd-arrow-icon">➤</span>
-                        <p className="pd-arrow-text">Clean chromatograms with low noise</p>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 mb-3">
-                      <div className="pd-arrow-point">
-                        <span className="pd-arrow-icon">➤</span>
-                        <p className="pd-arrow-text">Low water content & high UV transmission</p>
-                      </div>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -136,7 +129,11 @@ const GcHcArea = () => {
               <div className="text-center">
                 <h2 className="mb-3">Products</h2>
               </div>
-              <DataTable columns={columns} data={productData} />
+              {loading ? (
+                <p className="text-center">Loading products...</p>
+              ) : (
+                <DataTable columns={columns} data={productData} />
+              )}
             </div>
           </div>
         </div>
