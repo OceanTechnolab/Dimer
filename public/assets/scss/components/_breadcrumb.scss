@@ -54,10 +54,10 @@
         font-size: 16px;
       }
       & a {
-        text-decoration: underline;
         margin-left: 5px;
         &:hover {
           color: var(--tp-icon-green);
+          text-decoration: underline;
         }
       }
       @media #{$md,$xs} {
@@ -72,10 +72,18 @@
   }
 }
 .breadcrumb__content.text-center {
-    color: #F27E01;
+    color: var(--tp-icon-blue);
 }
 
 .breadcrumb-item.active {
-    color: #F27E01;
+    color: var(--tp-icon-green);
+    display: inline-flex;
+}
+.breadcrumb-item.active {
+    color: #FBBF77;
      display: inline-flex;
+}
+
+.breadcrumb-item.active :hover {
+    color: var(--tp-icon-blue);
 }
