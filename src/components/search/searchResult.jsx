@@ -1,66 +1,89 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import article_data from "../../data/article-data";
 import DataTable from "../../common/DataTable";
-
-const columns = [
-  {
-    name: "Title",
-    selector: (row) => row.title,
-    sortable: false,
-    grow: 2,
-  },
-  {
-    name: "Author",
-    selector: (row) => row.user,
-    sortable: false,
-  },
-  {
-    name: "Date",
-    selector: (row) => row.date,
-    sortable: false,
-  },
-];
-
-const flattenText = (val) => {
-  if (typeof val === "string") return val;
-  if (
-    typeof val === "object" &&
-    val !== null &&
-    val.props &&
-    val.props.children
-  ) {
-    return Array.isArray(val.props.children)
-      ? val.props.children.join(" ")
-      : val.props.children;
-  }
-  return "";
-};
 
 const SearchResult = () => {
   const router = useRouter();
   const { q } = router.query;
-  const searchQuery = (q || "").toString().toLowerCase();
+  const [loading, setLoading] = useState(true);
+  const [productData, setProductData] = useState([]);
+  const [coaData, setCoaData] = useState([]);
 
-  const filteredData = useMemo(() => {
-    if (!searchQuery) return article_data;
-    return article_data.filter((item) => {
-      return (
-        (item.title && item.title.toLowerCase().includes(searchQuery)) ||
-        (item.user && item.user.toLowerCase().includes(searchQuery)) ||
-        (item.date && item.date.toLowerCase().includes(searchQuery)) ||
-        (item.des && flattenText(item.des).toLowerCase().includes(searchQuery))
-      );
-    });
-  }, [searchQuery]);
+  useEffect(() => {
+    if (q) {
+      fetchResults(q);
+    }
+  }, [q]);
+
+  const fetchResults = async (query) => {
+    setLoading(true);
+    const formData = new FormData();
+    formData.append("search", query);
+
+    try {
+      const response = await fetch("https://api.dimerscientific.com/headersearch.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.status === "success") {
+        setProductData(data.product_details || []);
+        setCoaData(data.coas || []);
+      }
+    } catch (err) {
+      console.error("Search failed:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const productColumns = [
+    { name: "Product Name", selector: (row) => row.product_name },
+    { name: "CAS No", selector: (row) => row.CASNo },
+    { name: "Product Code", selector: (row) => row.ProductCode },
+  ];
+
+  const coaColumns = [
+    { name: "Product Code", selector: (row) => row.ProductCode },
+    { name: "Batch No", selector: (row) => row.BatchNo },
+    {
+      name: "COA URL",
+      selector: (row) =>
+        row.COAurl ? (
+          <a href={row.COAurl} target="_blank" rel="noopener noreferrer" title="Download COA">
+            ⬇
+          </a>
+        ) : (
+          "N/A"
+        ),
+    },
+    { name: "Uploaded At", selector: (row) => row.uploaded_at },
+  ];
 
   return (
     <div className="container py-5">
-      <h2 className="mb-4">Search Results{searchQuery && ` for "${q}"`}</h2>
-      {filteredData.length > 0 ? (
-        <DataTable columns={columns} data={filteredData} />
+      <h2 className="mb-4">Search Results {q && `for "${q}"`}</h2>
+      {loading ? (
+        <p>Loading...</p>
       ) : (
-        <div className="alert alert-warning">No results found.</div>
+        <>
+          {productData.length > 0 && (
+            <>
+              <h4>Product Details</h4>
+              <DataTable columns={productColumns} data={productData} />
+            </>
+          )}
+          {coaData.length > 0 && (
+            <>
+              <h4 className="mt-4">COA Records</h4>
+              <DataTable columns={coaColumns} data={coaData} />
+            </>
+          )}
+          {productData.length === 0 && coaData.length === 0 && (
+            <div className="alert alert-warning">No results found.</div>
+          )}
+        </>
       )}
     </div>
   );
