@@ -103,7 +103,17 @@ h1 {
 h2 {
   font-size: 32px;
 }
-
+h2.heading{
+  text-align: center;
+  margin-bottom: 50px;
+  &:hover{
+    color: var(--tp-icon-blue);
+  }
+}
+.description{
+  font-size: 18px;
+  font-weight: bold;
+}
 h3 {
   font-size: 28px;
 }
@@ -115,6 +125,11 @@ h4 {
 
 h5 {
   font-size: 20px;
+}
+
+h5.subheading{
+  color: var(--tp-icon-blue);
+  font-size: 25px;
 }
 
 h6 {
@@ -402,4 +417,11 @@ input[type="color"] {
     width: 70px;
     animation: preloader 3s linear infinite;
   }
+}
+
+.img-one {
+    width: 80%;
+    height: auto;
+    margin-bottom: 30px;
+    padding-left: 30px;
 }
