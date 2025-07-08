@@ -556,6 +556,7 @@
 .pt-125 {
   padding-top: 125px;
 }
+
 .pt-130 {
   padding-top: 130px;
 }
@@ -621,6 +622,7 @@
 }
 .pb-35 {
   padding-bottom: 35px;
+  padding-right: 250px;
 }
 .pb-40 {
   padding-bottom: 40px;
@@ -959,5 +961,10 @@
   padding-right: 195px;
 }
 .pr-200 {
-  padding-right: 200px;
+  padding-right: 250px;
+}
+@media (max-width: 768px) {
+  .pr-200 {
+    padding-right: 20px; /* Adjust this value as needed */
+  }
 }

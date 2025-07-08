@@ -33,7 +33,6 @@
     20. CART CSS START
     21. PORTFOLIO CSS START
     22. FOOTER CSS START
-    23. PERIODIC TABLE CSS START
 
 
 **********************************************/
@@ -4215,6 +4214,7 @@ div.tp-srv-link a {
   padding: 40px 45px 45px 45px;
   background-color: var(--tp-common-white);
   border-radius: 0 0 5px 5px;
+  background-color: #F27E01;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tp-team__content {
@@ -4237,6 +4237,7 @@ div.tp-srv-link a {
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   transition: background-size 0.4s linear;
+  padding-left: 90px;
 }
 .tp-team__social a {
   margin-right: 12px;
@@ -7704,6 +7705,7 @@ p.checkout-coupon input[type=text]:focus {
 .tpprothumb img {
   border-radius: 10px;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tpprothumb img {
     max-width: 100%;
@@ -8285,114 +8287,5 @@ p.checkout-coupon input[type=text]:focus {
 .tp-footer-white-content .footer-widget__copyright-info a {
   color: var(--tp-text-1);
 }
-
-/* change */
-
-
-.description-area {
-  padding: 80px 20px;
-  background-color: #ffffff; /* or #f9f9f9 if you want light contrast */
-  text-align: center;
-}
-
-.description-area h3 {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #1a1a4e; /* dark navy or deep blue for brand identity */
-  margin-bottom: 30px;
-  line-height: 1.3;
-}
-
-.description-area ul {
-  list-style-type: none;
-  padding-left: 0;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.description-area ul li {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 14px;
-  position: relative;
-  padding-left: 25px;
-  text-align: left;
-}
-
-.description-area ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #009688; /* teal or brand color */
-  font-size: 22px;
-  line-height: 1;
-}
-
-.star-icon {
-  color: #154462;
-}
-.star-icon:hover{
-  color: #007ba0;
-}
-
-.about-heading1 {
-  background-color: #f3f4f6; 
-  padding: 15px 20px;
-  border-radius: 8px;
-  color: #1f2937; 
-  transition: color 0.3s ease;
-}
-
-.about-heading1:hover {
-  color: #2563eb;
-}
-.about-heading1:hover {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-image {
-  flex: 1;
-  min-width: 300px;
-}
-
-.about-image  {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.breadcrumb-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-weight: 600;
-  text-transform: uppercase;
-  gap: 5px;
-  color: #fff;
-}
-.breadcrumb-link {
-  text-decoration: underline;
-  color: #fff;
-}
-.breadcrumb-separator {
-  margin: 0 4px;
-}
-
-.counter-number {
-  display: inline-flex;
-  align-items: center;
-  font-size: 3rem;
-  font-weight: 700;
-  color: #0d084d; /* adjust for your theme */
-}
-
-.plus-icon {
-  font-size: 1.6rem;
-  margin-left: 4px;
-  line-height: 1;
-}
-
-
 
 /*# sourceMappingURL=style.css.map */

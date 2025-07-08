@@ -2,7 +2,12 @@
 
 .breadcrumb {
   &__area {
+<<<<<<< HEAD
     padding: 20px 0;
+=======
+   // padding: 200px 0;
+   height: 120px;
+>>>>>>> 5e0b3eb200eacc315ddc54cd47bd5ab09b0e6d31
   }
   &__overlay {
     position: relative;
@@ -15,7 +20,7 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgb(23, 17, 81, 0.7);
+      //background-color: rgb(23, 17, 81, 0.7);
       z-index: -1;
     }
   }
@@ -69,4 +74,12 @@
   @media #{$md} {
     justify-content: start;
   }
+}
+.breadcrumb__content.text-center {
+    color: #F27E01;
+}
+
+.breadcrumb-item.active {
+    color: #F27E01;
+     display: inline-flex;
 }

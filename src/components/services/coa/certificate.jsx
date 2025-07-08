@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Certificate() {
-  const [sapCode, setSapCode] = useState("");
-  const [batchNumber, setBatchNumber] = useState("");
-  const [pdfUrl, setPdfUrl] = useState(null);
+  const [productCode, setProductCode] = useState("");
+  const [batchNo, setBatchNo] = useState("");
+  const [coaList, setCoaList] = useState([]);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [animateCard, setAnimateCard] = useState(false);
@@ -14,49 +14,42 @@ function Certificate() {
     setAnimateCard(true);
   }, []);
 
-const handleSearch = async () => {
-  // Input validation
-  if (!sapCode.trim()) {
-    setError("Please enter a Product Code");
-    setPdfUrl(null);
-    return;
-  }
+  const handleSearch = async () => {
+    if (!productCode.trim() || !batchNo.trim()) {
+      setError("Both Product Code and Batch Number are required.");
+      setCoaList([]);
+      return;
+    }
 
-  if (!batchNumber.trim()) {
-    setError("Please enter a Batch Number");
-    setPdfUrl(null);
-    return;
-  }
+    setIsLoading(true);
+    setError("");
+    setCoaList([]);
 
-  setIsLoading(true); // Optional: show loader
-
-  try {
-    const formData = new FormData();
-    formData.append("sap_code", sapCode);
-    formData.append("batch_number", batchNumber);
+    try {
+      const formData = new FormData();
+      formData.append("ProductCode", productCode.trim().toLowerCase());
+      formData.append("BatchNo", batchNo.trim().toLowerCase());
 
     // Use .env API or fallback to Hostinger live URL
     // const apiEndpoint =
-    // process.env.REACT_APP_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
-    const apiEndpoint = process.env.REACT_APP_API_ENDPOINT || "https://dev.dimerscientific.com/dimer_api";
+    // process.env.NEXT_PUBLIC_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
+    const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT || "https://api.dimerscientific.com";
 
-    const response = await axios.post(`${apiEndpoint}/search.php`, formData);
+    const response = await axios.post(`${apiEndpoint}/coa_search.php`, formData);
 
-    if (response.data.status === "success") {
-      setPdfUrl(`${apiEndpoint}/${response.data.pdf_url}`);
-      setError("");
-    } else {
-      setError(response.data.message || "PDF not found.");
-      setPdfUrl(null);
+
+      if (response.data.status === "success" && Array.isArray(response.data.data) && response.data.data.length > 0) {
+        setCoaList(response.data.data);
+      } else {
+        setError(response.data.message || "No matching COA found.");
+      }
+    } catch (err) {
+      console.error("Fetch error:", err);
+      setError("An error occurred while fetching the COA.");
+    } finally {
+      setIsLoading(false);
     }
-  } catch (error) {
-    console.error("Error:", error);
-    setError("An error occurred while fetching the PDF.");
-    setPdfUrl(null);
-  } finally {
-    setIsLoading(false);
-  }
-};
+  };
 
   return (
     <div
@@ -71,26 +64,20 @@ const handleSearch = async () => {
       }}
     >
       <div
-        className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${
-          animateCard ? "fade-in" : ""
-        }`}
-        style={{  
-          maxWidth: "800px",
+        className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${animateCard ? "fade-in" : ""}`}
+        style={{
+          maxWidth: "900px",
           backgroundColor: "#fff",
           borderColor: "#d4af37",
           overflow: "hidden",
         }}
       >
-        {/* Optional Seal */}
+        {/* Seal */}
         <div style={{ position: "absolute", top: 20, right: 20, zIndex: 2 }}>
-          <img
-            src="/images/seal.png"
-            alt="Seal"
-            style={{ height: "80px", width: "80px" }}
-          />
+          <img src="/images/seal.png" alt="Seal" style={{ height: "80px", width: "80px" }} />
         </div>
 
-        {/* Optional Watermark */}
+        {/* Watermark */}
         <div
           style={{
             position: "absolute",
@@ -100,70 +87,56 @@ const handleSearch = async () => {
             zIndex: 0,
           }}
         >
-          <img
-            src="/images/molecule-watermark.png"
-            alt="Watermark"
-            width="300"
-          />
+          <img src="/images/molecule-watermark.png" alt="Watermark" width="300" />
         </div>
 
-        {/* Header */}
         <div style={{ zIndex: 2, position: "relative" }}>
-          <h2
-            className="text-center fw-bold mb-3"
-            style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}
-          >
+          <h2 className="text-center fw-bold mb-3" style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}>
             Certificate of Analysis
           </h2>
           <p className="text-center text-muted fst-italic mb-4">
             Please enter the product details to find your certificate.
           </p>
 
-          {/* Sample Formula */}
           <p className="text-center text-muted small mb-4">
-            <em>C₈H₉NO₂ + H₂O → Medical Base Compound</em>
+            <em>C₈H₉NO₂ + Batch → Quality Verified Output</em>
           </p>
 
-          {/* Form */}
           <form
             onSubmit={(e) => {
               e.preventDefault();
               handleSearch();
             }}
           >
-     
+            <div className="row">
+              <div className="col-md-6 mb-3">
+                <label htmlFor="batchNo" className="form-label fw-medium">Batch Number</label>
+                <input
+                  id="batchNo"
+                  type="text"
+                  placeholder="e.g., F25D430"
+                  value={batchNo}
+                  onChange={(e) => setBatchNo(e.target.value)}
+                  className="form-control form-control-lg border-2 rounded-3"
+                  disabled={isLoading}
+                />
+              </div>
 
-            <div className="mb-4">
-              <label htmlFor="batchNumber" className="form-label fw-medium">
-                Batch Number
-              </label>
-              <input
-                id="batchNumber"
-                type="text"
-                placeholder="e.g., #AB1235"
-                value={batchNumber}
-                onChange={(e) => setBatchNumber(e.target.value)}
-                className="form-control form-control-lg border-2 rounded-3"
-                disabled={isLoading}
-              />
+              <div className="col-md-6 mb-3">
+                <label htmlFor="productCode" className="form-label fw-medium">Product Code</label>
+                <input
+                  id="productCode"
+                  type="text"
+                  placeholder="e.g., 1001001"
+                  value={productCode}
+                  onChange={(e) => setProductCode(e.target.value)}
+                  className="form-control form-control-lg border-2 rounded-3"
+                  disabled={isLoading}
+                />
+              </div>
             </div>
 
-                   <div className="mb-3">
-              <label htmlFor="sapCode" className="form-label fw-medium">
-                Product Code
-              </label>
-              <input
-                id="sapCode"
-                type="text"
-                placeholder="e.g., 1001001"
-                value={sapCode}
-                onChange={(e) => setSapCode(e.target.value)}
-                className="form-control form-control-lg border-2 rounded-3"
-                disabled={isLoading}
-              />
-            </div>
-
-            <div className="d-grid mb-3">
+            <div className="d-grid mb-4">
               <button
                 type="submit"
                 className="btn btn-dark btn-lg rounded-3 btn-hover-scale"
@@ -171,17 +144,13 @@ const handleSearch = async () => {
               >
                 {isLoading ? (
                   <>
-                    <span
-                      className="spinner-border spinner-border-sm me-2"
-                      role="status"
-                      aria-hidden="true"
-                    ></span>
+                    <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                     Searching...
                   </>
                 ) : (
                   <>
                     <i className="bi bi-search me-2"></i>
-                    Search Certificate
+                    Search COA
                   </>
                 )}
               </button>
@@ -190,32 +159,42 @@ const handleSearch = async () => {
 
           {/* Error Alert */}
           {error && (
-            <div className="alert alert-danger d-flex align-items-center mt-3 fade-in">
+            <div className="alert alert-danger d-flex align-items-center fade-in">
               <i className="bi bi-exclamation-triangle-fill me-2"></i>
               <div>{error}</div>
             </div>
           )}
 
-          {/* Success Alert */}
-          {pdfUrl && (
-            <div className="alert alert-success mt-3 fade-in">
-              <div className="d-flex align-items-center mb-2">
-                <i className="bi bi-check-circle-fill me-2"></i>
-                <strong>Certificate Found Successfully!</strong>
+          {/* Results */}
+          {coaList.length > 0 && (
+            <div className="fade-in mt-4">
+              {/* Display once */}
+              <div className="alert alert-success d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
+                <div>
+                  <strong>Batch Number:</strong> {coaList[0]?.BatchNo || batchNo}
+                </div>
+                <div>
+                  <strong>Product Code:</strong> {coaList[0]?.ProductCode || productCode}
+                </div>
               </div>
-              <p className="mb-2 small">
-                Your certificate is ready for download.
-              </p>
-              <div className="d-grid">
-                <a
-                  href={pdfUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-success bounce-in btn-hover-scale"
-                >
-                  <i className="bi bi-file-earmark-pdf me-2"></i>
-                  Open Certificate PDF
-                </a>
+
+              {/* List of PDFs */}
+              <div className="list-group">
+                {coaList.map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.COAurl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                  >
+                    <span>
+                      <i className="bi bi-file-earmark-pdf me-2 text-danger"></i>
+                      Certificate {index + 1}
+                    </span>
+                    <span className="badge bg-primary rounded-pill">Download</span>
+                  </a>
+                ))}
               </div>
             </div>
           )}

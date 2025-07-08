@@ -12,15 +12,15 @@ const Banner = () => {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-xl-6 col-lg-7 col-md-12 col-12">
+            <div className="col-lg-6 col-md-7 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">COA</h2>
+                <h2 className="tp-breadcrumb__title">Periodic-Table</h2>
               </div>
             </div>
-            <div className="col-xl-6 col-lg-5 col-md-12 col-12">
-              <div className="tp-breadcrumb__link serv-md d-flex">
+            <div className="col-lg-6 col-md-5 col-12">
+              <div className="tp-breadcrumb__link d-flex align-items-center">
                 <span>
-                 <a href="/">Home</a>/<li className="breadcrumb-item active" aria-current="page">COA</li>
+                  <a href="/">Home</a> / <li className="breadcrumb-item active" aria-current="page">Resources</li> / <li className="breadcrumb-item active" aria-current="page">Periodic Table</li>
                 </span>
               </div>
             </div>

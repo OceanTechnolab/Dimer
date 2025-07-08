@@ -1,0 +1,10 @@
+.pd-table-header .rdt_TableHeadRow {
+  background-color: #f27e01;
+  color: #fff;
+}
+
+.pd-table-header .rdt_TableCol {
+  color: #fff;
+  font-weight: 600;
+  font-size: 20px;
+} 
