@@ -87,7 +87,7 @@ const GCReferenceStandardsArea = () => {
 
     try {
       const response = await fetch(
-        "https://dev.dimerscientific.com/get_category_products.php",
+        "https://api.dimerscientific.com/get_category_products.php",
         {
           method: "POST",
           body: formData,
