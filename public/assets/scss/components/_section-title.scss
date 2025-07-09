@@ -8,12 +8,15 @@
         display: inline-block;
     }
     &__title {
-        font-size: 43px;
+        font-size: 30px;
 		@media #{$xl} {
 			font-size: 40px;
 		}
 		@media #{$xs} {
 			font-size: 32px;
+		}
+		&:hover{
+			color: var(--tp-icon-blue);
 		}
     }
 	& i {
