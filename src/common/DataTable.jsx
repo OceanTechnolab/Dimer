@@ -30,15 +30,17 @@ const DataTable = ({ columns, data, title }) => {
   return (
     <div>
       {title && <h4 className="mb-3">{title}</h4>}
-      <div className="mb-3">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search..."
-          value={filterText}
-          onChange={e => setFilterText(e.target.value)}
-        />
-      </div>
+<div className="mb-3 d-flex justify-content-center align-items-center">
+    <div className='col-12 col-md-4'>
+      <input
+        type="text"
+        className="form-control"
+        placeholder="Search..."
+        value={filterText}
+        onChange={e => setFilterText(e.target.value)}
+      />
+    </div>
+  </div>
       <DataTableBase
         columns={columns}
         data={filteredData}
