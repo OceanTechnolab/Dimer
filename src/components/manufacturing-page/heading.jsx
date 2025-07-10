@@ -58,7 +58,7 @@ const Heading = () => {
               <div className="tp-about-thumb wow fadeInLeft" data-wow-delay=".3s">
                 <div className="tp-ab-img">
                   <img
-                    src="/assets/img/manufacturing/manufacuring.webp"
+                    src="/assets/img/manufacturing/manufacturing.webp"
                     alt="slide-1-img1"
                     className="img-fluid mb-3"
                   />
