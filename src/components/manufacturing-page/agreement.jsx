@@ -10,7 +10,7 @@ const Agreement = () => {
             <div className="col-md-6 col-mb-6" >
               <div className="tp-team-dtls__conten pl-0 mb-10 ">
                 <h1 className="tp-team-dtls__title mb-10">
-                  <a className="tital-agreement">Confidentiality Agreement (NDA)</a>
+                  <a className="title-agreement">Confidentiality Agreement (NDA)</a>
                 </h1>
                <div className="agreement">
                   <p className="agreement-text">
