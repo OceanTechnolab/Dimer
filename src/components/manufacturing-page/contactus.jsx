@@ -23,12 +23,12 @@ const ContactUs = () => {
                   <input type="text" placeholder="Enter your Name" />
                   <input type="text" placeholder="Enter your Mail" />
                   <textarea
-                    name="massage"
-                    placeholder="Type your massage"
+                    name="message"
+                    placeholder="Type your message"
                   ></textarea>
                 </form>
                 <div className="tp-support-form__btn">
-                  <button className="tp-btn">Send Massage</button>
+                  <button className="tp-btn">Send Message</button>
                 </div>
               </div>
             </div>
