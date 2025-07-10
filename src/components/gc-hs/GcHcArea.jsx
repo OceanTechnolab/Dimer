@@ -7,37 +7,37 @@ const GcHcArea = () => {
   const [loading, setLoading] = useState(true);
 
   const features = [
-    "Each batch is subjected to GC-HS analysis to ensure suitability for residual analysis in excipients or API.",
-    "Remarkable quality and low residue levels due to glass distilled GC-HS solvents.",
-    "Appropriately clean chromatogram in the appropriate elution range with a stable base line and minimal signal-to-noise ratio.",
-    "Low water content & High UV transmission.",
+    "Trustworthy for leftover solvent checks: Every lot is pre-checked, so it finds residual solvents in drug components precisely, without getting in the way.",
+    "Super Clean: Produced by special distillation, they contain hardly any unwanted substances, leading to more precise tests.",
+    "Easy-to-Read Data: They generate neat charts with steady backgrounds, simplifying the process of finding and measuring compounds. ",
+    "Improved Accuracy: Minimal water and excellent UV transparency lead to more exact and trustworthy analytical outcomes. ",
   ];
 
   const columns = [
     {
       name: "Code",
       selector: (row) => row.ProductCode,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "CAS No.",
       selector: (row) => row.CASNo,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "Grade",
       selector: (row) => row.Grade,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "Pack Size",
       selector: (row) => row.PackSize,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "PDF",
@@ -88,7 +88,7 @@ const GcHcArea = () => {
     try {
       const response = await fetch(
         "https://api.dimerscientific.com/get_category_products.php",
-        
+
         {
           method: "POST",
           body: formData,
@@ -108,11 +108,26 @@ const GcHcArea = () => {
     }
   };
 
+  // Helper function to render feature text with bold title
+  const renderFeatureText = (feature) => {
+    const colonIndex = feature.indexOf(':');
+    if (colonIndex === -1) return feature;
+    
+    const title = feature.substring(0, colonIndex);
+    const description = feature.substring(colonIndex);
+    
+    return (
+      <>
+        <strong>{title}</strong>{description}
+      </>
+    );
+  };
+
   return (
     <section className="shop-area pt-120 pb-70">
       <div className="container">
         <div className="shop-left-right ml-130 mr-130">
-          <div className="row">
+          <div className="row align-items-center">
             {/* Left - Product Image */}
             <div className="col-lg-6 col-md-6">
               <div
@@ -133,25 +148,21 @@ const GcHcArea = () => {
                 data-wow-delay=".4s"
               >
                 <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-30">HEAD-SPACE SOLVENTS</h5>
+                  <h5 className="product-dtitle mb-3 mb-lg-4">GC-HS solvents </h5>
                   <p className="pd-description">
-                    GC-Headspace (GC-HS) is the technique used to determine
-                    Organic Volatile Impurities (OVIs) in pharmaceutical
-                    products. Our specialized solvents are designed to be free
-                    from volatile impurities that may interfere with GC-HS
-                    analysis, following USP 467 and EP 2.4.24 guidelines.
+                    The determination of Organic Volatile Impurities (OVI)
+                    utilizes the GC-Headspace technique, which necessitates the
+                    use of organic solvents to dissolve or extract the sample.
+                    These solvents must be free of impurities to prevent
+                    interference with the GC-HS analysis. Methods for
+                    identifying and quantifying these solvents in pharmaceutical
+                    products, addressing potential human health risks, are
+                    detailed in Chapter 467 of the USP and Chapter 2.4.24 of the
+                    European Pharmacopoeia. To enhance the accuracy of GC-HS
+                    analysis, we have developed a range of GC-HS solvents
+                    specifically designed to be free from volatile impurities
+                    that could cause interference.
                   </p>
-
-                  <div className="row">
-                    {features.map((feature, index) => (
-                      <div key={index} className="col-sm-6 mb-3">
-                        <div className="pd-arrow-point">
-                          <span className="pd-arrow-icon">➤</span>
-                          <p className="pd-arrow-text">{feature}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
@@ -176,7 +187,7 @@ const GcHcArea = () => {
                         <div className="pd-check-circle">
                           <span className="pd-check-mark">✓</span>
                         </div>
-                        <p className="pd-feature-text">{feature}</p>
+                        <p className="pd-feature-text">{renderFeatureText(feature)}</p>
                       </div>
                     </div>
                   ))}

@@ -7,10 +7,13 @@ const LcMsArea = () => {
   const [loading, setLoading] = useState(true);
 
   const features = [
-    "High purity solvents for LC-MS applications, ensuring minimal background noise and high sensitivity.",
-    "Low levels of metal ions and other contaminants.",
-    "Optimized for mass spectrometry detection with high UV transmission.",
-    "Consistent lot-to-lot quality for reproducible results."
+    "Exceptional Purity: These solvents are highly purified to minimize residues, contaminants, and metal ions. This prevents instrument clogging, reduces background noise, and ensures accurate measurement of target substances",
+    "Enhanced Detection: Their purity allows for the detection of very small amounts of substances, leading to better sensitivity and clearer signals. ",
+    "Consistent Results: Each batch is uniform, ensuring that analytical methods work reliably across different tests and over time. ",
+    "Increased Instrument Longevity: Low levels of impurities protect the LC-MS equipment, extending its operational life and reducing maintenance. ",
+    "Clear UV Readings: For methods using UV detection, these solvents provide stable baselines and high sensitivity.",
+    "Performance Verified: Manufacturers specifically test each batch to confirm its suitability for demanding LC-MS applications.",
+    "Fewer Analytical Problems: Using pure solvents significantly reduces issues caused by contamination, saving time and effort.",
   ];
 
   const columns = [
@@ -107,11 +110,26 @@ const LcMsArea = () => {
     }
   };
 
+  // Helper function to render feature text with bold title
+  const renderFeatureText = (feature) => {
+    const colonIndex = feature.indexOf(":");
+    if (colonIndex === -1) return feature;
+
+    const title = feature.substring(0, colonIndex);
+    const description = feature.substring(colonIndex);
+
+    return (
+      <>
+        <strong>{title}</strong>
+        {description}
+      </>
+    );
+  };
   return (
     <section className="shop-area pt-120 pb-70">
       <div className="container">
         <div className="shop-left-right ml-130 mr-130">
-          <div className="row">
+          <div className="row align-items-center">
             {/* Left - Product Image */}
             <div className="col-lg-6 col-md-6">
               <div
@@ -134,19 +152,18 @@ const LcMsArea = () => {
                 <div className="product__details-content mb-40">
                   <h5 className="product-dtitle mb-30">LC-MS SOLVENTS</h5>
                   <p className="pd-description">
-                    Our LC-MS solvents are specially purified and filtered to ensure the highest performance in liquid chromatography-mass spectrometry applications. They are ideal for trace analysis and sensitive detection, providing low background and high reproducibility.
+                    LC-MS solvents are highly specialized, ultra-high purity
+                    solvents used in Liquid Chromatography-Mass Spectrometry
+                    (LC-MS), a powerful analytical technique that combines the
+                    separation capabilities of liquid chromatography with the
+                    identification and quantification abilities of mass
+                    spectrometry. LC-MS grade solvents provide substantial
+                    benefits for precise and reliable Liquid Chromatography-Mass
+                    Spectrometry.n essence, LC-MS solvents are meticulously
+                    crafted to meet the stringent demands of LC-MS, guaranteeing
+                    superior data quality, extended instrument lifespan, and
+                    dependable analytical outcomes.
                   </p>
-
-                  <div className="row">
-                    {features.map((feature, index) => (
-                      <div key={index} className="col-sm-6 mb-3">
-                        <div className="pd-arrow-point">
-                          <span className="pd-arrow-icon">➤</span>
-                          <p className="pd-arrow-text">{feature}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
@@ -171,7 +188,9 @@ const LcMsArea = () => {
                         <div className="pd-check-circle">
                           <span className="pd-check-mark">✓</span>
                         </div>
-                        <p className="pd-feature-text">{feature}</p>
+                        <p className="pd-feature-text">
+                          {renderFeatureText(feature)}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -199,4 +218,4 @@ const LcMsArea = () => {
   );
 };
 
-export default LcMsArea; 
+export default LcMsArea;
