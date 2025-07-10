@@ -53,7 +53,7 @@ const answer_question_data = [
   },
   {
     id: 4,
-    question: " Can I rely on Dimer for timely and dependable deliveries?",
+    question: "Can I rely on Dimer for timely and dependable deliveries?",
     answer: (
       <>
         Absolutely. We prioritize reliability and timely dispatches, backed by well-managed logistics and 
