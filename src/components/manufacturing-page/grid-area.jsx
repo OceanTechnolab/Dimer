@@ -23,7 +23,7 @@ const slider_content = [
     id: 3,
     icon: "fa-solid fa-scale-balanced",
     title: "Competitive pricing",
-    des: "offring Cost-effective solutions that deliver high value without compromising quality.",
+    des: "offering Cost-effective solutions that deliver high value without compromising quality.",
     color_icon: "green-icon",
     color: "green-hexa",
   },
