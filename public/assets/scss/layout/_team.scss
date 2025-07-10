@@ -455,3 +455,14 @@
     }
   }
 }
+
+img.agr {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* default shadow */
+  border-radius: 10px; /* optional */
+}
+
+img.agr:hover {
+  box-shadow: 0 0 30px var(--tp-icon-blue); /* orange glow on hover */
+  transform: scale(1.03); /* slight zoom effect */
+}

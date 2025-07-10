@@ -3,7 +3,7 @@ import React from "react";
 const ContactUs = () => {
   return (
     <>
-      <section className="support-area grey-bg pt-125 pb-130">
+      <section className="support-area grey-bg pt-20 pb-130">
         <div className="container">
           <div className="row text-center">
             <div className="col-lg-12 col-md-12 col-12">

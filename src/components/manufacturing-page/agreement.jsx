@@ -4,19 +4,11 @@ import React from "react";
 const Agreement = () => {
   return (
     <>
-      <section className="team-details-area pt-50 pb-10">
+      <section className="about-area pt-50 pb-10">
         <div className="container">
-          <div className="row">
-            <div className="col-lg-5 col-md-6">
-              <div className="tp-team-dtls__thumb mb-50 ">
-                <img
-                  src="/assets/img/team/form.webp"
-                  alt="team-thumb"
-                />
-              </div>
-            </div>
-            <div className="col-md-6 col-mb-6">
-              <div className="tp-team-dtls__conten pl-0 mb-10">
+          <div className="agerment-row">
+            <div className="col-md-6 col-mb-6" >
+              <div className="tp-team-dtls__conten pl-0 mb-10 ">
                 <h1 className="tp-team-dtls__title mb-10">
                   <a className="tital-agreement">Confidentiality Agreement (NDA)</a>
                 </h1>
@@ -36,6 +28,14 @@ const Agreement = () => {
                     approach, today Dimer brand products have achieved a respectable & reliable place in the industry across the globe.
                   </p>
                 </div>
+              </div>
+            </div>
+             <div className="col-lg-5 col-md-6 pl-40 pr-40">
+              <div className="tp-team-dtls__thumb mb-50 ">
+                <img className="agr"
+                  src="/assets/img/team/form.webp"
+                  alt="team-thumb"
+                />
               </div>
             </div>
           </div>

@@ -43,7 +43,9 @@ const Facility = () => {
           {/* Left: Image */}
           <div className="col-xl-6 col-lg-12 col-12">
             <div className="about-thumb text-lg-center p-relative mb-60 wow fadeInLeft" data-wow-delay=".3s">
-              <img src={about_img} alt="about-thumb" />
+              <div className="facility-container">
+                 <img src="/assets/img/about/infrastructure.webp" className="facility-image" alt="Facility" />
+                  </div>
             </div>
           </div>
 
@@ -51,7 +53,7 @@ const Facility = () => {
           <div className="col-xl-6 col-lg-12 col-12">
             <div className="about-content mb-60 wow fadeInRight" data-wow-delay=".3s">
               <h3 className="tp-section__title mb-45">Infrastructure & Facility Overview</h3>
-              <h4>At Dimer Scientific, our facilities are built for precision, performance, and scalability.</h4>
+              <h4 className="performace">At Dimer Scientific, our facilities are built for precision, performance, and scalability.</h4>
 
               <div className="row">
                 {infoBoxes.map((item, idx) => (
