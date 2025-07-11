@@ -90,6 +90,35 @@
     }
   }
 }
+
+.tp-about1 {
+  &__info-list {
+    & ul {
+      & li {
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 34px;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        & i {
+          font-size: 20px;
+          color: var(--tp-icon-green);
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+  &__content {
+    @media #{$lg,$md,$xs} {
+      margin-left: 0;
+    }
+  }
+}
 .about-thumb-shape {
   position: absolute;
   bottom: 0;
@@ -154,6 +183,14 @@
   font-weight: 400;
   @media #{$xs} {
     font-size: 30px;
+  }
+}
+
+.ab-title1 {
+  font-size: 30px;
+  font-weight: 400;
+  &:hover{
+    color: var(--tp-icon-blue);
   }
 }
 .about-align {
