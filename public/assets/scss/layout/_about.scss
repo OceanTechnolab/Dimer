@@ -166,7 +166,8 @@
   & ul {
     & li {
       & i {
-        color: var(--tp-theme-blue);
+        //color: var(--tp-theme-blue);
+        color: #F27e01;
       }
     }
   }
@@ -198,7 +199,7 @@
   border-radius: 5px;
   width: 236px;
   height: 258px;
-  padding: 31px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
   left: 50px;
   bottom: 7px;
   @media #{$xl} {
@@ -254,4 +255,22 @@
 }
 .tp-ab-sm-title {
   font-size: 36px;
+}
+
+.label-points-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.label-points-list li i {
+  color: #ffa500; /* saffron circle */
+  margin-right: 10px;
+  font-size: 10px;
+  padding-top: 6px;
+}
+
+.label-points-list li {
+  align-items: start;
+  padding: 10px;
 }

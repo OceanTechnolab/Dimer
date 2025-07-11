@@ -49,6 +49,14 @@
   padding: 0;
   box-sizing: border-box;
 }
+.img.rounded-md.shadow-md {
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .container,
 .container-fluid,
 .container-xxl,
@@ -93,6 +101,7 @@ h6 {
   margin-top: 0px;
   font-weight: var(--tp-fw-sbold);
   line-height: 1.2;
+  margin-top: 50px;
   @include transition(0.3s);
 }
 
@@ -102,6 +111,16 @@ h1 {
 
 h2 {
   font-size: 32px;
+}
+.label-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.label-heading:hover {
+  color: #f27e01;
 }
 
 h3 {

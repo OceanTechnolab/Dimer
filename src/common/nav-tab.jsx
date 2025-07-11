@@ -48,17 +48,18 @@ const tab_content = [
     aria_labelledby: "profile-tab",
     header: (
       <>
-        Your full service lab for clinical trials. Our process is to ensure the
-        generation of <br /> accurate and precise findings
+        At Dimer Scientific, we aim to lead through energy,
+         innovation, and trust,<br /> empowering researchers and 
+         industries to explore new frontiers in chemistry.
       </>
     ),
-    title: "Our Mission is Give You Always Best Results.",
+    title: "Our Vision is Give You Always Best Results.",
     des_1: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        We envision a future where every experiment is
+        enabled, every formulation supported, and every
+        challenge in fine & specialty chemicals is met
+        with smart, scalable, and sustainable solutions.
       </>
     ),
     des_2: (
@@ -68,7 +69,7 @@ const tab_content = [
       </>
     ),
     images: [
-      { order: "order-lg-1", img: "/assets/img/tab/tab-thumb-03.jpg" },
+      { order: "order-lg-1", img: "/assets/img/tab/Vision-1.png" },
       { order: "order-lg-3", img: "/assets/img/tab/tab-thumb-04.jpg" },
     ],
   },
@@ -121,7 +122,7 @@ const NavTab = () => {
                 aria-selected="true"
                 tabIndex="-1"
               >
-                Our Process
+                Our Mission
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -136,7 +137,7 @@ const NavTab = () => {
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUr Mission
+                Our Vision
               </button>
             </li>
             <li className="nav-item" role="presentation">
