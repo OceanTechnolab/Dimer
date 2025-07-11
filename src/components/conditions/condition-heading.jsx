@@ -5,7 +5,7 @@ import React from "react";
 const Conditionheading = () => {
   return (
     <>
-      <section className="team-details-area pt-130 pb-70">
+      <section className="team-details-area pt-10 pb-70">
         <div className="container">
           <div className="row">
               <div className="tp-team-dtls__content mt-50 mb-50">
@@ -35,25 +35,22 @@ const Conditionheading = () => {
                 experience.Our website uses cookies to enhance your experience by enabling key features. Additionally, our affiliat
                  and advertising partners may also utilize cookies.
                 </p>
-                 <p>
-                    <a>Email</a> :{" "}
-                    
-                    <a className="info"
-                      href="mailto:info@white-mongoose-785996.hostingersite.com"
-                      >
-                       Info@dimerscientific.com
-                    </a>
-                </p>
-                <p>
-                    <a>Contact Number</a> :{" "}
-                    <a className="info">
-                    <a href="tel:+911234567890">
-                       +91-63588 18151
-                       </a>
-                    </a>
-                </p>
-                </div>  
               </div>
+                <div className="tp-team-for">
+                <p>
+               <strong>Email</strong>:{' '}
+                <a href="mailto:Info@dimerscientific.com.hostingersite.com">
+                  Info@dimerscientific.com
+                </a>
+              </p>
+              </div>
+              <div className="number">
+              <p>
+                 <strong>Contact Number</strong>:{' '}
+                  <a href="tel:+916358818151">+91 6358848151</a>
+              </p>
+              </div>
+                </div>  
           </div>
       </section>
     </>

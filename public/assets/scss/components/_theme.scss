@@ -422,9 +422,23 @@ input[type="color"] {
     animation: preloader 3s linear infinite;
   }
 }
-.info:hover{
-      color: var(--tp-icon-blue);
+
+.tp-team-for p {
+  font-size: 20px;
 }
-.email-terms{
-  font-size: 10px;
+.tp-team-for a:hover {
+  color: var(--tp-icon-blue);
+}
+.tp-team-for strong {
+  color: var(--tp-common-black);
+}
+
+.number p {
+  font-size: 20px;
+}
+.number a:hover {
+  color: var(--tp-icon-blue);
+}
+.number strong {
+  color: var(--tp-common-black);
 }
