@@ -403,3 +403,13 @@ input[type="color"] {
     animation: preloader 3s linear infinite;
   }
 }
+
+.cert-images-section img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-images-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px var(--tp-icon-blue);
+  z-index: 2;
+}
