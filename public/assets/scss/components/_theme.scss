@@ -403,3 +403,9 @@ input[type="color"] {
     animation: preloader 3s linear infinite;
   }
 }
+.info:hover{
+      color: var(--tp-icon-blue);
+}
+.email-terms{
+  font-size: 10px;
+}
