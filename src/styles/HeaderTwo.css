@@ -784,3 +784,7 @@ html, body {
     flex-shrink: 0;
   }
 }
+
+.tp-policy{
+  text-align: justify;
+}
