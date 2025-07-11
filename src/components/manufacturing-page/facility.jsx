@@ -53,7 +53,7 @@ const Facility = () => {
           <div className="col-xl-6 col-lg-12 col-12">
             <div className="about-content mb-60 wow fadeInRight" data-wow-delay=".3s">
               <h3 className="tp-section__title mb-45">Infrastructure & Facility Overview</h3>
-              <h4 className="performace">At Dimer Scientific, our facilities are built for precision, performance, and scalability.</h4>
+              <h5 className="performace">At Dimer Scientific, our facilities are built for precision, performance, and scalability.</h5>
 
               <div className="row">
                 {infoBoxes.map((item, idx) => (

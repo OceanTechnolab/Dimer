@@ -131,7 +131,7 @@ h2.heading{
 }
 .description{
   font-size: 18px;
-  font-weight: bold;
+  text-align: justify;
 }
 h3 {
   font-size: 28px;
@@ -149,6 +149,7 @@ h5 {
 h5.subheading{
   color: var(--tp-icon-blue);
   font-size: 25px;
+  text-align: justify;
 }
 
 h6 {
@@ -542,7 +543,7 @@ a.tital-agreement{
   opacity: 1;
   transform: translateY(0);
 }
-h4.performace
+h5.performace
  {
     padding-bottom: 25px;
 }
