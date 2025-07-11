@@ -33,7 +33,6 @@
     20. CART CSS START
     21. PORTFOLIO CSS START
     22. FOOTER CSS START
-    23. table CSS START
 
 
 **********************************************/
@@ -694,12 +693,13 @@ input[type=color] {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(23, 17, 81, 0.7);
+  background-color: #0b7d82;
   z-index: -1;
 }
 
 .tp-breadcrumb__title {
   color: var(--tp-common-white);
+  position: absolute;
   font-weight: 400;
   font-size: 55px;
   text-transform: uppercase;
@@ -8287,13 +8287,5 @@ p.checkout-coupon input[type=text]:focus {
 .tp-footer-white-content .footer-widget__copyright-info a {
   color: var(--tp-text-1);
 }
-
-.highlight-box {
-  background-color: #f9f3dc;
-  border: 2px solid #f27e01;
-  border-radius: 8px;
-  padding: 20px;
-}
-
 
 /*# sourceMappingURL=style.css.map */

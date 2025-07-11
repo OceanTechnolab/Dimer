@@ -6,26 +6,30 @@ const counter_text = [
   {
     id: 1,
     color: "blue-hard",
-    counter: 1492,
-    text: "Laboratories in 100+ states",
+    counter: 10, 
+    
+    text: "of R&D Excellence in Fine & Specialty Chemicals",
+    suffix: "+",
   },
   {
     id: 2,
     color: "pink-hard",
-    counter: 152,
-    text: "Laboratory specialists",
+    counter: 25000,
+    suffix: "+",
+    text: "Research & Industrial Chemicals in Our Portfolio",
   },
   {
     id: 3,
     color: "sky-hard",
-    counter: 1022,
-    text: "Material collection points",
+    counter: 48,
+    text: "Average Dispatch Time with Ready Stock & Quick Logistics",
   },
   {
     id: 4,
     color: "green-hard",
-    counter: 24333,
-    text: "Patients diagnosed in 2022",
+    counter:  12,
+    suffix: "+",
+    text: "Industries Served Across Pharma, Agriculture, and Petrochemicals. ",
   },
 ];
 
@@ -49,6 +53,7 @@ const Counter = ({ cls = "pt-40 pb-100"  }) => {
                       <span className="counter">
                         <Count  number={item.counter} />
                       </span>
+                       <span className="suffix">{item.suffix}</span>
                     </h4>
                     <p>{item.text}</p>
                   </div>
