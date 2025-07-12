@@ -151,6 +151,7 @@ const menu_data = [
       { link: "/coa", title: "COA" },
       { link: "/blog-details", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
+       { link: "/label-identification", title: "Label Identification Guide" },
       { link: "/blog-details", title: "Terms & conditions" },
       { link: "/blog-details", title: "Applications " },
       { link: "/blog-details", title: "Custom synthesis" },
