@@ -114,7 +114,7 @@ const menu_data = [
         ]
       },
       {
-        link: "/service-2",
+        link: "/gc-reference-standards",
         title: "GC reference standards",
         has_dropdown: false
       },
