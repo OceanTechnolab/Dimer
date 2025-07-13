@@ -135,7 +135,7 @@ const GcHcArea = () => {
                 data-wow-delay=".4s"
               >
                 <img
-                  src="/assets/img/productdetails/gchc.png"
+                  src="/assets/img/productdetails/GC-HS_solvent.svg"
                   alt="product-thumb"
                 />
               </div>

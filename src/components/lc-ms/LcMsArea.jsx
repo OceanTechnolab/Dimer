@@ -137,7 +137,7 @@ const LcMsArea = () => {
                 data-wow-delay=".4s"
               >
                 <img
-                  src="/assets/img/productdetails/gchc.png"
+                  src="/assets/img/productdetails/LC-MS_solvent.svg"
                   alt="product-thumb"
                 />
               </div>
