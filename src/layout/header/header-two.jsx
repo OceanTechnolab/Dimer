@@ -12,6 +12,7 @@ const HeaderTwo = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdowns, setOpenDropdowns] = useState({});
   const [searchFocused, setSearchFocused] = useState(false);
+  const [searchValue, setSearchValue] = useState("");
 
   const toggleDropdown = (id) => {
     setOpenDropdowns((prev) => {
@@ -121,7 +122,7 @@ const HeaderTwo = () => {
           </Link>
         </div>
 
-        <form className="header-search-bar d-flex align-items-center flex-grow-1 mx-4">
+        <form className="header-search-bar d-flex align-items-center flex-grow-1 mx-4" onSubmit={e => { e.preventDefault(); if (searchValue.trim()) router.push(`/search?q=${encodeURIComponent(searchValue)}`); }}>
           <div className={`search-container ${searchFocused ? "focused" : ""}`}>
             <div className="search-input-wrapper">
               <input
@@ -130,11 +131,17 @@ const HeaderTwo = () => {
                   searchFocused ? "focused" : ""
                 }`}
                 placeholder="Search product..."
+                value={searchValue}
+                onChange={e => setSearchValue(e.target.value)}
                 onFocus={() => setSearchFocused(true)}
                 onBlur={() => setSearchFocused(false)}
               />
             </div>
-            <button type="button" className="category-button btn">
+            <button
+              type="submit"
+              className="category-button btn"
+              aria-label="Search"
+            >
               <FaSearch />
             </button>
           </div>

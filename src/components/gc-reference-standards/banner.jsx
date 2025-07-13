@@ -7,7 +7,7 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url("/assets/img/banner/gchs-banner.png")`,
+          backgroundImage: `url('/assets/img/productdetails/gchc.png')`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -16,14 +16,13 @@ const Banner = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-7 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">GC-HS</h2>
+                <h2 className="tp-breadcrumb__title">GC Reference Standards</h2>
               </div>
             </div>
             <div className="col-lg-6 col-md-5 col-12">
               <div className="tp-breadcrumb__link d-flex align-items-center">
                 <span>
-                  Dimer Scientific :{" "}
-                  <Link href="/blog-details"> Blog Details</Link>
+                  Dimer Scientific : <Link href="/blog-details"> Blog Details</Link>
                 </span>
               </div>
             </div>
@@ -34,4 +33,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Banner; 

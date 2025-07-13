@@ -1,15 +1,15 @@
+import Search from "@/components/search/search";
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
 import React from "react";
-import Hplc from "@/components/hplc/hplc";
 
-const HPLCPage = () => {
+const index = () => {
   return (
     <Wrapper>
-      <SEO pageTitle="HPLC Solvents" />
-      <Hplc />
+      <SEO pageTitle={"contact us"} />
+      <Search />
     </Wrapper>
   );
 };
 
-export default HPLCPage; 
+export default index;
