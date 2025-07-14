@@ -35,8 +35,43 @@ const GcHcArea = () => {
       sortable: false,
     },
     {
-      name: "Pack Size",
-      selector: (row) => row.PackSize,
+      name: "Price (500 mL)",
+      selector: (row) => row.price_500ml || "-",
+      sortable: false,
+    },
+    {
+      name: "HSN (500 mL)",
+      selector: (row) => row.hsn_code_500ml || "-",
+      sortable: false,
+    },
+    {
+      name: "GST (500 mL)",
+      selector: (row) => row.gst_500ml || "-",
+      sortable: false,
+    },
+    {
+      name: "Stock (500 mL)",
+      selector: (row) => row.stock_500ml ?? "-",
+      sortable: false,
+    },
+    {
+      name: "Price (1 L)",
+      selector: (row) => row.price_1l || "-",
+      sortable: false,
+    },
+    {
+      name: "HSN (1 L)",
+      selector: (row) => row.hsn_code_1l || "-",
+      sortable: false,
+    },
+    {
+      name: "GST (1 L)",
+      selector: (row) => row.gst_1l || "-",
+      sortable: false,
+    },
+    {
+      name: "Stock (1 L)",
+      selector: (row) => row.stock_1l ?? "-",
       sortable: false,
     },
     {
@@ -88,7 +123,6 @@ const GcHcArea = () => {
     try {
       const response = await fetch(
         "https://api.dimerscientific.com/get_category_products.php",
-
         {
           method: "POST",
           body: formData,
@@ -108,14 +142,13 @@ const GcHcArea = () => {
     }
   };
 
-  // Helper function to render feature text with bold title
   const renderFeatureText = (feature) => {
-    const colonIndex = feature.indexOf(':');
+    const colonIndex = feature.indexOf(":");
     if (colonIndex === -1) return feature;
-    
+
     const title = feature.substring(0, colonIndex);
     const description = feature.substring(colonIndex);
-    
+
     return (
       <>
         <strong>{title}</strong>{description}
@@ -128,25 +161,14 @@ const GcHcArea = () => {
       <div className="container">
         <div className="shop-left-right ml-130 mr-130">
           <div className="row align-items-center">
-            {/* Left - Product Image */}
             <div className="col-lg-6 col-md-6">
-              <div
-                className="productthumb mb-40 wow fadeInRighLeft"
-                data-wow-delay=".4s"
-              >
-                <img
-                  src="/assets/img/productdetails/GC-HS_solvent.svg"
-                  alt="product-thumb"
-                />
+              <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
+                <img src="/assets/img/productdetails/GC-HS_solvent.svg" alt="product-thumb" />
               </div>
             </div>
 
-            {/* Right - Description */}
             <div className="col-lg-6 col-md-6">
-              <div
-                className="product mb-40 ml-20 wow fadeInRighRight"
-                data-wow-delay=".4s"
-              >
+              <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
                 <div className="product__details-content mb-40">
                   <h5 className="product-dtitle mb-3 mb-lg-4">GC-HS solvents </h5>
                   <p className="pd-description">
@@ -168,7 +190,6 @@ const GcHcArea = () => {
             </div>
           </div>
 
-          {/* Features & Benefits */}
           <div className="row mb-5">
             <div className="col-12">
               <div className="pd-feature-section">
@@ -196,7 +217,6 @@ const GcHcArea = () => {
             </div>
           </div>
 
-          {/* Product Table */}
           <div className="row mb-5">
             <div className="col-12">
               <div className="text-center">
