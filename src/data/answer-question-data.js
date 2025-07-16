@@ -1,16 +1,12 @@
 const answer_question_data = [
   {
     id: 1,
-    question: "What payment do you except?",
+    question: "How does Dimer ensure high quality and consistency in its processes?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+       At Dimer, we follow quality-driven processes that are designed to maintain excellence and 
+       repeatability across all stages—from R&D to production and packaging. Our facilities are ISO
+      9001 and GMP certified, reinforcing our commitment to global quality standards.
       </>
     ),
     accordion_id: "headingOne",
@@ -22,16 +18,12 @@ const answer_question_data = [
   },
   {
     id: 2,
-    question: "Who performs the testing on laboratory specimens?",
+    question: "How cost-effective are Dimer’s chemical solutions?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        We believe in economical resource maximization—offering the best value without compromising 
+        on quality. Our supply chain and bulk inventory systems help us keep prices competitive and 
+        delivery timelines short.
       </>
     ),
     accordion_id: "headingTwo",
@@ -44,16 +36,11 @@ const answer_question_data = [
   },
   {
     id: 3,
-    question: "What are laboratory tests?",
+    question: "Is batch-to-batch consistency guaranteed?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+       Yes. Batch-to-batch consistency is a cornerstone of our manufacturing. Our QC systems are aligned 
+       with ISO 17034 standards, ensuring each batch meets precise technical parameters and regulatory requirements.
       </>
     ),
     accordion_id: "headingThree",
@@ -66,16 +53,11 @@ const answer_question_data = [
   },
   {
     id: 4,
-    question: "Who performs the testing on laboratory specimens?",
+    question: "Can I rely on Dimer for timely and dependable deliveries?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Absolutely. We prioritize reliability and timely dispatches, backed by well-managed logistics and 
+        a ready stock of over 25,000+ SKUs. This helps us support our partners with minimal lead time and predictable supply.
       </>
     ),
     accordion_id: "headingFour",
@@ -88,16 +70,11 @@ const answer_question_data = [
   },
   {
     id: 5,
-    question: "How can I be sure that my property is in good hands?",
+    question: "How does Dimer manage communication with clients?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Effective communication is central to our client engagement. We maintain transparent, prompt, and 
+        professional collaboration with partners—right from inquiry to delivery and post-sales support.
       </>
     ),
     accordion_id: "headingFive",
@@ -110,16 +87,12 @@ const answer_question_data = [
   },
   {
     id: 6,
-    question: "Do I have tp fast before my laboratory",
+    question: "Who makes up the Dimer team?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+         Dimer is powered by a team of skilled professionals with expertise across research, chemical 
+         synthesis, quality control, and international marketing. Our experienced chemists and support 
+         staff ensure innovation and integrity in every project.
       </>
     ),
     accordion_id: "headingSix",
@@ -132,16 +105,11 @@ const answer_question_data = [
   },
   {
     id: 7,
-    question: "How to Create account and login Regularly??",
+    question: "Does Dimer support long-term supply partnerships?",
     answer: (
       <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
+        Yes. We are structured to handle long-term supply contracts, offering stability, scalability, and trust. 
+        Our clients include reputed institutions and industries who rely on us for consistent support over years.
       </>
     ),
     accordion_id: "headingSeven",
@@ -149,28 +117,6 @@ const answer_question_data = [
     data_bs_target: "#collapseSeven",
     aria_expanded: false,
     aria_controls: "collapseSeven",
-    show: ""
-
-  },
-  {
-    id: 8,
-    question: "What forms of payment do you accept?",
-    answer: (
-      <>
-        Laboratories used for scientific research take many forms because of the
-        differing requirements of specialists in the various fields of science
-        and <br />
-        engineering. A physics laboratory might contain a particle accelerator
-        or vacuum chamber, while a metallurgy laboratory could have apparatus
-        for <br />
-        casting or refining metals or for testing their strength.
-      </>
-    ),
-    accordion_id: "headingEight",
-    collapsed: "collapsed",
-    data_bs_target: "#collapseEight",
-    aria_expanded: false,
-    aria_controls: "collapseEight",
     show: ""
 
   },

@@ -67,7 +67,7 @@ const slider_content = [
   },
 ];
 
-const ServiceArea = () => {
+const  ServiceArea = () => {
   const [isLoop, setIsLoop] = useState(false);
   useEffect(() => {
     setIsLoop(true);

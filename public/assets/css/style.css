@@ -8288,4 +8288,14 @@ p.checkout-coupon input[type=text]:focus {
   color: var(--tp-text-1);
 }
 
+.highlight-box {
+  background-color: #f9f3dc;
+  border: 2px solid #f27e01;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+
+
 /*# sourceMappingURL=style.css.map */
