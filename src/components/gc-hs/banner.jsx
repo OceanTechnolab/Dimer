@@ -24,7 +24,7 @@ const Banner = () => {
               <div className="tp-breadcrumb__link d-flex align-items-center">
                 <span>
                   {/* Home /{" "} */}
-                  <Link href="https://demo.dimerscientific.com/"> Home</Link> /
+                  <Link href="/"> Home</Link> /
                   <Link href="/gc-hs"> GC HS Solvents</Link>
                 </span>
               </div>
