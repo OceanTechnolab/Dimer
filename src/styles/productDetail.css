@@ -28,6 +28,7 @@
   display: flex;
   align-items: flex-start;
   background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 10px;
   backdrop-filter: blur(10px);
@@ -38,7 +39,7 @@
 
 .pd-feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+
 }
 
 /* Check Circle */
@@ -92,5 +93,6 @@
 
 .pd-table-header th {
   background-color: #f27e01;
-  color: #fff; /* Optional: make text white for contrast */
+  color: #fff;
+  /* Optional: make text white for contrast */
 }
