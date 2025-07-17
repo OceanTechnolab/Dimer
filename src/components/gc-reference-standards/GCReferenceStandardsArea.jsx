@@ -15,59 +15,101 @@ const GCReferenceStandardsArea = () => {
 
   const columns = [
     {
-      name: "Code",
+      name: "Product Code",
       selector: (row) => row.ProductCode,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "CAS No.",
       selector: (row) => row.CASNo,
-      sortable: true,
-    },
-    {
-      name: "Grade",
-      selector: (row) => row.Grade,
-      sortable: true,
+      sortable: false,
     },
     {
       name: "Pack Size",
-      selector: (row) => row.PackSize,
-      sortable: true,
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom:
+                  index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              {p.pack_size}
+            </div>
+          ))}
+        </div>
+      ),
+      sortable: false,
     },
     {
-      name: "PDF",
+      name: "Price (INR)",
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom:
+                  index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              INR {Number(p.price).toFixed(2)}
+            </div>
+          ))}
+        </div>
+      ),
+      sortable: false,
+    },
+    {
+      name: "Stock",
+      cell: (row) => <div>{row.stock ?? "0"}</div>,
+      sortable: false,
+    },
+    {
+      name: "HSN Code",
+      cell: (row) => <div>{row.hsn_code || "-"}</div>,
+      sortable: false,
+    },
+    {
+      name: "GST",
+      cell: (row) => <div>{row.gst || "-"}</div>,
+      sortable: false,
+    },
+    {
+      name: "MSDS",
       selector: (row) =>
         row.msds_url ? (
           <a
             href={row.msds_url}
             target="_blank"
             rel="noopener noreferrer"
-            title="Download PDF"
+            title="Download MSDS PDF"
             style={{
               display: "inline-flex",
               alignItems: "center",
               justifyContent: "center",
+              padding: "4px 8px",
+              borderRadius: "4px",
+              backgroundColor: "#eaf7f0",
+              border: "1px solid #2e7d32",
+              color: "#2e7d32",
+              fontSize: "14px",
+              gap: "4px",
+              textDecoration: "none",
             }}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              style={{ width: "24px", height: "24px", color: "#2e7d32" }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3m-6-6h6"
-              />
-            </svg>
+            ⬇️
           </a>
         ) : (
           "N/A"
@@ -134,7 +176,8 @@ const GCReferenceStandardsArea = () => {
                 <div className="product__details-content mb-40">
                   <h5 className="product-dtitle mb-30">GC REFERENCE STANDARDS</h5>
                   <p className="pd-description">
-                    Our GC reference standards are certified and traceable to international standards, ensuring accurate calibration and validation of your gas chromatography instruments.
+                    Our GC reference standards are certified and traceable to international standards,
+                    ensuring accurate calibration and validation of your gas chromatography instruments.
                   </p>
 
                   <div className="row">
@@ -199,4 +242,4 @@ const GCReferenceStandardsArea = () => {
   );
 };
 
-export default GCReferenceStandardsArea; 
+export default GCReferenceStandardsArea;
