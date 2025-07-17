@@ -784,3 +784,31 @@ html, body {
     flex-shrink: 0;
   }
 }
+
+/* Main dropdown arrow styles */
+.dropdown-arrow {
+  font-size: 14px;
+  margin-left: 8px;
+  color: white;
+  stroke-width: 2px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Sub dropdown arrow styles */
+.sub-dropdown-arrow {
+  font-size: 10px;
+  margin-left: 6px;
+  color: white;
+  stroke-width: 2px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.sub-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
