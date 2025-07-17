@@ -214,9 +214,11 @@ const GcHcArea = () => {
               </div>
             </div>
           </div>
-
-          {/* Product Table */}
-          <div className="row mb-5">
+      
+        </div>
+      </div>
+       {/* Product Table */}
+          <div className="row mb-5 mx-3">
             <div className="col-12">
               <div className="text-center">
                 <h2 className="mb-3">Products</h2>
@@ -228,8 +230,6 @@ const GcHcArea = () => {
               )}
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };
