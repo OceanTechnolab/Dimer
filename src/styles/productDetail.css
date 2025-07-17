@@ -1,7 +1,7 @@
 /* ProductDetail.css */
 
 /* Decorative Background Circles */
-.pd-bg-circle-1 {
+/* .pd-bg-circle-1 {
   position: absolute;
   top: -50px;
   right: -50px;
@@ -21,7 +21,7 @@
   background: rgba(255, 255, 255, 0.08);
   border-radius: 50%;
   z-index: 1;
-}
+} */
 
 /* Feature Card */
 .pd-feature-card {
