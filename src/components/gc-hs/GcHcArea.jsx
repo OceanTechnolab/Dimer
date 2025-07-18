@@ -105,7 +105,8 @@ const GcHcArea = () => {
           textDecoration: "none",
         }}
       >
-        ⬇️ 
+        <span aria-hidden="true" style={{ fontSize: "16px" }}>⬇️</span>
+        <span className="sr-only">Download</span>
       </a>
     ) : (
       "N/A"
