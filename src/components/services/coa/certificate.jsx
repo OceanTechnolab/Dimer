@@ -30,15 +30,23 @@ function Certificate() {
       formData.append("ProductCode", productCode.trim().toLowerCase());
       formData.append("BatchNo", batchNo.trim().toLowerCase());
 
-    // Use .env API or fallback to Hostinger live URL
-    // const apiEndpoint =
-    // process.env.NEXT_PUBLIC_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
-    const apiEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT || "https://api.dimerscientific.com";
+      // Use .env API or fallback to Hostinger live URL
+      // const apiEndpoint =
+      // process.env.NEXT_PUBLIC_API_ENDPOINT ||"https://dev.dimerscientific.com/dimer_api/";
+      const apiEndpoint =
+        process.env.NEXT_PUBLIC_API_ENDPOINT ||
+        "https://api.dimerscientific.com";
 
-    const response = await axios.post(`${apiEndpoint}/coa_search.php`, formData);
+      const response = await axios.post(
+        `${apiEndpoint}/coa_search.php`,
+        formData
+      );
 
-
-      if (response.data.status === "success" && Array.isArray(response.data.data) && response.data.data.length > 0) {
+      if (
+        response.data.status === "success" &&
+        Array.isArray(response.data.data) &&
+        response.data.data.length > 0
+      ) {
         setCoaList(response.data.data);
       } else {
         setError(response.data.message || "No matching COA found.");
@@ -64,7 +72,9 @@ function Certificate() {
       }}
     >
       <div
-        className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${animateCard ? "fade-in" : ""}`}
+        className={`container p-4 p-md-5 rounded-4 shadow-lg border border-4 position-relative ${
+          animateCard ? "fade-in" : ""
+        }`}
         style={{
           maxWidth: "1200px",
           backgroundColor: "#fff",
@@ -72,11 +82,25 @@ function Certificate() {
           overflow: "hidden",
         }}
       >
-        <div className="certificate-page-flex" style={{display: 'flex', gap: '2rem', alignItems: 'flex-start', flexWrap: 'wrap'}}>
+        <div
+          className="certificate-page-flex"
+          style={{
+            display: "flex",
+            gap: "2rem",
+            alignItems: "flex-start",
+            flexWrap: "wrap",
+          }}
+        >
           {/* Left: Certificate Content */}
-          <div className="certificate-content" style={{flex: '1 1 0', minWidth: 0}}>
+          <div
+            className="certificate-content"
+            style={{ flex: "1 1 0", minWidth: 0 }}
+          >
             <div style={{ zIndex: 2, position: "relative" }}>
-              <h2 className="text-center fw-bold mb-3" style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}>
+              <h2
+                className="text-center fw-bold mb-3"
+                style={{ fontFamily: "Georgia, serif", color: "#2c3e50" }}
+              >
                 Certificate of Analysis
               </h2>
               <p className="text-center text-muted fst-italic mb-4">
@@ -95,7 +119,9 @@ function Certificate() {
               >
                 <div className="row">
                   <div className="col-md-6 mb-3">
-                    <label htmlFor="batchNo" className="form-label fw-medium">Batch Number</label>
+                    <label htmlFor="batchNo" className="form-label fw-medium">
+                      Batch Number
+                    </label>
                     <input
                       id="batchNo"
                       type="text"
@@ -108,7 +134,12 @@ function Certificate() {
                   </div>
 
                   <div className="col-md-6 mb-3">
-                    <label htmlFor="productCode" className="form-label fw-medium">Product Code</label>
+                    <label
+                      htmlFor="productCode"
+                      className="form-label fw-medium"
+                    >
+                      Product Code
+                    </label>
                     <input
                       id="productCode"
                       type="text"
@@ -129,7 +160,11 @@ function Certificate() {
                   >
                     {isLoading ? (
                       <>
-                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        <span
+                          className="spinner-border spinner-border-sm me-2"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
                         Searching...
                       </>
                     ) : (
@@ -156,10 +191,12 @@ function Certificate() {
                   {/* Display once */}
                   <div className="alert alert-success d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center">
                     <div>
-                      <strong>Batch Number:</strong> {coaList[0]?.BatchNo || batchNo}
+                      <strong>Batch Number:</strong>{" "}
+                      {coaList[0]?.BatchNo || batchNo}
                     </div>
                     <div>
-                      <strong>Product Code:</strong> {coaList[0]?.ProductCode || productCode}
+                      <strong>Product Code:</strong>{" "}
+                      {coaList[0]?.ProductCode || productCode}
                     </div>
                   </div>
 
@@ -177,7 +214,9 @@ function Certificate() {
                           <i className="bi bi-file-earmark-pdf me-2 text-danger"></i>
                           Certificate {index + 1}
                         </span>
-                        <span className="badge bg-primary rounded-pill">Download</span>
+                        <span className="badge bg-primary rounded-pill">
+                          Download
+                        </span>
                       </a>
                     ))}
                   </div>
@@ -194,8 +233,15 @@ function Certificate() {
             </div>
           </div>
           {/* Right: Certificate Image */}
-          <div className="certificate-image" style={{flex: '0 0 350px', display: 'flex', alignItems: 'center', justifyContent: 'center', minWidth: '220px', width: '100%'}}>
-            <img src="/assets/img/coa/coa.png" alt="Certificate Seal" style={{maxWidth: '100%', height: 'auto', borderRadius: '12px', boxShadow: '0 2px 12px rgba(0,0,0,0.08)'}} />
+          <div
+            className="certificate-image"
+           
+          >
+            <img
+              src="/assets/img/coa/coa.webp"
+              alt="Certificate Seal"
+            
+            />
           </div>
         </div>
         {/* Watermark */}
@@ -208,7 +254,11 @@ function Certificate() {
             zIndex: 0,
           }}
         >
-          <img src="/images/molecule-watermark.png" alt="Watermark" width="300" />
+          <img
+            src="/images/molecule-watermark.png"
+            alt="Watermark"
+            width="300"
+          />
         </div>
       </div>
     </div>
