@@ -4214,7 +4214,7 @@ div.tp-srv-link a {
   padding: 40px 45px 45px 45px;
   background-color: var(--tp-common-white);
   border-radius: 0 0 5px 5px;
-  background-color: #F27E01;
+  background-color: #FF6000;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .tp-team__content {

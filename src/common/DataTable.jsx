@@ -12,7 +12,7 @@ const DataTable = ({ columns, data, title }) => {
   const customStyles = {
   headRow: {
     style: {
-      backgroundColor: '#f27e01',
+      backgroundColor: '#FF6000',
     },
   },
   headCells: {
@@ -20,7 +20,7 @@ const DataTable = ({ columns, data, title }) => {
       color: '#fff',
       fontWeight: '600',
       fontSize: '17px',
-      backgroundColor: '#f27e01',
+      backgroundColor: '#FF6000',
       transition: 'none', // prevent color fade
     },
   },

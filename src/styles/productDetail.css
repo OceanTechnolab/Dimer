@@ -57,7 +57,7 @@
 }
 
 .pd-check-mark {
-  color: #f27e01;
+  color: #FF6000;
   font-weight: bold;
   font-size: 14px;
 }
@@ -78,7 +78,7 @@
 }
 
 .pd-arrow-icon {
-  color: #f27e01;
+  color: #FF6000;
   font-weight: bold;
   font-size: 18px;
   margin-right: 10px;
@@ -92,7 +92,7 @@
 }
 
 .pd-table-header th {
-  background-color: #f27e01;
+  background-color: #FF6000;
   color: #fff;
   /* Optional: make text white for contrast */
 }
