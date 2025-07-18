@@ -468,6 +468,8 @@ html, body {
 }
 
 /* Mobile sub-dropdown centering */
+/* The breakpoint has been updated to 992px to better accommodate tablet devices.
+   Ensure this aligns with the design system's strategy and does not cause layout issues. */
 @media (max-width: 992px) {
   .sub-dropdown-list {
     padding-left: 0;
