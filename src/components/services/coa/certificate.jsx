@@ -235,7 +235,6 @@ function Certificate() {
           {/* Right: Certificate Image */}
           <div
             className="certificate-image"
-           
           >
             <picture>
               <source srcSet="/assets/img/coa/coa.webp" type="image/webp" />
