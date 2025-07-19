@@ -812,3 +812,17 @@ html, body {
 .sub-dropdown-arrow.open {
   transform: rotate(180deg);
 }
+
+/* Default: show on mobile */
+.mobile-search-bar {
+  position: absolute;
+  top: 21px;
+  left: 12px;
+}
+
+/* Hide on screens wider than 768px */
+@media (min-width: 769px) {
+  .mobile-search-bar {
+    display: none;
+  }
+}

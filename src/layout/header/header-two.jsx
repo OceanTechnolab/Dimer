@@ -208,6 +208,36 @@ const HeaderTwo = () => {
             ×
           </button>
 
+          {/* Mobile Search Bar in Overlay */}
+          <form
+           className="mobile-search-bar "
+           
+            onSubmit={e => { e.preventDefault(); if (searchValue.trim()) { setMenuOpen(false); router.push(`/search?q=${encodeURIComponent(searchValue)}`); } }}
+          >
+            <div className={`search-container ${searchFocused ? "focused" : ""}`}> 
+              <div className="search-input-wrapper">
+                <input
+                  type="text"
+                  className={`search-input form-control ${searchFocused ? "focused" : ""}`}
+                  placeholder="Search product..."
+                  value={searchValue}
+                  onChange={e => setSearchValue(e.target.value)}
+                  onFocus={() => setSearchFocused(true)}
+                  onBlur={() => setSearchFocused(false)}
+                  style={{ fontSize: '15px', padding: '6px 12px', borderRadius: '30px 0 0 30px', border: '1px solid #ddd', borderRight: 'none', width: '100%' }}
+                />
+              </div>
+              <button
+                type="submit"
+                className="category-button btn"
+                aria-label="Search"
+                style={{ borderRadius: '0 30px 30px 0', fontSize: '16px', padding: '6px 12px' }}
+              >
+                <FaSearch />
+              </button>
+            </div>
+          </form>
+
           <nav className="menu-nav">
             <div className="menu-columns">
               {menuColumns.map((col, colIdx) => (
