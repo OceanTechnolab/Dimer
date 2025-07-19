@@ -7,10 +7,7 @@ const BileSaltsArea = () => {
   const [loading, setLoading] = useState(true);
 
   const features = [
-    "High-quality bile salts and sodium lauryl sulfate for research and analytical applications.",
-    "Purity and consistency for reliable experimental results.",
-    "Suitable for pharmaceutical, biochemical, and analytical uses.",
-    "Available in various grades and pack sizes."
+    // You can add specific features here if needed, or leave empty if not provided
   ];
 
   const columns = [
@@ -107,42 +104,95 @@ const BileSaltsArea = () => {
     }
   };
 
+  const renderFeatureText = (feature) => {
+    const colonIndex = feature.indexOf(":");
+    if (colonIndex === -1) return feature;
+    const title = feature.substring(0, colonIndex);
+    const description = feature.substring(colonIndex);
+    return (
+      <>
+        <strong>{title}</strong>
+        {description}
+      </>
+    );
+  };
+
   return (
     <section className="shop-area pt-120 pb-70">
       <div className="container">
         <div className="shop-left-right ml-130 mr-130">
-          <div className="row">
-            {/* Left - Product Image */}
+          <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
               <div
                 className="productthumb mb-40 wow fadeInRighLeft"
                 data-wow-delay=".4s"
               >
                 <img
-                  src="/assets/img/productdetails/gchc.png"
+                  src="/assets/img/productdetails/GC-HS_solvent.svg"
                   alt="product-thumb"
                 />
               </div>
             </div>
 
-            {/* Right - Description */}
             <div className="col-lg-6 col-md-6">
               <div
                 className="product mb-40 ml-20 wow fadeInRighRight"
                 data-wow-delay=".4s"
               >
                 <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-30">BILE SALTS & SLS</h5>
+                  <h5 className="product-dtitle mb-3 mb-lg-4">BILE SALTS</h5>
                   <p className="pd-description">
-                    Our bile salts and sodium lauryl sulfate (SLS) are produced to the highest standards for use in research, pharmaceuticals, and analytical applications. They offer high purity and consistency for reliable results.
+                    Conjugated bile salts are not just vital for the human body;
+                    their physiologically important acid-base properties also
+                    make them indispensable ingredients in various scientific
+                    and pharmaceutical applications. Notably, they are widely
+                    utilized in microbiological culture media for critical
+                    processes such as the dissolution testing of drugs.
+                    <br />
+                    <br />
+                    Bile salts in dissolution testing for Bioequivalence studies
+                    provides a critical physiological link, allowing for a more
+                    accurate assessment of a drug's solubility, dissolution, and
+                    potential absorption, particularly for challenging poorly
+                    water-soluble compounds. This enhances the relevance and
+                    reliability of the in vitro data for predicting in vivo
+                    performance. Beyond drug testing, conjugated bile salts find
+                    use in a range of other biological applications.
+                    <br />
+                    <br />
+                    Dimer has successfully leveraged its expertise in chemical
+                    synthesis to produce the following conjugated bile salts on
+                    a kilogram (Kg) scale, demonstrating our robust capabilities
+                    and commitment to supporting these vital research and
+                    industrial needs.
                   </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Features */}
+          {features.length > 0 && (
+            <div className="row mb-5">
+              <div className="col-12">
+                <div className="pd-feature-section">
+                  <div className="pd-bg-circle-1"></div>
+                  <div className="pd-bg-circle-2"></div>
+                  <div className="text-center mb-4">
+                    <h2>Features & Benefits</h2>
+                    <div className="pd-section-underline"></div>
+                  </div>
 
                   <div className="row">
                     {features.map((feature, index) => (
-                      <div key={index} className="col-sm-6 mb-3">
-                        <div className="pd-arrow-point">
-                          <span className="pd-arrow-icon">➤</span>
-                          <p className="pd-arrow-text">{feature}</p>
+                      <div key={index} className="col-md-6 mb-3">
+                        <div className="pd-feature-card">
+                          <div className="pd-check-circle">
+                            <span className="pd-check-mark">✓</span>
+                          </div>
+                          <p className="pd-feature-text">
+                            {renderFeatureText(feature)}
+                          </p>
                         </div>
                       </div>
                     ))}
@@ -150,53 +200,24 @@ const BileSaltsArea = () => {
                 </div>
               </div>
             </div>
+          )}
+        </div>
+      </div>
+      {/* Product Table */}
+      <div className="row mb-5 mx-3">
+        <div className="col-12">
+          <div className="text-center">
+            <h2 className="mb-3">Products</h2>
           </div>
-
-          {/* Features & Benefits */}
-          <div className="row mb-5">
-            <div className="col-12">
-              <div className="pd-feature-section">
-                <div className="pd-bg-circle-1"></div>
-                <div className="pd-bg-circle-2"></div>
-
-                <div className="text-center mb-4">
-                  <h2>Features & Benefits</h2>
-                  <div className="pd-section-underline"></div>
-                </div>
-
-                <div className="row">
-                  {features.map((feature, index) => (
-                    <div key={index} className="col-md-6 mb-3">
-                      <div className="pd-feature-card">
-                        <div className="pd-check-circle">
-                          <span className="pd-check-mark">✓</span>
-                        </div>
-                        <p className="pd-feature-text">{feature}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Product Table */}
-          <div className="row mb-5">
-            <div className="col-12">
-              <div className="text-center">
-                <h2 className="mb-3">Products</h2>
-              </div>
-              {loading ? (
-                <p className="text-center">Loading products...</p>
-              ) : (
-                <DataTable columns={columns} data={productData} />
-              )}
-            </div>
-          </div>
+          {loading ? (
+            <p className="text-center">Loading products...</p>
+          ) : (
+            <DataTable columns={columns} data={productData} />
+          )}
         </div>
       </div>
     </section>
   );
 };
 
-export default BileSaltsArea; 
+export default BileSaltsArea;
