@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import DataTable from "../../common/DataTable";
+import { FaSearch } from "react-icons/fa";
 
 const SearchResult = () => {
   const router = useRouter();
@@ -8,10 +9,17 @@ const SearchResult = () => {
   const [loading, setLoading] = useState(true);
   const [productData, setProductData] = useState([]);
   const [coaData, setCoaData] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
 
+  // On mount and when q changes, set searchValue
   useEffect(() => {
-    if (q) {
+    setSearchValue(q || "");
+    if (q && q.trim()) {
       fetchResults(q);
+    } else {
+      setProductData([]);
+      setCoaData([]);
+      setLoading(false);
     }
   }, [q]);
 
@@ -35,6 +43,13 @@ const SearchResult = () => {
       console.error("Search failed:", err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (searchValue.trim()) {
+      router.push(`/search?q=${encodeURIComponent(searchValue)}`);
     }
   };
 
@@ -108,51 +123,76 @@ const SearchResult = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="mb-4">Search Results {q && `for "${q}"`}</h2>
-
-      {loading ? (
-        <div className="d-flex align-items-center">
-          <strong>Loading...</strong>
-          <div
-            className="spinner-border text-primary ms-3"
-            role="status"
-            aria-hidden="true"
-          ></div>
-        </div>
-      ) : (
+      {/* Mobile-only search bar */}
+        <form className="d-flex d-md-none align-items-center flex-grow-1 mx-4" onSubmit={handleSubmit}>
+          <div className={`search-container `}>
+            <div className="search-input-wrapper">
+              <input
+                type="text"
+                className={`search-input form-control`}
+                placeholder="Search product..."
+               value={searchValue}
+            onChange={e => setSearchValue(e.target.value)}
+              />
+            </div>
+            <button
+              type="submit"
+              className="category-button btn"
+              aria-label="Search"
+            >
+              <FaSearch />
+            </button>
+          </div>
+        </form>
+      {/* Only show results if q is not empty */}
+      {q && q.trim() && (
         <>
-          {productData.length > 0 && (
+          <h2 className="mb-4">Search Results {q && `for "${q}"`}</h2>
+          {loading ? (
+            <div className="d-flex align-items-center">
+              <strong>Loading...</strong>
+              <div
+                className="spinner-border text-primary ms-3"
+                role="status"
+                aria-hidden="true"
+              ></div>
+            </div>
+          ) : (
             <>
-              <h4 className="mb-3">Product Details</h4>
-              <DataTable
-                columns={productColumns}
-                data={productData}
-                striped
-                highlightOnHover
-                responsive
-                pagination
-                dense
-              />
-            </>
-          )}
+              {productData.length > 0 && (
+                <>
+                  <h4 className="mb-3">Product Details</h4>
+                  <DataTable
+                    columns={productColumns}
+                    data={productData}
+                    striped
+                    highlightOnHover
+                    responsive
+                    pagination
+                    dense
+                  />
+                </>
+              )}
 
-          {coaData.length > 0 && (
-            <>
-              <h4 className="mt-5 mb-3">COA Records</h4>
-              <DataTable
-                columns={coaColumns}
-                data={coaData}
-                striped
-                highlightOnHover
-                responsive
-                pagination
-                dense
-              />
-            </>
-          )}
+              {coaData.length > 0 && (
+                <>
+                  <h4 className="mt-5 mb-3">COA Records</h4>
+                  <DataTable
+                    columns={coaColumns}
+                    data={coaData}
+                    striped
+                    highlightOnHover
+                    responsive
+                    pagination
+                    dense
+                  />
+                </>
+              )}
 
-          {productData.length === 0 && coaData.length === 0 && (
-            <div className="alert alert-warning mt-4">No results found.</div>
+              {productData.length === 0 && coaData.length === 0 && (
+                <div className="alert alert-warning mt-4">No results found.</div>
+              )}
+            </>
           )}
         </>
       )}
