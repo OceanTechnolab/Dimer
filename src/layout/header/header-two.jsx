@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import menu_data from "./menu-data";
 import { FaSearch } from "react-icons/fa";
+import { HiChevronDown } from "react-icons/hi2";
 
 const HeaderTwo = () => {
   const { sticky } = useSticky();
@@ -149,14 +150,49 @@ const HeaderTwo = () => {
 
         <button
           className="menu-button btn p-0 ms-2"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           <span className="menu-icon">
             <svg width="32" height="32" viewBox="0 0 32 32">
-              <rect y="7" width="32" height="3" rx="1.5" fill="#2d3748" />
-              <rect y="15" width="32" height="3" rx="1.5" fill="#2d3748" />
-              <rect y="23" width="24" height="3" rx="1.5" fill="#2d3748" />
+              <rect 
+                y="7" 
+                width="32" 
+                height="3" 
+                rx="1.5" 
+                fill="#2d3748"
+                style={{
+                  transform: menuOpen ? 'rotate(45deg) translate(8px, 8px)' : 'rotate(0deg)',
+                  transformOrigin: 'center',
+                  transition: 'all 0.3s ease'
+                }}
+              />
+              <rect 
+                y="15" 
+                width="32" 
+                height="3" 
+                rx="1.5" 
+                fill="#2d3748"
+                style={{
+                  opacity: menuOpen ? 0 : 1,
+                  transform: menuOpen ? 'scaleX(0)' : 'scaleX(1)',
+                  transformOrigin: 'center',
+                  transition: 'all 0.3s ease'
+                }}
+              />
+              <rect 
+                y="23" 
+                width="24" 
+                height="3" 
+                rx="1.5" 
+                fill="#2d3748"
+                style={{
+                  transform: menuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'rotate(0deg)',
+                  transformOrigin: 'center',
+                  transition: 'all 0.3s ease',
+                  width: menuOpen ? '32px' : '24px'
+                }}
+              />
             </svg>
           </span>
         </button>
@@ -171,6 +207,36 @@ const HeaderTwo = () => {
           >
             ×
           </button>
+
+          {/* Mobile Search Bar in Overlay */}
+          <form
+           className="mobile-search-bar "
+           
+            onSubmit={e => { e.preventDefault(); if (searchValue.trim()) { setMenuOpen(false); router.push(`/search?q=${encodeURIComponent(searchValue)}`); } }}
+          >
+            <div className={`search-container ${searchFocused ? "focused" : ""}`}> 
+              <div className="search-input-wrapper">
+                <input
+                  type="text"
+                  className={`search-input form-control ${searchFocused ? "focused" : ""}`}
+                  placeholder="Search product..."
+                  value={searchValue}
+                  onChange={e => setSearchValue(e.target.value)}
+                  onFocus={() => setSearchFocused(true)}
+                  onBlur={() => setSearchFocused(false)}
+                  style={{ fontSize: '15px', padding: '6px 12px', borderRadius: '30px 0 0 30px', border: '1px solid #ddd', borderRight: 'none', width: '100%' }}
+                />
+              </div>
+              <button
+                type="submit"
+                className="category-button btn"
+                aria-label="Search"
+                style={{ borderRadius: '0 30px 30px 0', fontSize: '16px', padding: '6px 12px' }}
+              >
+                <FaSearch />
+              </button>
+            </div>
+          </form>
 
           <nav className="menu-nav">
             <div className="menu-columns">
@@ -193,13 +259,11 @@ const HeaderTwo = () => {
                           {menu.title}
                         </span>
                         {menu.has_dropdown && (
-                          <span
+                          <HiChevronDown
                             className={`dropdown-arrow ${
                               openDropdowns[menu.id] ? "open" : ""
                             }`}
-                          >
-                            ▶
-                          </span>
+                          />
                         )}
                       </div>
                       {menu.has_dropdown && menu.sub_menus && (
@@ -228,15 +292,13 @@ const HeaderTwo = () => {
                                     {sub.title}
                                   </span>
                                   {sub.has_dropdown && (
-                                    <span
+                                    <HiChevronDown
                                       className={`sub-dropdown-arrow ${
                                         openDropdowns[menu.id + "-" + i]
                                           ? "open"
                                           : ""
                                       }`}
-                                    >
-                                      ▶
-                                    </span>
+                                    />
                                   )}
                                 </div>
                                 {sub.has_dropdown && sub.sub_menus && (

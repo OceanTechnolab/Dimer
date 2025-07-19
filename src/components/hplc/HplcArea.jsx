@@ -7,10 +7,12 @@ const HplcArea = () => {
   const [loading, setLoading] = useState(true);
 
   const features = [
-    "High purity solvents for HPLC applications, ensuring reliable and reproducible results.",
-    "Low UV absorbance and minimal impurities.",
-    "Filtered and tested for gradient and isocratic HPLC methods.",
-    "Consistent quality for analytical and preparative chromatography."
+    "Exceptional Purity: HPLC solvent purity is paramount. Solvents are rigorously purified to eliminate non-volatile residues, UV-absorbing impurities, particulates, and metal ions. Higher purity levels are available across different grades, including HPLC, Gradient, and LC-MS.",
+    "Improved Baseline Stability: Degassed and pure solvents lead to a stable baseline, which is critical for accurate integration of peaks and sensitive detection, especially in gradient methods.",
+    "Compliance with Regulatory Standards: For industries like pharmaceuticals and food safety, using specified HPLC-grade solvents is often a regulatory requirement to ensure data integrity and product safety.",
+    "Reduced Instrument Downtime: By minimizing contamination and backpressure issues, high-quality solvents contribute to smoother HPLC system operation and reduce the need for maintenance or repairs.",
+    "Extended Column Lifespan: Particulate-free and non-reactive solvents prevent column clogging, degradation of the stationary phase, and damage to the sensitive HPLC components, thereby prolonging the life of expensive columns.",
+    "Superior Resolution & Enhanced Sensitivity: Precise polarity control in HPLC solvents ensures optimal interaction with the stationary phase, which leads to better separation of complex mixtures and improved peak resolution. Simultaneously, their low UV absorbance allows for the detection of even trace amounts of analytes without background interference, significantly enhancing the method's overall sensitivity."
   ];
 
   const columns = [
@@ -99,7 +101,20 @@ const HplcArea = () => {
               textDecoration: "none",
             }}
           >
-            ⬇️
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              style={{ width: "24px", height: "24px", color: "#2e7d32" }}
+          >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3m-6-6h6"
+              />
+            </svg>
           </a>
         ) : (
           "N/A"
@@ -118,10 +133,13 @@ const HplcArea = () => {
     formData.append("category", "HPLC Solvents");
 
     try {
-      const response = await fetch("https://api.dimerscientific.com/get_category_products.php", {
+      const response = await fetch(
+        "https://api.dimerscientific.com/get_category_products.php",
+        {
         method: "POST",
         body: formData,
-      });
+        }
+      );
 
       const data = await response.json();
       if (data.status === "success") {
@@ -136,71 +154,83 @@ const HplcArea = () => {
     }
   };
 
+  const renderFeatureText = (feature) => {
+    const colonIndex = feature.indexOf(":");
+    if (colonIndex === -1) return feature;
+    const title = feature.substring(0, colonIndex);
+    const description = feature.substring(colonIndex);
+    return (
+      <>
+        <strong>{title}</strong>
+        {description}
+      </>
+    );
+  };
+
   return (
-    <section className="shop-area pt-120 pb-70">
-      <div className="container">
-        <div className="shop-left-right ml-130 mr-130">
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-6">
-              <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
-                <img src="/assets/img/productdetails/gchc.png" alt="product-thumb" />
+    <>
+      <section className="shop-area pt-120 pb-70">
+        <div className="container">
+          <div className="shop-left-right ml-130 mr-130">
+            <div className="row align-items-center">
+              <div className="col-lg-6 col-md-6">
+                <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
+                  <img src="/assets/img/productdetails/LC-MS_solvent.svg" alt="product-thumb" />
+                </div>
               </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6">
-              <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
-                <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-3 mb-lg-4">HPLC Solvents</h5>
-                  <p className="pd-description">
-                    Our HPLC solvents are manufactured to the highest standards for use in high-performance liquid chromatography.
-                    They are filtered and tested to ensure low UV absorbance and minimal impurities, supporting both analytical and preparative chromatography.
-                  </p>
+              <div className="col-lg-6 col-md-6">
+                <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
+                  <div className="product__details-content mb-40">
+                    <h5 className="product-dtitle mb-3 mb-lg-4">HPLC Solvents</h5>
+                    <p className="pd-description">
+                      HPLC (High-Performance Liquid Chromatography) solvents, also known as the mobile phase, are fundamental to the success of any HPLC analysis. Their purity, properties, and careful handling are fundamental to getting accurate, reliable, and reproducible results.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-12">
-              <div className="pd-feature-section">
-                <div className="pd-bg-circle-1"></div>
-                <div className="pd-bg-circle-2"></div>
-                <div className="text-center mb-4">
-                  <h2>Features & Benefits</h2>
-                  <div className="pd-section-underline"></div>
-                </div>
-
-                <div className="row">
-                  {features.map((feature, index) => (
-                    <div key={index} className="col-md-6 mb-3">
-                      <div className="pd-feature-card">
-                        <div className="pd-check-circle">
-                          <span className="pd-check-mark">✓</span>
+            {/* Features */}
+            <div className="row mb-5">
+              <div className="col-12">
+                <div className="pd-feature-section">
+                  <div className="pd-bg-circle-1"></div>
+                  <div className="pd-bg-circle-2"></div>
+                  <div className="text-center mb-4">
+                    <h2>Features & Benefits</h2>
+                    <div className="pd-section-underline"></div>
+                  </div>
+                  <div className="row">
+                    {features.map((feature, index) => (
+                      <div key={index} className="col-md-6 mb-3">
+                        <div className="pd-feature-card">
+                          <div className="pd-check-circle">
+                            <span className="pd-check-mark">✓</span>
+                          </div>
+                          <p className="pd-feature-text">{renderFeatureText(feature)}</p>
                         </div>
-                        <p className="pd-feature-text">{feature}</p>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="row mb-5">
-            <div className="col-12">
-              <div className="text-center">
-                <h2 className="mb-3">Products</h2>
-              </div>
-              {loading ? (
-                <p className="text-center">Loading products...</p>
-              ) : (
-                <DataTable columns={columns} data={productData} />
-              )}
             </div>
           </div>
         </div>
+      </section>
+      {/* Product Table */}
+      <div className="row mb-5 mx-3">
+        <div className="col-12">
+          <div className="text-center">
+            <h2 className="mb-3">Products</h2>
+          </div>
+          {loading ? (
+            <p className="text-center">Loading products...</p>
+          ) : (
+            <DataTable columns={columns} data={productData} />
+          )}
+        </div>
       </div>
-    </section>
+    </>
   );
 };
 

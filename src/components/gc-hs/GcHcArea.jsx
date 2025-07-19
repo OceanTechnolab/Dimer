@@ -18,11 +18,13 @@ const GcHcArea = () => {
       name: "Product Code",
       selector: (row) => row.ProductCode,
       sortable: false,
+      grow: 1,
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
       sortable: false,
+      grow: 2,
     },
     {
       name: "CAS No.",
@@ -214,9 +216,11 @@ const GcHcArea = () => {
               </div>
             </div>
           </div>
-
-          {/* Product Table */}
-          <div className="row mb-5">
+      
+        </div>
+      </div>
+       {/* Product Table */}
+          <div className="row mb-5 mx-3">
             <div className="col-12">
               <div className="text-center">
                 <h2 className="mb-3">Products</h2>
@@ -228,8 +232,6 @@ const GcHcArea = () => {
               )}
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };
