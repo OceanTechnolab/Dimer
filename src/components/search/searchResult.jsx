@@ -39,9 +39,32 @@ const SearchResult = () => {
   };
 
   const productColumns = [
-    { name: "Product Name", selector: (row) => row.product_name },
-    { name: "CAS No", selector: (row) => row.CASNo },
-    { name: "Product Code", selector: (row) => row.ProductCode },
+    { name: "Product Name", selector: (row) => row.product_name, wrap: true },
+    { name: "CAS No", selector: (row) => row.CASNo || "—" },
+    { name: "Product Code", selector: (row) => row.ProductCode || "—" },
+    { name: "Grade", selector: (row) => row.Grade || "—" },
+    { name: "Pack Size", selector: (row) => row.PackSize || "—" },
+    { name: "HSN Code", selector: (row) => row.hsn_code || "—" },
+    { name: "GST", selector: (row) => row.gst || "—" },
+    { name: "Stock", selector: (row) => row.stock || "—" },
+    {
+      name: "MSDS",
+      selector: (row) =>
+        row.msds_url ? (
+          <a
+            href={row.msds_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download MSDS"
+            style={{ color: "#1976d2", fontWeight: "bold" }}
+          >
+            PDF
+          </a>
+        ) : (
+          "N/A"
+        ),
+      center: true,
+    },
   ];
 
   const coaColumns = [
