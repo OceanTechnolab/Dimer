@@ -94,13 +94,13 @@
       }
     }
     & .pink-icon {
-      box-shadow: inset 0 0 0 60px var(--tp-icon-pink);
+      box-shadow: inset 0 0 0 60px var(--tp-icon-blue);
     }
     & .green-icon {
       box-shadow: inset 0 0 0 60px var(--tp-icon-green);
     }
     & .sky-icon {
-      box-shadow: inset 0 0 0 60px var(--tp-icon-sky);
+      box-shadow: inset 0 0 0 60px var(--tp-icon-blue);
     }
     & .services-item__btn {
       & .btn-hexa {
@@ -110,7 +110,7 @@
       }
       & .pink-hexa {
         i {
-          background-color: var(--tp-icon-pink);
+          background-color: var(--tp-icon-blue);
         }
       }
       & .green-hexa {
