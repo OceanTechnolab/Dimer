@@ -15,7 +15,7 @@ const BileSaltsArea = () => {
       name: "Product Code",
       selector: (row) => row.ProductCode,
       sortable: false,
-      grow: 1,
+      grow: 2,
     },
     {
       name: "Product Description",

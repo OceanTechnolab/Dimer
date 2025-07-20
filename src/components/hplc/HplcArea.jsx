@@ -19,6 +19,7 @@ const HplcArea = () => {
     {
       name: "Product Code",
       selector: (row) => row.ProductCode,
+       grow: 2,
       sortable: false,
     },
     {
