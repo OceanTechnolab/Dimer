@@ -47,24 +47,37 @@ const SearchResult = () => {
     { name: "HSN Code", selector: (row) => row.hsn_code || "—" },
     // { name: "GST", selector: (row) => row.gst || "—" },
     // { name: "Stock", selector: (row) => row.stock || "—" },
-    {
-      name: "MSDS",
-      selector: (row) =>
-        row.msds_url ? (
-          <a
-            href={row.msds_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Download MSDS"
-            style={{ color: "#1976d2", fontWeight: "bold" }}
-          >
-            PDF
-          </a>
-        ) : (
-          "N/A"
-        ),
-      center: true,
-    },
+  {
+  name: "MSDS",
+  selector: (row) =>
+    row.msds_url ? (
+      <a
+        href={row.msds_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download MSDS PDF"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4px 8px",
+          borderRadius: "4px",
+          backgroundColor: "#eaf7f0",
+          border: "1px solid #2e7d32",
+          color: "#2e7d32",
+          fontSize: "14px",
+          gap: "4px",
+          textDecoration: "none",
+        }}
+      >
+        ⬇️ 
+      </a>
+    ) : (
+      "N/A"
+    ),
+  center: true,
+}
+
   ];
 
   const coaColumns = [
