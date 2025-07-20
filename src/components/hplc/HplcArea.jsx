@@ -24,6 +24,7 @@ const HplcArea = () => {
     {
       name: "Product Description",
       selector: (row) => row.product_name,
+      grow: 2,
       sortable: false,
     },
     {
