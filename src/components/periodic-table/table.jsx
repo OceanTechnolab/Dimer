@@ -34,7 +34,7 @@ const Table = () => {
             data-wow-delay=".2s"
           >
             <img
-            src="/assets/img/periodic-Table.png"
+            src="/assets/img/periodic-Table.webp"
             alt="projrct-thumb"
             />
           </div>
