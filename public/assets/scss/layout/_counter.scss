@@ -75,6 +75,8 @@
   &__title {
     font-size: 48px;
     font-weight: 400;
+    display: inline-flex;
+
   }
 }
 .experience-item {
@@ -105,4 +107,11 @@
     font-size: 33px;
     font-weight: bold;
   }
+}
+
+counter__title .suffix {
+  font-weight: 700;
+  font-size: 1.8rem; 
+  margin-left: 2px;
+  display: inline-block;
 }
