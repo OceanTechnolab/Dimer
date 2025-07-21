@@ -114,7 +114,7 @@ const menu_data = [
         ]
       },
       {
-        link: "/service-2",
+        link: "/gc-reference-standards",
         title: "GC reference standards",
         has_dropdown: false
       },
@@ -136,7 +136,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "Manufacturing",
-    link: "/research",
+    link: "/manufacturing",
     active: "",
   },
   {
