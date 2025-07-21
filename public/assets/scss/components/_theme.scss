@@ -403,3 +403,184 @@ input[type="color"] {
     animation: preloader 3s linear infinite;
   }
 }
+
+.application-hero {
+  background-color: #f8f9fa;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.application-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.application-hero p {
+  font-size: 1.125rem;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.application-hero img {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.industry-sections {
+  display: grid;
+  gap: 2.5rem;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .industry-sections {
+    padding: 4rem 5rem;
+  }
+}
+
+.industry-sections > div {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.industry-sections h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis {
+  background-color: #f27e01;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.custom-synthesis h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis p {
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+.custom-synthesis button {
+  background: white;
+  color: #f27e01;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-synthesis button:hover {
+  background: #f1f1f1;
+}
+
+.certificates-section {
+  background-color: #f3f4f6;
+  padding: 4rem 1rem;
+}
+
+.certificates-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.certificates-section ul {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  list-style: disc inside;
+}
+
+.certificates-section a {
+  color: #f27e01;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.inquiry-form {
+  background-color: white;
+  padding: 4rem 1rem;
+}
+
+.inquiry-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.inquiry-form form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.inquiry-form button {
+  background-color: #f27e01;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.inquiry-form button:hover {
+  background-color: #dc5f00;
+}
+
+.faqs {
+  background-color: #f9fafb;
+  padding: 4rem 1rem;
+}
+
+.faqs h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.faqs > div {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.faqs details {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faqs summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faqs p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
