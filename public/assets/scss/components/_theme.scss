@@ -928,3 +928,111 @@ h5.performace
     padding-right: 20px;
     text-align: justify;
 }
+
+.industry-section {
+  padding: 40px 20px;
+  background: var(--tp-common-white);
+}
+
+.industry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.industry-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px var(--tp-icon-blue);
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.industry-img img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.industry-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+.industry-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.industry-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+a.industry-button {
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  border: solid 1px;
+  border-radius: 10px;
+}
+a.industry-button:hover{
+  border-color: var(--tp-icon-blue) ;
+}
+
+.certificates-section {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  padding: 4rem 1rem;
+}
+
+.certificates-section h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.certificates-list {
+  max-width: 640px; /* max-w-2xl */
+  margin: 0 auto;
+  font-size: 1.125rem; /* text-lg */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cert-item img {
+  width: 100px;
+  height: 100px;
+}
+
+.cert-item strong {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.certificates-section-m a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--tp-icon-blue);
+  font-weight: 500;
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 10px;
+}
