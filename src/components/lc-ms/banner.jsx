@@ -7,7 +7,7 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url('/assets/img/productdetails/gchc.png')`,
+          backgroundImage: `url("/assets/img/banner/Productbackgroud.svg")`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -21,8 +21,10 @@ const Banner = () => {
             </div>
             <div className="col-lg-6 col-md-5 col-12">
               <div className="tp-breadcrumb__link d-flex align-items-center">
-                <span>
-                  Dimer Scientific : <Link href="/blog-details"> Blog Details</Link>
+               <span>
+                  {/* Home /{" "} */}
+                    <Link href="/"> Home</Link> /
+                  <Link href="/lc-ms"> lc-ms Solvents</Link>
                 </span>
               </div>
             </div>
@@ -33,4 +35,4 @@ const Banner = () => {
   );
 };
 
-export default Banner; 
+export default Banner;
