@@ -1,37 +1,52 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import DataTable from "../../common/DataTable";
+import { FaSearch } from "react-icons/fa";
 
 const SearchResult = () => {
   const router = useRouter();
   const { q } = router.query;
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false); // default false
   const [productData, setProductData] = useState([]);
   const [coaData, setCoaData] = useState([]);
+  // Mobile search bar state
+  const [mobileSearchValue, setMobileSearchValue] = useState("");
+  const [searchFocused, setSearchFocused] = useState(false);
+  const [localQuery, setLocalQuery] = useState(""); // for mobile search only
 
+  // Effect: fetch results for q (URL) or localQuery (mobile)
   useEffect(() => {
-    if (q) {
+    // If localQuery is set, fetch for that (mobile search)
+    if (localQuery) {
+      setMobileSearchValue(localQuery); // keep input in sync
+      fetchResults(localQuery);
+    } else if (q) {
+      setMobileSearchValue(q);
       fetchResults(q);
     }
-  }, [q]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [q, localQuery]);
 
   const fetchResults = async (query) => {
     setLoading(true);
     const formData = new FormData();
     formData.append("search", query);
-
     try {
       const response = await fetch("https://api.dimerscientific.com/headersearch.php", {
         method: "POST",
         body: formData,
       });
-
       const data = await response.json();
       if (data.status === "success") {
         setProductData(data.product_details || []);
         setCoaData(data.coas || []);
+      } else {
+        setProductData([]);
+        setCoaData([]);
       }
     } catch (err) {
+      setProductData([]);
+      setCoaData([]);
       console.error("Search failed:", err);
     } finally {
       setLoading(false);
@@ -121,57 +136,90 @@ const SearchResult = () => {
 
   return (
     <div className="container py-5">
-    <h2 className="mb-4">
-  Search Results {q && `for "${q}"`}
-</h2>
-
-
-      {loading ? (
-        <div className="d-flex align-items-center">
-          <strong>Loading...</strong>
-          <div
-            className="spinner-border text-primary ms-3"
-            role="status"
-            aria-hidden="true"
-          ></div>
+      {/* Mobile Search Bar (only visible on mobile) */}
+      <form
+        className="d-flex align-items-center flex-grow-1 mx-4 d-md-none mb-4"
+        style={{ display: "flex" }}
+        onSubmit={e => {
+          e.preventDefault();
+          if (mobileSearchValue.trim()) {
+            setLocalQuery(mobileSearchValue.trim()); // set local state, do not push URL
+          }
+        }}
+      >
+        <div className={`search-container ${searchFocused ? "focused" : ""}`}> 
+          <div className="search-input-wrapper">
+            <input
+              type="text"
+              className={`search-input form-control ${searchFocused ? "focused" : ""}`}
+              placeholder="Search product..."
+              value={mobileSearchValue}
+              onChange={e => setMobileSearchValue(e.target.value)}
+              onFocus={() => setSearchFocused(true)}
+              onBlur={() => setSearchFocused(false)}
+            />
+          </div>
+          <button
+            type="submit"
+            className="category-button btn"
+            aria-label="Search"
+          >
+            <FaSearch />
+          </button>
         </div>
-      ) : (
+      </form>
+      {/* Only show results if localQuery or q exists */}
+      {(localQuery || q) ? (
         <>
-          {productData.length > 0 && (
+          <h2 className="mb-4">
+            Search Results {(localQuery || q) && `for \"${localQuery || q}\"`}
+          </h2>
+          {loading ? (
+            <div className="d-flex align-items-center">
+              <strong>Loading...</strong>
+              <div
+                className="spinner-border text-primary ms-3"
+                role="status"
+                aria-hidden="true"
+              ></div>
+            </div>
+          ) : (
             <>
-              <h4 className="mb-3">Product Details</h4>
-              <DataTable
-                columns={productColumns}
-                data={productData}
-                striped
-                highlightOnHover
-                responsive
-                pagination
-                dense
-              />
+              {productData.length > 0 && (
+                <>
+                  <h4 className="mb-3">Product Details</h4>
+                  <DataTable
+                    columns={productColumns}
+                    data={productData}
+                    striped
+                    highlightOnHover
+                    responsive
+                    pagination
+                    dense
+                  />
+                </>
+              )}
+              {coaData.length > 0 && (
+                <>
+                  <h4 className="mt-5 mb-3">COA Records</h4>
+                  <DataTable
+                    columns={coaColumns}
+                    data={coaData}
+                    striped
+                    highlightOnHover
+                    responsive
+                    pagination
+                    dense
+                  />
+                </>
+              )}
+              {productData.length === 0 && coaData.length === 0 && (
+                <div className="alert alert-warning mt-4">No results found.</div>
+              )}
             </>
-          )}
-
-          {coaData.length > 0 && (
-            <>
-              <h4 className="mt-5 mb-3">COA Records</h4>
-              <DataTable
-                columns={coaColumns}
-                data={coaData}
-                striped
-                highlightOnHover
-                responsive
-                pagination
-                dense
-              />
-            </>
-          )}
-
-          {productData.length === 0 && coaData.length === 0 && (
-            <div className="alert alert-warning mt-4">No results found.</div>
           )}
         </>
-      )}
+      ) : null}
     </div>
   );
 };
