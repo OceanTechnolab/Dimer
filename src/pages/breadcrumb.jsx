@@ -1,6 +1,7 @@
 // src/components/common/Breadcrumb.jsx
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 // Optional: map clean names
 const breadcrumbMap = {
@@ -12,13 +13,13 @@ const breadcrumbMap = {
 };
 
 const Breadcrumb = () => {
-  const location = useLocation();
-  const pathParts = location.pathname.split("/").filter(Boolean);
+  const router = useRouter();
+  const pathParts = router.pathname.split("/").filter(Boolean);
 
   return (
     <div className="bg-green-200 px-5 py-2 text-base font-medium">
-      <Link to="/" className="text-gray-800 font-semibold hover:underline">
-        Home
+      <Link href="/">
+        <a className="text-gray-800 font-semibold hover:underline">Home</a>
       </Link>
       {pathParts.map((part, index) => {
         const path = "/" + pathParts.slice(0, index + 1).join("/");
@@ -26,8 +27,8 @@ const Breadcrumb = () => {
         return (
           <span key={index}>
             <span className="mx-2 text-gray-500">›</span>
-            <Link to={path} className="text-gray-800 capitalize">
-              {name}
+            <Link href={path}>
+              <a className="text-gray-800 capitalize">{name}</a>
             </Link>
           </span>
         );
