@@ -90,6 +90,35 @@
     }
   }
 }
+
+.tp-about1 {
+  &__info-list {
+    & ul {
+      & li {
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 34px;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        & i {
+          font-size: 20px;
+          color: var(--tp-icon-green);
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+  &__content {
+    @media #{$lg,$md,$xs} {
+      margin-left: 0;
+    }
+  }
+}
 .about-thumb-shape {
   position: absolute;
   bottom: 0;
@@ -156,6 +185,14 @@
     font-size: 30px;
   }
 }
+
+.ab-title1 {
+  font-size: 30px;
+  font-weight: 400;
+  &:hover{
+    color: var(--tp-icon-blue);
+  }
+}
 .about-align {
   padding-left: 80px;
   @media #{$md,$xs,$xl} {
@@ -166,7 +203,8 @@
   & ul {
     & li {
       & i {
-        color: var(--tp-theme-blue);
+        //color: var(--tp-theme-blue);
+        color: #F27e01;
       }
     }
   }
@@ -198,7 +236,7 @@
   border-radius: 5px;
   width: 236px;
   height: 258px;
-  padding: 31px 15px 15px 15px;
+  padding: 15px 15px 15px 15px;
   left: 50px;
   bottom: 7px;
   @media #{$xl} {
@@ -254,4 +292,22 @@
 }
 .tp-ab-sm-title {
   font-size: 36px;
+}
+
+.label-points-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.label-points-list li i {
+  color: #ffa500; /* saffron circle */
+  margin-right: 10px;
+  font-size: 10px;
+  padding-top: 6px;
+}
+
+.label-points-list li {
+  align-items: start;
+  padding: 10px;
 }
