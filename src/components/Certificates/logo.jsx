@@ -24,7 +24,7 @@ const Logo = () => {
     b_sub_title: "book Free sampling",
     b_title: (
       <>
-        Free Sampling at your <br /> Home Adress
+        Free Sampling at your <br /> Home Address
       </>
     ),
     b_btn: "Book Now",
