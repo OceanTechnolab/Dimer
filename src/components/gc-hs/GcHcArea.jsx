@@ -18,11 +18,13 @@ const GcHcArea = () => {
       name: "Product Code",
       selector: (row) => row.ProductCode,
       sortable: false,
+      grow: 2,
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
       sortable: false,
+      grow: 2,
     },
     {
       name: "CAS No.",
@@ -105,8 +107,7 @@ const GcHcArea = () => {
           textDecoration: "none",
         }}
       >
-        <span aria-hidden="true" style={{ fontSize: "16px" }}>⬇️</span>
-        <span className="sr-only">Download</span>
+        ⬇️ 
       </a>
     ) : (
       "N/A"

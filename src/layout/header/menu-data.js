@@ -120,13 +120,15 @@ const menu_data = [
       },
       {
         link: "/service-3",
-        title: "Specialty chemicals",
+        title: "Chromapure",
         has_dropdown: true,
         sub_menus: [
-          { link: "/buffers", title: "Biological Buffers" },
-          { link: "/building-blocks", title: "Building Blocks" },
-          { link: "/solar", title: "Solar Chemicals" },
-          { link: "/battery", title: "Battery Materials" }
+          { link: "/gc-hs", title: "GC-HS Solvents" },
+          { link: "/lc-ms", title: "LC-MS Solvents" },
+          { link: "/hplc", title: "HPLC Solvents" },
+          { link: "/ion-pairing", title: "Ion Pairing Reagents" },
+          { link: "/bile-salts", title: "Bile Salts & SLS" },
+          { link: "/gc-reference-standards", title: "GC standards" }
         ]
       },
     ],
@@ -152,7 +154,7 @@ const menu_data = [
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
        { link: "/label-identification", title: "Label Identification Guide" },
-      { link: "/blog-details", title: "Terms & conditions" },
+      { link: "/conditions", title: "Terms & conditions" },
       { link: "/applications", title: "Applications " },
       { link: "/blog-details", title: "Custom synthesis" },
       { link: "/blog-details", title: "Career " },

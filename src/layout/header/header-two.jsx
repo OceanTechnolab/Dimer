@@ -123,6 +123,7 @@ const HeaderTwo = () => {
           </Link>
         </div>
 
+        {/* Desktop Search Bar (hidden on mobile via CSS) */}
         <form className="header-search-bar d-flex align-items-center flex-grow-1 mx-4" onSubmit={e => { e.preventDefault(); if (searchValue.trim()) router.push(`/search?q=${encodeURIComponent(searchValue)}`); }}>
           <div className={`search-container ${searchFocused ? "focused" : ""}`}>
             <div className="search-input-wrapper">
@@ -147,6 +148,15 @@ const HeaderTwo = () => {
             </button>
           </div>
         </form>
+
+        {/* Mobile Search Icon Button (hidden on desktop via CSS) */}
+        <button
+          className="mobile-search-icon btn p-0 me-2"
+          onClick={() => router.push('/search')}
+          aria-label="Open search"
+        >
+          <FaSearch size={22} />
+        </button>
 
         <button
           className="menu-button btn p-0 ms-2"
@@ -207,6 +217,8 @@ const HeaderTwo = () => {
           >
             ×
           </button>
+
+          {/* Removed mobile search bar from overlay */}
 
           <nav className="menu-nav">
             <div className="menu-columns">
@@ -281,20 +293,16 @@ const HeaderTwo = () => {
                                   >
                                     <ul className="sub-dropdown-list">
                                       {sub.sub_menus.map((sub2, j) => (
-                                        <li
-                                          key={j}
-                                          className="sub-dropdown-item"
-                                        >
-                                          <Link
-                                            href={sub2.link}
+                                        <li key={j} className="sub-dropdown-item">
+                                          <span
                                             className={`sub-dropdown-link ${
-                                              isActiveLink(sub2.link)
-                                                ? "active"
-                                                : ""
+                                              isActiveLink(sub2.link) ? "active" : ""
                                             }`}
+                                            onClick={() => router.push(sub2.link)}
+                                            tabIndex={0}
                                           >
                                             {sub2.title}
-                                          </Link>
+                                          </span>
                                         </li>
                                       ))}
                                     </ul>
