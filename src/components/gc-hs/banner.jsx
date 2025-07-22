@@ -15,17 +15,16 @@ const Banner = () => {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-7 col-12">
+            <div className="col-xl-7 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">GC-HS</h2>
+                <h2 className="tp-breadcrumb__title">GC HS</h2>
               </div>
             </div>
-            <div className="col-lg-6 col-md-5 col-12">
-              <div className="tp-breadcrumb__link d-flex align-items-center">
+            <div className="col-xl-5 col-lg-12 col-md-12 col-12">
+              <div className="tp-breadcrumb__link text-xl-end">
                 <span>
-                  {/* Home /{" "} */}
-                  <Link href="/"> Home</Link> /
-                  <Link href="/gc-hs"> GC HS Solvents</Link>
+
+                  <a href="/">Home</a>/<li className="breadcrumb-item active" aria-current="page">GC HS</li>
                 </span>
               </div>
             </div>

@@ -16,67 +16,108 @@ const LcMsArea = () => {
     "Fewer Analytical Problems: Using pure solvents significantly reduces issues caused by contamination, saving time and effort.",
   ];
 
-  const columns = [
+    const columns = [
     {
-      name: "Code",
+      name: "Product Code",
       selector: (row) => row.ProductCode,
-      sortable: true,
+      sortable: false,
+      grow: 2,
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
-      sortable: true,
+      sortable: false,
+      grow: 2,
     },
     {
       name: "CAS No.",
       selector: (row) => row.CASNo,
-      sortable: true,
-    },
-    {
-      name: "Grade",
-      selector: (row) => row.Grade,
-      sortable: true,
-    },
-    {
-      name: "Pack Size",
-      selector: (row) => row.PackSize,
-      sortable: true,
-    },
-    {
-      name: "PDF",
-      selector: (row) =>
-        row.msds_url ? (
-          <a
-            href={row.msds_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Download PDF"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              style={{ width: "24px", height: "24px", color: "#2e7d32" }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3m-6-6h6"
-              />
-            </svg>
-          </a>
-        ) : (
-          "N/A"
-        ),
       sortable: false,
     },
+{
+  name: "Pack Size",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
+        >
+          {p.pack_size}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+{
+  name: "Price (INR)",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{
+            lineHeight: "1.8",
+            paddingBottom: "6px",
+            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+          }}
+        >
+          INR {Number(p.price).toFixed(2)}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+
+
+    {
+      name: "Stock",
+      cell: (row) => <div>{row.stock ?? "0"}</div>,
+      sortable: false,
+    },
+    {
+      name: "HSN Code",
+      cell: (row) => <div>{row.hsn_code || "-"}</div>,
+      sortable: false,
+    },
+    {
+      name: "GST",
+      cell: (row) => <div>{row.gst || "-"}</div>,
+      sortable: false,
+    },
+ {
+  name: "MSDS",
+  selector: (row) =>
+    row.msds_url ? (
+      <a
+        href={row.msds_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download MSDS PDF"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4px 8px",
+          borderRadius: "4px",
+          backgroundColor: "#eaf7f0",
+          border: "1px solid #2e7d32",
+          color: "#2e7d32",
+          fontSize: "14px",
+          gap: "4px",
+          textDecoration: "none",
+        }}
+      >
+        ⬇️ 
+      </a>
+    ) : (
+      "N/A"
+    ),
+  sortable: false,
+},
+
   ];
 
   useEffect(() => {
@@ -199,8 +240,11 @@ const LcMsArea = () => {
             </div>
           </div>
 
-          {/* Product Table */}
-          <div className="row mb-5">
+         
+        </div>
+      </div>
+       {/* Product Table */}
+          <div className="row mb-5 mx-3">
             <div className="col-12">
               <div className="text-center">
                 <h2 className="mb-3">Products</h2>
@@ -212,8 +256,6 @@ const LcMsArea = () => {
               )}
             </div>
           </div>
-        </div>
-      </div>
     </section>
   );
 };

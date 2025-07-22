@@ -90,6 +90,35 @@
     }
   }
 }
+
+.tp-about1 {
+  &__info-list {
+    & ul {
+      & li {
+        font-size: 18px;
+        font-weight: 500;
+        position: relative;
+        padding-left: 34px;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        & i {
+          font-size: 20px;
+          color: var(--tp-icon-green);
+          position: absolute;
+          display: inline-block;
+          left: 0;
+          padding-top: 1px;
+        }
+      }
+    }
+  }
+  &__content {
+    @media #{$lg,$md,$xs} {
+      margin-left: 0;
+    }
+  }
+}
 .about-thumb-shape {
   position: absolute;
   bottom: 0;
@@ -156,6 +185,14 @@
     font-size: 30px;
   }
 }
+
+.ab-title1 {
+  font-size: 30px;
+  font-weight: 400;
+  &:hover{
+    color: var(--tp-icon-blue);
+  }
+}
 .about-align {
   padding-left: 80px;
   @media #{$md,$xs,$xl} {
@@ -166,8 +203,7 @@
   & ul {
     & li {
       & i {
-        //color: var(--tp-theme-blue);
-        color: #FF6000;
+        color: var(--tp-icon-blue);
       }
     }
   }
@@ -273,4 +309,57 @@
 .label-points-list li {
   align-items: start;
   padding: 10px;
+}
+.console-container {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+.console-heading {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+.console-heading:hover{
+  color: var(--tp-icon-blue);
+}
+
+/* Hide overflow */
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scrolling container */
+.marquee-track {
+  display: flex;
+  gap: 40px;
+  animation: scrollLeft 30s linear infinite;
+  width: max-content;
+  padding-bottom: 20px;
+}
+
+/* Image styling */
+.marquee-image {
+  height: 80px;
+  flex-shrink: 0;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.marquee-image:hover{
+  border: solid 1px;
+  border-color: var(--tp-icon-blue);
+}
+
+/* Infinite scrolling keyframes */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

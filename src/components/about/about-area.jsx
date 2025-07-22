@@ -46,11 +46,6 @@ const AboutArea = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="about-content__btn">
-                  <Link href="/about" className="tp-btn">
-                    About us
-                  </Link>
-                </div>
               </div>
               </div>
             </div>
