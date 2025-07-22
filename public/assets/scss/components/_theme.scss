@@ -101,7 +101,6 @@ h6 {
   margin-top: 0px;
   font-weight: var(--tp-fw-sbold);
   line-height: 1.2;
-  margin-top: 50px;
   @include transition(0.3s);
 }
 
@@ -437,6 +436,16 @@ input[type="color"] {
     width: 70px;
     animation: preloader 3s linear infinite;
   }
+}
+
+.cert-images-section img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-images-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px var(--tp-icon-blue);
+  z-index: 2;
 }
 
 .application-hero {

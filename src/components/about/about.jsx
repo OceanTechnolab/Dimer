@@ -6,8 +6,8 @@ import AboutArea from "./about-area";
 import Counter from "@/common/counter";
 import Specialists from "@/common/specialists";
 import NavTab from "@/common/nav-tab";
-import Team from "@/common/team";
 import FooterFour from "@/layout/footer/footer-4";
+import ImageConsole from "./image-console";
 
 const About = () => {
   return (
@@ -16,10 +16,10 @@ const About = () => {
       <Banner />
       <Aboutfirst />
       <AboutArea />
+      <ImageConsole />
       <Counter />
       <Specialists />
       <NavTab />
-      <Team />
       <FooterFour />
     </>
   );

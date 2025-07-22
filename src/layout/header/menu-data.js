@@ -149,7 +149,7 @@ const menu_data = [
     sub_menus: [
       { link: "/blog", title: "Product literature" },
       { link: "/coa", title: "COA" },
-      { link: "/blog-details", title: "Certificates " },
+      { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
        { link: "/label-identification", title: "Label Identification Guide" },
       { link: "/blog-details", title: "Terms & conditions" },
