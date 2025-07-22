@@ -783,6 +783,25 @@ html, body {
   .menu-button {
     flex-shrink: 0;
   }
+  .mobile-search-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin-right: 8px;
+    color: #2d3748;
+    font-size: 22px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-search-icon {
+    display: none !important;
+  }
 }
 
 /* Main dropdown arrow styles */
