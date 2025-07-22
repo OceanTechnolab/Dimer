@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import menu_data from "./menu-data";
 import { FaSearch } from "react-icons/fa";
 import { HiChevronDown } from "react-icons/hi2";
-import { HiChevronDown } from "react-icons/hi2";
 
 const HeaderTwo = () => {
   const { sticky } = useSticky();
