@@ -152,7 +152,7 @@ const menu_data = [
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
        { link: "/label-identification", title: "Label Identification Guide" },
-      { link: "/blog-details", title: "Terms & conditions" },
+      { link: "/conditions", title: "Terms & conditions" },
       { link: "/blog-details", title: "Applications " },
       { link: "/blog-details", title: "Custom synthesis" },
       { link: "/blog-details", title: "Career " },

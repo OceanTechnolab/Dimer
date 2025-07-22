@@ -575,3 +575,22 @@ h5.performace
     padding-right: 20px;
     text-align: justify;
 }
+.tp-team-for p {
+  font-size: 20px;
+}
+.tp-team-for a:hover {
+  color: var(--tp-icon-blue);
+}
+.tp-team-for strong {
+  color: var(--tp-common-black);
+}
+
+.number p {
+  font-size: 20px;
+}
+.number a:hover {
+  color: var(--tp-icon-blue);
+}
+.number strong {
+  color: var(--tp-common-black);
+}
