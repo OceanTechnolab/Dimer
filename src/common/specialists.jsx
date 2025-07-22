@@ -11,30 +11,28 @@ const choose = [
     title: (
       <>
         High Quality <br />
-        Products & Services
+        & Consistency
       </>
     ),
     des: (
       <>
-        25,000+ research-grade chemicals with <br />
-         certified quality and consistent performance. 
+        All our chemicals are manufactured under strict SOPs and validated protocols ensuring batch-to-batch consistency.
       </>
     ),
   },
   {
     id: 2,
-    color: "pink-icon",
+    color: "blue-icon",
     icon: "flaticon-thinking",
     title: (
       <>
         Efficient Development  <br />
-       & Delivery
+      & Logistics
       </>
     ),
     des: (
       <>
-        Fast, reliable chemical solutions through<br />
-         optimized SOPs and ready stock availability. 
+        Ready stock availability, custom synthesis, and quick dispatch make us reliable partners for urgent R&D needs. 
       </>
     ),
   },
@@ -44,29 +42,27 @@ const choose = [
     icon: "flaticon-24-hours-1",
     title: (
       <>
-        24/7 Support &  <br /> Customer Partnership
+        End-to-End Support
       </>
     ),
     des: (
       <>
-        Round-the-clock assistance and <br />
-         a customer-first approach that goes beyond delivery. 
+        From COA, MSDS to customized reports—we support you from formulation to fulfillment.
       </>
     ),
   },
   {
     id: 4,
-    color: "sky-icon",
+    color: "blue-icon",
     icon: "flaticon-team",
     title: (
       <>
-        Skilled & <br /> Experienced Team
+        Trusted Expertise
       </>
     ),
     des: (
       <>
-        Driven by expert chemists and technical<br />
-         professionals committed to excellence. 
+        Our dedicated R&D professionals and skilled workforce ensure every product meets scientific rigor and practical performance.
       </>
     ),
   },
@@ -107,18 +103,6 @@ const Specialists = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="row text-center">
-            <div className="col-lg-12">
-              <div className="tp-choose-option">
-                <span>
-                  Laboratories Used For Scientific Research :
-                  <Link href="/">
-                    Take Many Forms<i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>
