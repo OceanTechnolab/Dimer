@@ -32,7 +32,7 @@ const Conditionheading = () => {
                   Dimer utilizes cookies. By accessing our website, you consent to their use in accordance with our Privacy Policy.
                     <br />
                 Like most interactive websites, we utilize cookies to store and retrieve user information, enhancing your browsing 
-                experience.Our website uses cookies to enhance your experience by enabling key features. Additionally, our affiliat
+                experience. Our website uses cookies to enhance your experience by enabling key features. Additionally, our affiliate
                  and advertising partners may also utilize cookies.
                 </p>
               </div>
