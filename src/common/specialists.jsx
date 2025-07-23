@@ -11,30 +11,28 @@ const choose = [
     title: (
       <>
         High Quality <br />
-        Services
+        & Consistency
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        All our chemicals are manufactured under strict SOPs and validated protocols ensuring batch-to-batch consistency.
       </>
     ),
   },
   {
     id: 2,
-    color: "pink-icon",
+    color: "blue-icon",
     icon: "flaticon-thinking",
     title: (
       <>
-        Fast Working <br />
-        Process
+        Efficient Development  <br />
+      & Logistics
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Ready stock availability, custom synthesis, and quick dispatch make us reliable partners for urgent R&D needs. 
       </>
     ),
   },
@@ -44,29 +42,27 @@ const choose = [
     icon: "flaticon-24-hours-1",
     title: (
       <>
-        24/7 Customer <br /> Support
+        End-to-End Support
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        From COA, MSDS to customized reports—we support you from formulation to fulfillment.
       </>
     ),
   },
   {
     id: 4,
-    color: "sky-icon",
+    color: "blue-icon",
     icon: "flaticon-team",
     title: (
       <>
-        We have <br /> Expert Team
+        Trusted Expertise
       </>
     ),
     des: (
       <>
-        Nam eget dui vel quam sodales <br />
-        semper quis porttitor tortor.
+        Our dedicated R&D professionals and skilled workforce ensure every product meets scientific rigor and practical performance.
       </>
     ),
   },
@@ -107,18 +103,6 @@ const Specialists = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="row text-center">
-            <div className="col-lg-12">
-              <div className="tp-choose-option">
-                <span>
-                  Laboratories Used For Scientific Research :
-                  <Link href="/">
-                    Take Many Forms<i className="fa-solid fa-arrow-right"></i>
-                  </Link>
-                </span>
-              </div>
-            </div>
           </div>
         </div>
       </section>

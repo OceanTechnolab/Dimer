@@ -2,6 +2,7 @@
 
 .breadcrumb {
   &__area {
+
    // padding: 200px 0;
    height: 120px;
   }
@@ -24,13 +25,15 @@
 .tp-breadcrumb {
   &__title {
     color: var(--tp-common-white);
+    //font-weight: 400;
+   // font-size: 55px;
     font-weight: 400;
-    font-size: 55px;
+    font-size: 35px;
     text-transform: uppercase;
     line-height: 1.2;
     margin-bottom: 0;
     @media #{$lg} {
-      font-size: 46px;
+      font-size: 30px;
     }
     @media #{$md} {
       font-size: 44px;
@@ -54,10 +57,10 @@
         font-size: 16px;
       }
       & a {
-        text-decoration: underline;
         margin-left: 5px;
         &:hover {
           color: var(--tp-icon-green);
+          text-decoration: underline;
         }
       }
       @media #{$md,$xs} {
@@ -72,10 +75,18 @@
   }
 }
 .breadcrumb__content.text-center {
-    color: #F27E01;
+    color: var(--tp-icon-blue);
 }
 
 .breadcrumb-item.active {
-    color: #F27E01;
+    color: var(--tp-icon-green);
+    display: inline-flex;
+}
+.breadcrumb-item.active {
+    color: #FBBF77;
      display: inline-flex;
+}
+
+.breadcrumb-item.active:hover {
+    color: var(--tp-icon-blue);
 }

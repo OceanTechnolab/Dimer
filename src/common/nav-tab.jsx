@@ -10,7 +10,7 @@ const progress_data = [
     title: "Generate Proposal",
     des: (
       <>
-        Testing Begins many varios <br /> suffered alten in some
+        Share your requirement. We’ll prepare a custom solution that fits your needs.
       </>
     ),
   },
@@ -21,8 +21,7 @@ const progress_data = [
     title: "Testing Begins",
     des: (
       <>
-        There are many varios passages <br />
-        suffered alten in some
+        Our lab begins production under strict quality control and SOPs.
       </>
     ),
   },
@@ -33,8 +32,7 @@ const progress_data = [
     title: "Reports Delivered",
     des: (
       <>
-        There are many varios passages <br />
-        suffered alten in some
+        Get COA, MSDS, and technical documents along with your shipment.
       </>
     ),
   },
@@ -48,17 +46,18 @@ const tab_content = [
     aria_labelledby: "profile-tab",
     header: (
       <>
-        Your full service lab for clinical trials. Our process is to ensure the
-        generation of <br /> accurate and precise findings
+        At Dimer Scientific, we aim to lead through energy,
+         innovation, and trust,<br /> empowering researchers and 
+         industries to explore new frontiers in chemistry.
       </>
     ),
-    title: "Our Mission is Give You Always Best Results.",
+    title: "Our Vision is Give You Always Best Results.",
     des_1: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        We envision a future where every experiment is
+        enabled, every formulation supported, and every
+        challenge in fine & specialty chemicals is met
+        with smart, scalable, and sustainable solutions.
       </>
     ),
     des_2: (
@@ -68,7 +67,7 @@ const tab_content = [
       </>
     ),
     images: [
-      { order: "order-lg-1", img: "/assets/img/tab/tab-thumb-03.jpg" },
+      { order: "order-lg-1", img: "/assets/img/tab/Vision1.webp" },
       { order: "order-lg-3", img: "/assets/img/tab/tab-thumb-04.jpg" },
     ],
   },
@@ -78,27 +77,24 @@ const tab_content = [
     aria_labelledby: "contact-tab",
     header: (
       <>
-        Your full service lab for clinical trials. Our process is to ensure the
-        generation of <br /> accurate and precise findings
+        At Dimer Scientific, our values guide every product we create and every partnership we build
       </>
     ),
     title: "We are Trusted by over 25000+ of customers",
     des_1: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscipit loborti
-        excommodo habent claritatem insitamconse quat.Exerci tationlobortis nisl
-        aliquip ex ea commodo habent claritatem insitamconse quat.
+        At Dimer Scientific, our values aren’t just words — they shape the way we operate, 
+        innovate, and support our partners. From the lab bench to your doorstep, these principles 
+        guide our commitment to quality, reliability, and trust.
       </>
     ),
     des_2: (
       <>
-        Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo
-        claritatem insitamconse quat.Exerci tation ullamcorper suscip
+        They remind us that behind every order is a person, a purpose, and a pursuit of something bigger.
       </>
     ),
     images: [
-      { order: "order-lg-1", img: "/assets/img/tab/tab-thumb-01.jpg" },
+      { order: "order-lg-1", img: "/assets/img/tab/tab-values.webp" },
       { order: "order-lg-3", img: "/assets/img/tab/tab-thumb-02.jpg" },
     ],
   },
@@ -121,7 +117,7 @@ const NavTab = () => {
                 aria-selected="true"
                 tabIndex="-1"
               >
-                Our Process
+                Our Mission
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -136,7 +132,7 @@ const NavTab = () => {
                 aria-selected="false"
                 tabIndex="-1"
               >
-                OUr Mission
+                Our Vision
               </button>
             </li>
             <li className="nav-item" role="presentation">
@@ -163,8 +159,8 @@ const NavTab = () => {
               aria-labelledby="home-tab"
             >
               <span className="nav-info d-flex justify-content-center text-center mb-75">
-                Your full service lab for clinical trials. Our process is to
-                ensure the generation of <br /> accurate and precise findings
+                Our mission is to enable discovery, accelerate innovation, and deliver reliable <br /> 
+                solutions that help our customers bring their chemistry to life — with trust, care, and precision.
               </span>
               <div className="row">
                 {progress_data.map((item) => (

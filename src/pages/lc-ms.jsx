@@ -1,20 +1,13 @@
 import SEO from "@/components/seo";
 import Wrapper from "@/layout/wrapper";
 import React from "react";
+import LcMs from "@/components/lc-ms/lc-ms";
 
 const LCMSPage = () => {
   return (
     <Wrapper>
       <SEO pageTitle="LC-MS Solvents" />
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <h1>LC-MS Solvents</h1>
-            <p>Premium solvents for Liquid Chromatography Mass Spectrometry applications.</p>
-            {/* Add your content here */}
-          </div>
-        </div>
-      </div>
+      <LcMs />
     </Wrapper>
   );
 };

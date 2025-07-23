@@ -13,16 +13,53 @@ const AboutArea = () => {
                 className="tp-about-thumb mb-60 wow fadeInLeft"
                 data-wow-delay=".3s"
               >
+                <div
+                className="about-content about-align mb-60 wow fadeInRight"
+                data-wow-delay=".3s"
+              >
+                <div className="tp-section">
+                  <h3 className="tp-section__title ab-title mb-25">
+                   Trusted by Scientists, Powered by Innovation.
+                  </h3>
+                  <p className=" mr-20 mb-40">
+                    Our extensive product range, expert team, and agile
+                    logistics make us a preferred partner for research
+                    institutions and global companies seeking reliable
+                    and responsive chemical solutions.
+                  </p>
+                </div>
+                <div className="tp-about__info-list ab-check-list mb-55">
+                  <ul>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Specialized in R&D, Analytical & Custom Synthesis
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Advanced Manufacturing Facilities with GMP & ISO certifications
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Serving 10+ Industries including pharma, agro, petrochemical
+                      euismod
+                    </li>
+                    <li>
+                      <i className="fa-solid fa-check"></i>Rapid Logistics & Ready Inventory for quick turnaround
+                      lectus
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              </div>
+            </div>
+            <div className="col-xl-6 col-lg-8 col-12">
                 <div className="tp-ab-img d-flex">
                   <div className="tp-ab-main-img p-relative">
                     <img
-                      src="/assets/img/about/about-bg-04.jpg"
+                      src="/assets/img/about/about-us-1.png"
                       alt="about-thumb"
                     />
                     <div className="about__exprience tp-ab-counter">
-                      <h3 className="counter">
-
-                        <Count add_style={true} number={12} />
+                      <h3 className="counter inline-flex items-center justify-center bg-orange-500 text-white w-20 h-20 rounded-md text-3xl font-bold">
+                        <Count add_style={true} number={10} /> 
+                        +
                       </h3>
                       <i>
                         Years of <br />
@@ -33,63 +70,16 @@ const AboutArea = () => {
                   <div className="tp-ab-shape d-none d-md-block d-lg-none d-xl-block">
                     <img
                       className="ab-shape-one"
-                      src="/assets/img/about/about-bg-05.jpg"
+                      src="/assets/img/about/about-us-2.png"
                       alt="about-shape"
                     />
                     <img
                       className="ab-shape-two"
-                      src="/assets/img/about/about-bg-06.jpg"
+                      src="/assets/img/about/about-us-3.png"
                       alt=""
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-8 col-12">
-              <div
-                className="about-content about-align mb-60 wow fadeInRight"
-                data-wow-delay=".3s"
-              >
-                <div className="tp-section">
-                  <h3 className="tp-section__title ab-title mb-25">
-                    We’ll Ensure You Alwasy Get Best Results.
-                  </h3>
-                  <a className="tp-section__link" href="#">
-                    Read our MIssion & Vission{" "}
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </a>
-                  <p className=" mr-20 mb-40">
-                    Exerci tation ullamcorper suscipit lobortis nisl aliquip ex
-                    ea commodo claritatem insitamconse quat.Exerci tation
-                    ullamcorper suscipit loborti excommodo habent claritatem
-                    insitamconse quat.Exerci tationlobortis nisl aliquip ex ea
-                    commodo habent claritatem insitamconse quat.
-                  </p>
-                </div>
-                <div className="tp-about__info-list ab-check-list mb-55">
-                  <ul>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>In aliquet dui nec
-                      lectus
-                    </li>
-                  </ul>
-                </div>
-                <div className="about-content__btn">
-                  <Link href="/about" className="tp-btn">
-                    About us
-                  </Link>
-                </div>
-              </div>
             </div>
           </div>
         </div>
