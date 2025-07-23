@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
@@ -12,23 +11,17 @@ const Banner = () => {
       >
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-6 col-md-7 col-12">
+            <div className="col-xl-7 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb">
                 <h2 className="tp-breadcrumb__title">Label-Identification</h2>
               </div>
             </div>
-            <div className="col-lg-6 col-md-5 col-12">
-              <div className="tp-breadcrumb__link d-flex align-items-center">
-                <nav aria-label="breadcrumb">
-                  <ul className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="/">Home</a>
-                    </li>
-                    <li className="breadcrumb-item active" aria-current="page">
-                      label-identification
-                    </li>
-                  </ul>
-                </nav>
+            <div className="col-xl-5 col-lg-12 col-md-12 col-12">
+              <div className="tp-breadcrumb__link text-xl-end">
+                <span>
+
+                  <a href="/">Home</a>/<li className="breadcrumb-item active" aria-current="page">Label-Identification</li>
+                </span>
               </div>
             </div>
           </div>
