@@ -233,15 +233,8 @@ function Certificate() {
             </div>
           </div>
           {/* Right: Certificate Image */}
-          <div
-            className="certificate-image"
-           
-          >
-            <img
-              src="/assets/img/coa/coa.webp"
-              alt="Certificate Seal"
-            
-            />
+          <div className="certificate-image">
+            <img src="/assets/img/coa/coanew.webp" alt="Certificate Seal" />
           </div>
         </div>
         {/* Watermark */}
