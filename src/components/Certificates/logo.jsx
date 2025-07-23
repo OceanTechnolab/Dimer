@@ -9,7 +9,7 @@ const Logo = () => {
    // about_img: "/assets/img/about/about-bg-02.png",
    // popup_video: "https://www.youtube.com/watch?v=-BpXNPHiB2U",
    // about_thumb: "/assets/img/about/about-bg-03.png",
-    title: "Certifications",
+    title: "",
     sub_title: "About",
     des_1: (
       <>
