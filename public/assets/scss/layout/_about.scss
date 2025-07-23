@@ -41,10 +41,12 @@
       padding: 30px;
     }
     & h3 {
-      font-size: 115px;
+      font-size: 100px;
       color: var(--tp-common-white);
       font-family: days one;
       line-height: 1;
+      display: flex;
+      justify-content: center;
       @media #{$xs} {
         font-size: 80px;
       }
@@ -348,6 +350,9 @@
   object-fit: contain;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: 180px;
+  height: auto;
+  padding: 20px;
 }
 .marquee-image:hover{
   border: solid 1px;
