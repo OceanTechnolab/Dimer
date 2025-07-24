@@ -46,11 +46,6 @@ const AboutArea = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="about-content__btn">
-                  <Link href="/about" className="tp-btn">
-                    About us
-                  </Link>
-                </div>
               </div>
               </div>
             </div>
@@ -62,9 +57,9 @@ const AboutArea = () => {
                       alt="about-thumb"
                     />
                     <div className="about__exprience tp-ab-counter">
-                      <h3 className="counter">
-
-                        <Count add_style={true} number={10} />
+                      <h3 className="counter inline-flex items-center justify-center bg-orange-500 text-white w-20 h-20 rounded-md text-3xl font-bold">
+                        <Count add_style={true} number={10} /> 
+                        +
                       </h3>
                       <i>
                         Years of <br />

@@ -968,3 +968,11 @@
     padding-right: 20px; /* Adjust this value as needed */
   }
 }
+
+.tp-section p {
+  padding-bottom: 10px;
+}
+
+.tp-about__info-list h5:hover{
+  color: var(--tp-icon-blue);
+}

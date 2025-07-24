@@ -32,7 +32,7 @@
   
   &__content {
     padding: 40px 45px 45px 45px;
-    background-color: #f27e01;
+    background-color: #FF6000;
     transform: translateY(-8px) scale(1.03); /* gentle popup + lift */
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
   z-index: 5;
@@ -42,14 +42,14 @@
     border-radius: 0 0 5px 5px;
     @media #{$md,$xs} {
       padding: 30px 25px 35px 25px;
-      background-color: #f27e01;
+      background-color: #FF6000;
       .col-xl-4:nth-child(2) > .tp-team__content {
     background-color: white;
 }
     }
     &_highlight-box {
   background-color: #f9f3dc;
-  border: 2px solid #f27e01;
+  border: 2px solid #FF6000;
   border-radius: 8px;
   padding: 20px;
 }
@@ -325,7 +325,7 @@
     }
   }
   &__content {
-    padding-left: -15px;
+    padding-left: 15px;
     @media #{$lg,$md,$xs} {
       margin-top: 0;
     }
@@ -338,7 +338,9 @@
     }
     & p {
       margin-bottom: 50px;
-      color: var(--tp-text-2);
+      color: var(--tp-theme-primary);
+      font-size: 18px;
+      text-align: justify;
       @media #{$md} {
         margin-bottom: 20px;
       }
@@ -453,4 +455,15 @@
       }
     }
   }
+}
+
+img.agr {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* default shadow */
+  border-radius: 10px; /* optional */
+}
+
+img.agr:hover {
+  box-shadow: 0 0 30px var(--tp-icon-blue); /* orange glow on hover */
+  transform: scale(1.03); /* slight zoom effect */
 }
