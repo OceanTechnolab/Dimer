@@ -862,3 +862,7 @@ html, body {
 .sub-dropdown-arrow.open {
   transform: rotate(180deg);
 }
+
+.tp-policy{
+  text-align: justify;
+}
