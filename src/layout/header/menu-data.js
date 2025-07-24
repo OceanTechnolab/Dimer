@@ -103,34 +103,36 @@ const menu_data = [
     sub_menus: [
       {
         link: "/service",
-        title: "Analytical Solvents",
-        has_dropdown: true,
-        sub_menus: [
-          { link: "/gc-hs", title: "GC-HS Solvents" },
-          { link: "/lc-ms", title: "LC-MS Solvents" },
-          { link: "/hplc", title: "HPLC Solvents" },
-          { link: "/ion-pairing", title: "Ion Pairing Reagents" },
-          { link: "/bile-salts", title: "Bile Salts & SLS" }
-        ]
-      },
-      {
-        link: "/gc-reference-standards",
-        title: "GC reference standards",
-        has_dropdown: false
-      },
-      {
-        link: "/service-3",
         title: "Chromapure",
         has_dropdown: true,
         sub_menus: [
+          { link: "/analyte", title: "Analytical Solvents" },
           { link: "/gc-hs", title: "GC-HS Solvents" },
           { link: "/lc-ms", title: "LC-MS Solvents" },
           { link: "/hplc", title: "HPLC Solvents" },
           { link: "/ion-pairing", title: "Ion Pairing Reagents" },
           { link: "/bile-salts", title: "Bile Salts & SLS" },
-          { link: "/gc-reference-standards", title: "GC standards" }
+          { link: "/gc-reference-standards", title: "GC reference standards" }
         ]
       },
+      {
+        link: "/elementa",
+        title: "Elementa",
+        has_dropdown: false
+      },
+      // {
+      //   link: "/service-3",
+      //   title: "Chromapure",
+      //   has_dropdown: true,
+      //   sub_menus: [
+      //     { link: "/gc-hs", title: "GC-HS Solvents" },
+      //     { link: "/lc-ms", title: "LC-MS Solvents" },
+      //     { link: "/hplc", title: "HPLC Solvents" },
+      //     { link: "/ion-pairing", title: "Ion Pairing Reagents" },
+      //     { link: "/bile-salts", title: "Bile Salts & SLS" },
+      //     { link: "/gc-reference-standards", title: "GC standards" }
+      //   ]
+      // },
     ],
   },
   {
