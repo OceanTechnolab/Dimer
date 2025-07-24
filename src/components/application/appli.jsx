@@ -77,7 +77,7 @@ const ApplicationPage = () => {
                         </div>
                       </div>
                   <div className="text-center mt-6">
-                    <a href="/certifications" className="text-[#f27e01] font-medium underline">
+                    <a href="/certificates" className="text-[#f27e01] font-medium underline">
                        View More Certifications
                     </a>
                   </div>
