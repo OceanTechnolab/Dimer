@@ -70,10 +70,11 @@ const GcHcArea = () => {
   sortable: false,
 },
 
+{
+  name: "Stock",
+  cell: (row) => <div>{row.stock ?? "0"}</div>,
+},
 
-    {
-      name: "Stock",
-      cell: (row) => <div>{row.stock ?? "0"}</div>,
 {
   name: "Pack Size",
   cell: (row) => (
