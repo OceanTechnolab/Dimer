@@ -62,11 +62,13 @@
         & p {
             color: var(--tp-text-1);
             font-size: 15px;
+            text-align: left;
         }
     }
     &__title {
         color: var(--tp-common-white);
         font-weight: 400;
+        text-align: justify;
     }
 }
 .tp-choose-option {
