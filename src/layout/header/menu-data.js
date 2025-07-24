@@ -156,7 +156,7 @@ const menu_data = [
        { link: "/label-identification", title: "Label Identification Guide" },
       { link: "/conditions", title: "Terms & conditions" },
       { link: "/privacy-policy", title: "Privacy & Policy" },
-      { link: "/blog-details", title: "Applications " },
+      { link: "/applications", title: "Applications " },
       { link: "/blog-details", title: "Custom synthesis" },
       { link: "/blog-details", title: "Career " },
     ],

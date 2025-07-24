@@ -119,7 +119,7 @@ h2 {
 }
 
 .label-heading:hover {
-  color: #f27e01;
+  color: #FF6000;
 }
 h2.heading{
   text-align: center;
@@ -448,6 +448,357 @@ input[type="color"] {
   z-index: 2;
 }
 
+.application-hero {
+  background-color: #f8f9fa;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.application-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.application-hero p {
+  font-size: 1.125rem;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+/* Consolidated styles from lines 632-654 */
+.application-hero {
+  /* Additional styles from the second definition, if any */
+}
+  }
+}
+
+.industry-sections > div {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.industry-sections h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis {
+  background-color: #f27e01;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.custom-synthesis h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis p {
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+.custom-synthesis button {
+  background: white;
+  color: #f27e01;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-synthesis button:hover {
+  background: #f1f1f1;
+}
+
+.certificates-section {
+  background-color: #f3f4f6;
+  padding: 4rem 1rem;
+}
+
+.certificates-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.certificates-section ul {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  list-style: disc inside;
+}
+
+.certificates-section a {
+  color: #f27e01;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.inquiry-form {
+  background-color: white;
+  padding: 4rem 1rem;
+}
+
+.inquiry-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.inquiry-form form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.inquiry-form button {
+  background-color: #f27e01;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.inquiry-form button:hover {
+  background-color: #dc5f00;
+}
+
+.faqs {
+  background-color: #f9fafb;
+  padding: 4rem 1rem;
+}
+
+.faqs h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.faqs > div {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.faqs details {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faqs summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faqs p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
+.application-hero {
+  background-color: #f8f9fa;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.application-hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.application-hero p {
+  font-size: 1.125rem;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.application-hero img {
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.industry-sections {
+  display: grid;
+  gap: 2.5rem;
+  padding: 4rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .industry-sections {
+    padding: 4rem 5rem;
+  }
+}
+
+.industry-sections > div {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.industry-sections h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis {
+  background-color: #f27e01;
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.custom-synthesis h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.custom-synthesis p {
+  margin: 0 auto 1.5rem;
+  max-width: 640px;
+}
+
+.custom-synthesis button {
+  background: white;
+  color: #f27e01;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-synthesis button:hover {
+  background: #f1f1f1;
+}
+
+.certificates-section {
+  background-color: #f3f4f6;
+  padding: 4rem 1rem;
+}
+
+.certificates-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.certificates-section ul {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  list-style: disc inside;
+}
+
+.certificates-section a {
+  color: #f27e01;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.inquiry-form {
+  background-color: white;
+  padding: 4rem 1rem;
+}
+
+.inquiry-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.inquiry-form form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.inquiry-form input,
+.inquiry-form select,
+.inquiry-form textarea {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.inquiry-form button {
+  background-color: #f27e01;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.inquiry-form button:hover {
+  background-color: #dc5f00;
+}
+
+.faqs {
+  background-color: #f9fafb;
+  padding: 4rem 1rem;
+}
+
+.faqs h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.faqs > div {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.faqs details {
+  background: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.faqs summary {
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.faqs p {
+  margin-top: 0.5rem;
+  color: #4b5563;
+}
+
 .img-one {
     width: 80%;
     height: auto;
@@ -593,4 +944,112 @@ h5.performace
 }
 .number strong {
   color: var(--tp-common-black);
+}
+
+.industry-section {
+  padding: 40px 20px;
+  background: var(--tp-common-white);
+}
+
+.industry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.industry-row {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 1px var(--tp-icon-blue);
+  flex-wrap: wrap; /* for responsiveness */
+}
+
+.industry-img img {
+  width: 220px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.industry-content {
+  flex: 1;
+  min-width: 200px;
+}
+
+.industry-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.industry-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+a.industry-button {
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  border: solid 1px;
+  border-radius: 10px;
+}
+a.industry-button:hover{
+  border-color: var(--tp-icon-blue) ;
+}
+
+.certificates-section {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  padding: 4rem 1rem;
+}
+
+.certificates-section h2 {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.certificates-list {
+  max-width: 640px; /* max-w-2xl */
+  margin: 0 auto;
+  font-size: 1.125rem; /* text-lg */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cert-item img {
+  width: 100px;
+  height: 100px;
+}
+
+.cert-item strong {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #111827;
+}
+
+.certificates-section-m a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--tp-icon-blue);
+  font-weight: 500;
+  border: solid 1px;
+  padding: 10px;
+  border-radius: 10px;
 }
