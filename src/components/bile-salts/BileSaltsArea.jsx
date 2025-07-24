@@ -28,43 +28,48 @@ const BileSaltsArea = () => {
       selector: (row) => row.CASNo,
       sortable: false,
     },
-{
-  name: "Pack Size",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
-        >
-          {p.pack_size}
+    {
+      name: "Pack Size",
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom:
+                  index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              {p.pack_size}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-{
-  name: "Price (INR)",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{
-            lineHeight: "1.8",
-            paddingBottom: "6px",
-            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
-          }}
-        >
-          INR {Number(p.price).toFixed(2)}
+      ),
+      sortable: false,
+    },
+    {
+      name: "Price (INR)",
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom:
+                  index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              INR {Number(p.price).toFixed(2)}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-
+      ),
+      sortable: false,
+    },
 
     {
       name: "Stock",
@@ -81,37 +86,36 @@ const BileSaltsArea = () => {
       cell: (row) => <div>{row.gst || "-"}</div>,
       sortable: false,
     },
- {
-  name: "MSDS",
-  selector: (row) =>
-    row.msds_url ? (
-      <a
-        href={row.msds_url}
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Download MSDS PDF"
-        style={{
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: "4px 8px",
-          borderRadius: "4px",
-          backgroundColor: "#eaf7f0",
-          border: "1px solid #2e7d32",
-          color: "#2e7d32",
-          fontSize: "14px",
-          gap: "4px",
-          textDecoration: "none",
-        }}
-      >
-        ⬇️ 
-      </a>
-    ) : (
-      "N/A"
-    ),
-  sortable: false,
-},
-
+    {
+      name: "MSDS",
+      selector: (row) =>
+        row.msds_url ? (
+          <a
+            href={row.msds_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download MSDS PDF"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: "4px 8px",
+              borderRadius: "4px",
+              backgroundColor: "#eaf7f0",
+              border: "1px solid #2e7d32",
+              color: "#2e7d32",
+              fontSize: "14px",
+              gap: "4px",
+              textDecoration: "none",
+            }}
+          >
+            ⬇️
+          </a>
+        ) : (
+          "N/A"
+        ),
+      sortable: false,
+    },
   ];
 
   useEffect(() => {
@@ -169,7 +173,7 @@ const BileSaltsArea = () => {
                 data-wow-delay=".4s"
               >
                 <img
-                  src="/assets/img/productdetails/GC-HS_solvent.svg"
+                  src="/assets/img/productdetails/BileSalts.svg"
                   alt="product-thumb"
                 />
               </div>
