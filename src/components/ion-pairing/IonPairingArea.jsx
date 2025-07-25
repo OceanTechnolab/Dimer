@@ -171,7 +171,7 @@ const IonPairingArea = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
               <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
-                <img src="/assets/img/productdetails/GC-HS_solvent.svg" alt="product-thumb" />
+                <img src="/assets/img/productdetails/Ion Pairing Reagents.svg" alt="product-thumb" />
               </div>
             </div>
             <div className="col-lg-6 col-md-6">

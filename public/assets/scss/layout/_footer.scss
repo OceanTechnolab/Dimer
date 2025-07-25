@@ -263,7 +263,7 @@
     }
   }
   &__contact {
-    font-size: 36px;
+    font-size: 22px;
     @media #{$lg} {
       font-size: 30px;
     }
@@ -557,4 +557,20 @@
       color: var(--tp-text-1);
     }
   }
+}
+.footer-flex-row {
+  display: flex;
+  flex-wrap: wrap;              
+  justify-content: space-between;
+  gap: 20px;                  
+}
+
+@media (min-width: 992px) {
+  .footer-flex-row {
+    flex-wrap: nowrap;
+  }
+}
+.footerimage{
+  width: 200px;
+  padding-bottom: 20px;
 }
