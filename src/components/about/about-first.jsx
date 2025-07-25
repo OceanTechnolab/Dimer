@@ -7,7 +7,6 @@ const Aboutfirst = () => {
   const about_content = {
     about_bg: "/assets/img/shape/shape-bg-05.png",
     about_img: "/assets/img/about/about-1.webp",
-    popup_video: "https://www.youtube.com/shorts/WeMXeXlkSN0",
     about_thumb: "/assets/img/about/custom.webp",
     title: "Driving Innovation in Research & Development Chemistry",
     sub_title: "About",
@@ -69,15 +68,6 @@ const Aboutfirst = () => {
                   data-wow-delay=".3s"
                 >
                   <img src={about_img} alt="about-thumb" />
-                  <div className="about-video">
-                    <button
-                      onClick={() => setIsVideoOpen(true)}
-                      className="popup-video"
-                      href={popup_video}
-                    >
-                      <i className="fa-solid fa-play"></i>
-                    </button>
-                  </div>
                   <div className="about-thumb-shape d-none d-md-block">
                     <img src={about_thumb} alt="about-shape" />
                   </div>
@@ -107,14 +97,6 @@ const Aboutfirst = () => {
           </div>
         </div>
       </section>
-
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"WeMXeXlkSN0"}
-      />
-      {/* video modal end */}
     </>
   );
 };
