@@ -63,7 +63,7 @@ const BileSaltsArea = () => {
                   index !== row.packs.length - 1 ? "1px solid #eee" : "none",
               }}
             >
-              INR {Number(p.price).toFixed(2)}
+              INR {Number(p.price).toFixed(2).replace(/\.00$/, "")}
             </div>
           ))}
         </div>
