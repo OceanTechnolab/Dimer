@@ -2,7 +2,7 @@ import React from "react";
 
 const Facility = () => {
   const about_content = {
-    about_img: "/assets/img/about/infrastructure.webp",
+    about_img: "/assets/img/about/facility.webp",
     //about_thumb: "/assets/img/about/custom.webp",
   };
 
@@ -44,7 +44,7 @@ const Facility = () => {
           <div className="col-xl-6 col-lg-12 col-12">
             <div className="about-thumb text-lg-center p-relative mb-60 wow fadeInLeft" data-wow-delay=".3s">
               <div className="facility-container">
-                 <img src="/assets/img/about/infrastructure.webp" className="facility-image" alt="Facility" />
+                 <img src="/assets/img/about/facility.webp" className="facility-image" alt="Facility" />
                   </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const Facility = () => {
           {/* Right: Heading + Info Boxes */}
           <div className="col-xl-6 col-lg-12 col-12">
             <div className="about-content mb-60 wow fadeInRight" data-wow-delay=".3s">
-              <h3 className="tp-section__title mb-45">Infrastructure & Facility Overview</h3>
+              <h3 className="tp-section__title mb-45">facility & Facility Overview</h3>
               <h5 className="performace">At Dimer Scientific, our facilities are built for precision, performance, and scalability.</h5>
 
               <div className="row">
