@@ -2,12 +2,17 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "../../common/DataTable";
 
-const BileSaltsArea = () => {
+const AnalyteArea = () => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const features = [
-    // You can add specific features here if needed, or leave empty if not provided
+    "Accuracy & Reliability: Their high purity ensures precise and trustworthy results, free from interfering contaminants.",
+    "Reproducibility: Consistent quality guarantees that experiments can be repeated with the same outcomes.",
+    "Enhanced Sensitivity: Low impurities allow for detection of even trace amounts of substances.",
+    "Regulatory Compliance: Essential for meeting industry standards and certifications.",
+    "Cost-Effectiveness: Reduces failed experiments, re-tests, and instrument downtime in the long run. Prevents contamination and damage to sensitive analytical equipment.",
+    "Broad Applicability: Indispensable across diverse scientific and industrial analyses. ",
   ];
 
   const columns = [
@@ -125,7 +130,7 @@ const BileSaltsArea = () => {
   const fetchProducts = async () => {
     setLoading(true);
     const formData = new FormData();
-    formData.append("category", "Bile Salts & SLS");
+    formData.append("category", "GC-HS Solvents");
 
     try {
       const response = await fetch(
@@ -137,13 +142,14 @@ const BileSaltsArea = () => {
       );
 
       const data = await response.json();
+
       if (data.status === "success") {
         setProductData(data.data);
       } else {
-        console.error("Error fetching products:", data.message);
+        console.error("API error:", data.message);
       }
     } catch (error) {
-      console.error("Fetch error:", error);
+      console.error("Network error:", error);
     } finally {
       setLoading(false);
     }
@@ -152,8 +158,10 @@ const BileSaltsArea = () => {
   const renderFeatureText = (feature) => {
     const colonIndex = feature.indexOf(":");
     if (colonIndex === -1) return feature;
+
     const title = feature.substring(0, colonIndex);
     const description = feature.substring(colonIndex);
+
     return (
       <>
         <strong>{title}</strong>
@@ -173,7 +181,7 @@ const BileSaltsArea = () => {
                 data-wow-delay=".4s"
               >
                 <img
-                  src="/assets/img/productdetails/BileSalts.svg"
+                  src="/assets/img/productdetails/GC-HS_solvent.svg"
                   alt="product-thumb"
                 />
               </div>
@@ -185,31 +193,18 @@ const BileSaltsArea = () => {
                 data-wow-delay=".4s"
               >
                 <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-3 mb-lg-4">BILE SALTS</h5>
+                  <h5 className="product-dtitle mb-3 mb-lg-4">
+                    Analytical Solvents
+                  </h5>
                   <p className="pd-description">
-                    Conjugated bile salts are not just vital for the human body;
-                    their physiologically important acid-base properties also
-                    make them indispensable ingredients in various scientific
-                    and pharmaceutical applications. Notably, they are widely
-                    utilized in microbiological culture media for critical
-                    processes such as the dissolution testing of drugs.
-                    <br />
-                    <br />
-                    Bile salts in dissolution testing for Bioequivalence studies
-                    provides a critical physiological link, allowing for a more
-                    accurate assessment of a drug's solubility, dissolution, and
-                    potential absorption, particularly for challenging poorly
-                    water-soluble compounds. This enhances the relevance and
-                    reliability of the in vitro data for predicting in vivo
-                    performance. Beyond drug testing, conjugated bile salts find
-                    use in a range of other biological applications.
-                    <br />
-                    <br />
-                    Dimer has successfully leveraged its expertise in chemical
-                    synthesis to produce the following conjugated bile salts on
-                    a kilogram (Kg) scale, demonstrating our robust capabilities
-                    and commitment to supporting these vital research and
-                    industrial needs.
+                    Analytical reagents are specialized chemical substances or
+                    mixtures used in laboratories to perform accurate and
+                    reliable chemical analyses. Their primary purpose is to
+                    detect the presence or absence of a substance (qualitative
+                    analysis) or to measure its concentration (quantitative
+                    analysis). The defining characteristic of analytical
+                    reagents is their high purity, which is essential to ensure
+                    the precision and reliability of experimental results.
                   </p>
                 </div>
               </div>
@@ -217,35 +212,33 @@ const BileSaltsArea = () => {
           </div>
 
           {/* Features */}
-          {features.length > 0 && (
-            <div className="row mb-5">
-              <div className="col-12">
-                <div className="pd-feature-section">
-                  <div className="pd-bg-circle-1"></div>
-                  <div className="pd-bg-circle-2"></div>
-                  <div className="text-center mb-4">
-                    <h2>Features & Benefits</h2>
-                    <div className="pd-section-underline"></div>
-                  </div>
+          <div className="row mb-5">
+            <div className="col-12">
+              <div className="pd-feature-section">
+                <div className="pd-bg-circle-1"></div>
+                <div className="pd-bg-circle-2"></div>
+                <div className="text-center mb-4">
+                  <h2>Features & Benefits</h2>
+                  <div className="pd-section-underline"></div>
+                </div>
 
-                  <div className="row">
-                    {features.map((feature, index) => (
-                      <div key={index} className="col-md-6 mb-3">
-                        <div className="pd-feature-card">
-                          <div className="pd-check-circle">
-                            <span className="pd-check-mark">✓</span>
-                          </div>
-                          <p className="pd-feature-text">
-                            {renderFeatureText(feature)}
-                          </p>
+                <div className="row">
+                  {features.map((feature, index) => (
+                    <div key={index} className="col-md-6 mb-3">
+                      <div className="pd-feature-card">
+                        <div className="pd-check-circle">
+                          <span className="pd-check-mark">✓</span>
                         </div>
+                        <p className="pd-feature-text">
+                          {renderFeatureText(feature)}
+                        </p>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </div>
       </div>
       {/* Product Table */}
@@ -265,4 +258,4 @@ const BileSaltsArea = () => {
   );
 };
 
-export default BileSaltsArea;
+export default AnalyteArea;
