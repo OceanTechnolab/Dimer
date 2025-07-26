@@ -6,13 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@next/font": "13.1.6",
     "@popperjs/core": "^2.11.6",
+    "animate.css": "^4.1.1",
     "antd": "^5.1.7",
     "axios": "^1.10.0",
     "bootstrap": "^5.2.3",

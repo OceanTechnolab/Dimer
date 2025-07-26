@@ -58,7 +58,6 @@
       font-weight: 600;
       font-style: normal;
       line-height: 1.3;
-      text-align: left;
       @media #{$xs} {
         font-size: 16px;
       }
@@ -367,4 +366,12 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+.console-container {
+  background-image: url('/assets/img/shape/shape-bg-01.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px; /* optional */
 }

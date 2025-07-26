@@ -70,21 +70,21 @@ const Logo = () => {
             <div className="row justify-content-center">
                 <div className="col-md-4 col-12 mb-50">
                     <img
-                        src="/assets/img/certificates/certification-01.jpg"
+                        src="/assets/img/certificates/certification-1.webp"
                         alt="Certificate 1"
                         className="img-fluid rounded shadow"
                     />
                 </div>
                 <div className="col-md-4 col-12 mb-50">
                     <img
-                        src="/assets/img/certificates/certification-02.jpg"
+                        src="/assets/img/certificates/certification-2.webp"
                         alt="Certificate 2"
                         className="img-fluid rounded shadow"
                     />
                 </div>
                 <div className="col-md-4 col-12 mb-50">
                     <img
-                        src="/assets/img/certificates/certification-03.jpg"
+                        src="/assets/img/certificates/certification-3.webp"
                         alt="Certificate 3"
                         className="img-fluid rounded shadow"
                     />

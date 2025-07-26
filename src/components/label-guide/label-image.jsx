@@ -15,7 +15,7 @@ const LabelImage = () => {
             data-wow-delay=".2s"
           >
             <img
-            src="/assets/img/label/label.png"
+            src="/assets/img/label/lable-id.webp"
             alt="label thumbnail"
             />
           </div>
