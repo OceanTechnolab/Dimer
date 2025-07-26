@@ -177,5 +177,13 @@ const menu_data = [
       { link: "/blog-details", title: "CSR Activities" },
     ],
   },
+  {
+     id: 7,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Contact",
+    link: "/contact",
+    active: "",
+  }
 ];
 export default menu_data;
