@@ -151,7 +151,7 @@ const menu_data = [
     link: "/blog",
     active: "",
     sub_menus: [
-      { link: "/blog", title: "Product literature" },
+      //{ link: "/blog", title: "Product literature" },
       { link: "/coa", title: "COA" },
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
@@ -159,11 +159,11 @@ const menu_data = [
       { link: "/conditions", title: "Terms & conditions" },
       { link: "/privacy-policy", title: "Privacy & Policy" },
       { link: "/applications", title: "Applications " },
-      { link: "/blog-details", title: "Custom synthesis" },
-      { link: "/blog-details", title: "Career " },
+      //{ link: "/blog-details", title: "Custom synthesis" },
+      //{ link: "/blog-details", title: "Career " },
     ],
   },
-  {
+  /*{
     id: 6,
     mega_menu: false,
     has_dropdown: true,
@@ -176,6 +176,6 @@ const menu_data = [
       { link: "/blog-details", title: "Road Show" },
       { link: "/blog-details", title: "CSR Activities" },
     ],
-  },
+  },*/
 ];
 export default menu_data;
