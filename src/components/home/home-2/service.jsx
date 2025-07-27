@@ -11,9 +11,9 @@ const Service = () => {
             <div className="col-lg-5 col-md-12 col-12">
               <div className="tp-section">
                 <span className="tp-section__sub-title left-line mb-20">
-                  our Services
+                  our Products
                 </span>
-                <h3 className="tp-section__title mb-30">Service Area</h3>
+                <h3 className="tp-section__title mb-30">Product Area</h3>
               </div>
             </div>
             <div className="col-lg-7 col-md-12 col-12">

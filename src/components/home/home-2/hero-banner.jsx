@@ -17,7 +17,7 @@ const hero_slider = [
         <br /> generation of accurate and precise findings
       </>
     ),
-    appointment: "Appointment",
+    appointment: "Contact us",
     about: "About us",
     img_1: "/assets/img/slider/slider-bg-1.png",
     img_2: "/assets/img/slider/slider-bg-2.png",
@@ -35,7 +35,7 @@ const hero_slider = [
         <br /> generation of accurate and precise findings
       </>
     ),
-    appointment: "Appointment",
+    appointment: "Contact us",
     about: "About us",
     img_1: "/assets/img/slider/slider-bg-3.png",
     img_2: "/assets/img/slider/slider-bg-2.png",
