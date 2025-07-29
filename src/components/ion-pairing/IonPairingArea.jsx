@@ -21,14 +21,15 @@ const IonPairingArea = () => {
       name: "Product Code",
       selector: (row) => row.ProductCode,
       sortable: false,
-      grow: 2,
+      grow: 1,
     },
     {
-      name: "Product Description",
-      selector: (row) => row.product_name,
-      sortable: false,
-      grow: 2,
-    },
+  name: "Product Description",
+  selector: (row) => row.product_name,
+  sortable: false,
+  grow: 2.5,
+},
+
     {
       name: "CAS No.",
       selector: (row) => row.CASNo,
