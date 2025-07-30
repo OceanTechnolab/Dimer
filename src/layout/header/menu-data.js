@@ -103,34 +103,36 @@ const menu_data = [
     sub_menus: [
       {
         link: "/service",
-        title: "Analytical Solvents",
-        has_dropdown: true,
-        sub_menus: [
-          { link: "/gc-hs", title: "GC-HS Solvents" },
-          { link: "/lc-ms", title: "LC-MS Solvents" },
-          { link: "/hplc", title: "HPLC Solvents" },
-          { link: "/ion-pairing", title: "Ion Pairing Reagents" },
-          { link: "/bile-salts", title: "Bile Salts & SLS" }
-        ]
-      },
-      {
-        link: "/gc-reference-standards",
-        title: "GC reference standards",
-        has_dropdown: false
-      },
-      {
-        link: "/service-3",
         title: "Chromapure",
         has_dropdown: true,
         sub_menus: [
+          { link: "/analyte", title: "Analytical Solvents" },
           { link: "/gc-hs", title: "GC-HS Solvents" },
           { link: "/lc-ms", title: "LC-MS Solvents" },
           { link: "/hplc", title: "HPLC Solvents" },
           { link: "/ion-pairing", title: "Ion Pairing Reagents" },
           { link: "/bile-salts", title: "Bile Salts & SLS" },
-          { link: "/gc-reference-standards", title: "GC standards" }
+          { link: "/gc-reference-standards", title: "GC reference standards" }
         ]
       },
+      {
+        link: "/elementa",
+        title: "Elementa",
+        has_dropdown: false
+      },
+      // {
+      //   link: "/service-3",
+      //   title: "Chromapure",
+      //   has_dropdown: true,
+      //   sub_menus: [
+      //     { link: "/gc-hs", title: "GC-HS Solvents" },
+      //     { link: "/lc-ms", title: "LC-MS Solvents" },
+      //     { link: "/hplc", title: "HPLC Solvents" },
+      //     { link: "/ion-pairing", title: "Ion Pairing Reagents" },
+      //     { link: "/bile-salts", title: "Bile Salts & SLS" },
+      //     { link: "/gc-reference-standards", title: "GC standards" }
+      //   ]
+      // },
     ],
   },
   {
@@ -149,7 +151,7 @@ const menu_data = [
     link: "/blog",
     active: "",
     sub_menus: [
-      { link: "/blog", title: "Product literature" },
+      //{ link: "/blog", title: "Product literature" },
       { link: "/coa", title: "COA" },
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
@@ -157,11 +159,11 @@ const menu_data = [
       { link: "/conditions", title: "Terms & conditions" },
       { link: "/privacy-policy", title: "Privacy & Policy" },
       { link: "/applications", title: "Applications " },
-      { link: "/blog-details", title: "Custom synthesis" },
-      { link: "/blog-details", title: "Career " },
+      //{ link: "/blog-details", title: "Custom synthesis" },
+      //{ link: "/blog-details", title: "Career " },
     ],
   },
-  {
+  /*{
     id: 6,
     mega_menu: false,
     has_dropdown: true,
@@ -174,6 +176,6 @@ const menu_data = [
       { link: "/blog-details", title: "Road Show" },
       { link: "/blog-details", title: "CSR Activities" },
     ],
-  },
+  },*/
 ];
 export default menu_data;

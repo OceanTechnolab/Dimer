@@ -61,86 +61,48 @@ const columns = [
       selector: (row) => row.CASNo,
       sortable: false,
     },
-{
-  name: "Pack Size",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
-        >
-          {p.pack_size}
+    {
+      name: "Pack Size",
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              {p.pack_size}
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-{
-  name: "Price (INR)",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{
-            lineHeight: "1.8",
-            paddingBottom: "6px",
-            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
-          }}
-        >
-          INR {Number(p.price).toFixed(2)}
+      ),
+      sortable: false,
+    },
+    {
+      name: "Price (INR)",
+      cell: (row) => (
+        <div>
+          {row.packs?.map((p, index) => (
+            <div
+              key={index}
+              style={{
+                lineHeight: "1.8",
+                paddingBottom: "6px",
+                borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+              }}
+            >
+              {/* INR {Number(p.price).toFixed(2).replace(/\.00$/, "")} */}
+              INR {Number(p.price).toFixed(2).replace(/\.00$/, "")}
+
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-
-{
-  name: "Stock",
-  cell: (row) => <div>{row.stock ?? "0"}</div>,
-},
-
-{
-  name: "Pack Size",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
-        >
-          {p.pack_size}
-        </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-{
-  name: "Price (INR)",
-  cell: (row) => (
-    <div>
-      {row.packs?.map((p, index) => (
-        <div
-          key={index}
-          style={{
-            lineHeight: "1.8",
-            paddingBottom: "6px",
-            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
-          }}
-        >
-          INR {Number(p.price).toFixed(2)}
-        </div>
-      ))}
-    </div>
-  ),
-  sortable: false,
-},
-
-
+      ),
+      sortable: false,
+    },
     {
       name: "Stock",
       cell: (row) => <div>{row.stock ?? "0"}</div>,
@@ -287,22 +249,22 @@ const columns = [
               </div>
             </div>
           </div>
-      
+        </div>
+
+        {/* Product Table */}
+        <div className="row mb-5 mx-3">
+          <div className="col-12">
+            <div className="text-center">
+              <h2 className="mb-3">Products</h2>
+            </div>
+            {loading ? (
+              <p className="text-center">Loading products...</p>
+            ) : (
+              <DataTable columns={columns} data={productData} />
+            )}
+          </div>
         </div>
       </div>
-       {/* Product Table */}
-          <div className="row mb-5 mx-3">
-            <div className="col-12">
-              <div className="text-center">
-                <h2 className="mb-3">Products</h2>
-              </div>
-              {loading ? (
-                <p className="text-center">Loading products...</p>
-              ) : (
-                <DataTable columns={columns} data={productData} />
-              )}
-            </div>
-          </div>
     </section>
   );
 };
