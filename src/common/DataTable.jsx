@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import DataTableBase from 'react-data-table-component';
+import { Tooltip } from 'react-tooltip';
 
 const DataTable = ({ columns, data, title }) => {
   const [filterText, setFilterText] = useState('');
@@ -45,6 +46,8 @@ const DataTable = ({ columns, data, title }) => {
         columns={columns}
         data={filteredData}
         pagination
+        paginationPerPage={20}
+        paginationRowsPerPageOptions={[20,50, 100, 500]}
         highlightOnHover
         responsive
         striped
