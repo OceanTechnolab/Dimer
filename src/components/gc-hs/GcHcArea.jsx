@@ -39,6 +39,8 @@ const columns = [
  {
   name: "Product Description",
   grow: 2,
+  selector: "product_name",
+  sortable: true,
   cell: (row) => {
     const tooltipId = `desc-tooltip-${row.ProductCode}`;
     const productName = row.product_name || "Unnamed Product";
