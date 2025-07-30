@@ -20,6 +20,8 @@ const GcHcArea = () => {
 const columns = [
   {
     name: "Product Code",
+    selector: (row) => row.ProductCode,
+    sortable: true,
     grow: 2,
     cell: (row) => {
       const tooltipId = `tooltip-${row.ProductCode}`;
