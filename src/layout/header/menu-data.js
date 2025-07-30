@@ -134,6 +134,8 @@ const menu_data = [
       has_dropdown: true,
       sub_menus: [
         { link: "/asymmetric-synthesis", title: "Asymmetric Synthesis" },
+        { link: "/material-science", title: "Material Science" },
+        { link: "/cell-culture", title: "Cell Culture" },
       ]
     }
       // {
