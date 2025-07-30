@@ -28,7 +28,7 @@ const HplcArea = () => {
               <>
                 <span
                   data-tooltip-id={tooltipId}
-                  data-tooltip-content={` ${row.product_name}`}
+                  data-tooltip-content={`${row.product_name}`}
                 >
                   {row.ProductCode}
                 </span>
