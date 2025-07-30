@@ -25,7 +25,7 @@ const BileSaltsArea = () => {
             <>
               <span
                 data-tooltip-id={tooltipId}
-                data-tooltip-content={` ${productName}`}
+                data-tooltip-content={`${productName}`}
               >
                 {productName}
               </span>
