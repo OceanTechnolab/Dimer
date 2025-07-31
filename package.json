@@ -2,15 +2,13 @@
   "name": "dimer-scientific",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "next lint",
-  "export": "next export"
-},
-
-
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@next/font": "13.1.6",
