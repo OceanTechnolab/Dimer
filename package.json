@@ -10,6 +10,7 @@
   "export": "next export"
 },
 
+
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@next/font": "13.1.6",
