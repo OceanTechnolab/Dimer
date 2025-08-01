@@ -1,7 +1,6 @@
 import React from "react";
 import Wrapper from "@/layout/wrapper";
 import SEO from "@/components/seo";
-import Biologicalbuffers from "@/components/Biological-buffers/biological-buffers";
 import Chemistry from "@/components/Chemistry/chemistry";
 
 const index = () => {
