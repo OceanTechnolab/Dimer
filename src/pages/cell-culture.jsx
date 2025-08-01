@@ -1,7 +1,7 @@
 import React from "react";
 import Wrapper from "@/layout/wrapper";
 import SEO from "@/components/seo";
-import CellCulture from "@/components/Cell Cultrue/cell-cultrue";
+import CellCulture from "@/components/Cell Culture/cell-cultrue";
 
 
 const index = () => {
