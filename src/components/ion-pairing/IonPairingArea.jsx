@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import DataTable from "../../common/DataTable";
+import { Tooltip } from 'react-tooltip';  
 
 const IonPairingArea = () => {
   const [productData, setProductData] = useState([]);
@@ -22,12 +23,42 @@ const IonPairingArea = () => {
       selector: (row) => row.ProductCode,
       sortable: false,
       grow: 2,
+       cell: (row) => {
+      const tooltipId = `tooltip-${row.ProductCode}`;
+      return (
+        <>
+          <span
+            data-tooltip-id={tooltipId}
+            data-tooltip-content={`${row.product_name}`}
+          >
+            {row.ProductCode}
+          </span>
+          <Tooltip id={tooltipId} place="top" />
+        </>
+      );
+    },
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
       sortable: false,
       grow: 2,
+       cell: (row) => {
+          const tooltipId = `desc-tooltip-${row.ProductCode}`;
+          const productName = row.product_name || "Unnamed Product";
+      
+          return (
+            <>
+              <span
+                data-tooltip-id={tooltipId}
+                data-tooltip-content={` ${productName}`}
+              >
+                {productName}
+              </span>
+              <Tooltip id={tooltipId} place="top" />
+            </>
+          );
+        },
     },
     {
       name: "CAS No.",

@@ -76,6 +76,7 @@
 // ];
 // export default menu_data;
 
+
 const menu_data = [
   {
     id: 1,
@@ -116,10 +117,26 @@ const menu_data = [
         ]
       },
       {
-        link: "/elementa",
-        title: "Elementa",
-        has_dropdown: false
+       link: "/elementa",
+      title: "Elementa",
+      has_dropdown: true,
+      sub_menus: [
+        { link: "/biological-buff", title: "Biological buffers" },
+        { link: "/building-blocks", title: "Building Blocks" },
+        { link: "/solar", title: "Solar Chemicals" },
+        { link: "/battery", title: "Battery materials" },
+      ]
       },
+      {
+      link: "/chemistry",
+      title: "Chemistry",
+      has_dropdown: true,
+      sub_menus: [
+        { link: "/asymmetric-synthesis", title: "Asymmetric Synthesis" },
+        { link: "/material-science", title: "Material Science" },
+        { link: "/cell-culture", title: "Cell Culture" },
+      ]
+    }
       // {
       //   link: "/service-3",
       //   title: "Chromapure",
