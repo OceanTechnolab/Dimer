@@ -76,7 +76,6 @@
 // ];
 // export default menu_data;
 
-import { X } from "lucide-react";
 
 const menu_data = [
   {
