@@ -115,7 +115,7 @@ html, body {
 }
 
 .search-input.focused {
-  border-color: #f27e01;
+  border-color: #FF6000;
 }
 
 .search-icon {
@@ -128,11 +128,11 @@ html, body {
 }
 
 .search-icon.focused {
-  color: #f27e01;
+  color: #FF6000;
 }
 
 .category-button {
-  background: linear-gradient(135deg, #f27e01 0%, #ff962f 100%);
+  background: linear-gradient(135deg, #FF6000 0%, #ff962f 100%);
   color: #fff;
   border-radius: 0 30px 30px 0;
   font-size: 14px;
@@ -153,7 +153,7 @@ html, body {
 }
 
 .category-button:hover {
-  background: linear-gradient(135deg, #f27e01 0%, #ff962f 100%);
+  background: linear-gradient(135deg, #FF6000 0%, #ff962f 100%);
   transform: scale(1.02);
 }
 
@@ -227,7 +227,7 @@ html, body {
 }
 
 .menu-close-button:hover {
-  border-color: #f27e01;
+  border-color: #FF6000;
   transform: scale(1.1) rotate(90deg);
 }
 
@@ -346,7 +346,7 @@ html, body {
 }
 
 .menu-link.active {
-  background: #f27e01;
+  background: #FF6000;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -432,7 +432,7 @@ html, body {
 }
 
 .dropdown-link.active {
-  color: #f27e01;
+  color: #FF6000;
 }
 
 .sub-dropdown-arrow {
@@ -468,6 +468,8 @@ html, body {
 }
 
 /* Mobile sub-dropdown centering */
+/* The breakpoint has been updated to 992px to better accommodate tablet devices.
+   Ensure this aligns with the design system's strategy and does not cause layout issues. */
 @media (max-width: 992px) {
   .sub-dropdown-list {
     padding-left: 0;
@@ -498,7 +500,7 @@ html, body {
 }
 
 .sub-dropdown-link.active {
-  color: #f27e01;
+  color: #FF6000;
   background: rgba(96, 165, 250, 0.1);
 }
 
@@ -783,6 +785,25 @@ html, body {
   .menu-button {
     flex-shrink: 0;
   }
+  .mobile-search-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    margin-right: 8px;
+    color: #2d3748;
+    font-size: 22px;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-search-icon {
+    display: none !important;
+  }
 }
 
 /* Main dropdown arrow styles */
@@ -811,4 +832,37 @@ html, body {
 
 .sub-dropdown-arrow.open {
   transform: rotate(180deg);
+}
+
+
+/* Main dropdown arrow styles */
+.dropdown-arrow {
+  font-size: 14px;
+  margin-left: 8px;
+  color: white;
+  stroke-width: 2px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+/* Sub dropdown arrow styles */
+.sub-dropdown-arrow {
+  font-size: 10px;
+  margin-left: 6px;
+  color: white;
+  stroke-width: 2px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.sub-dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.tp-policy{
+  text-align: justify;
 }

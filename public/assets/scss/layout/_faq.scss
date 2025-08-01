@@ -34,7 +34,7 @@
             transform: translateY(-50%);
             content: "\f062";
             background: none;
-            color: var(--tp-theme-blue);
+            color: var(--tp-icon-blue);
             @media #{$xs} {
                 right: 15px;
             }
@@ -56,7 +56,7 @@
         margin-bottom: 30px;
     }
     & .accordion-content {
-        border-bottom: 4px solid var(--tp-theme-blue);
+        border-bottom: 4px solid var(--tp-icon-blue);
         & p {
             padding: 0 75px 35px 45px;
             color: var(--tp-text-2);
