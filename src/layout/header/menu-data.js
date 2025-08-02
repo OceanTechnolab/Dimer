@@ -113,7 +113,7 @@ const menu_data = [
           { link: "/hplc", title: "HPLC Solvents" },
           { link: "/ion-pairing", title: "Ion Pairing Reagents" },
           { link: "/bile-salts", title: "Bile Salts & SLS" },
-          { link: "/gc-reference-standards", title: "GC reference standards" }
+          { link: "/gc-reference-standards", title: "GC reference standards" },
         ]
       },
       {
@@ -121,22 +121,10 @@ const menu_data = [
       title: "Elementa",
       has_dropdown: true,
       sub_menus: [
-        { link: "/biological-buff", title: "Biological buffers" },
-        { link: "/building-blocks", title: "Building Blocks" },
-        { link: "/solar", title: "Solar Chemicals" },
-        { link: "/battery", title: "Battery materials" },
+        { link: "/chemistry", title: "Chemistry" }
+
       ]
       },
-      {
-      link: "/chemistry",
-      title: "Chemistry",
-      has_dropdown: true,
-      sub_menus: [
-        { link: "/asymmetric-synthesis", title: "Asymmetric Synthesis" },
-        { link: "/material-science", title: "Material Science" },
-        { link: "/cell-culture", title: "Cell Culture" },
-      ]
-    }
       // {
       //   link: "/service-3",
       //   title: "Chromapure",
