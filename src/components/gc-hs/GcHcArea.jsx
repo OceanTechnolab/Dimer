@@ -65,48 +65,85 @@ const columns = [
       selector: (row) => row.CASNo,
       sortable: false,
     },
-    {
-      name: "Pack Size",
-      cell: (row) => (
-        <div>
-          {row.packs?.map((p, index) => (
-            <div
-              key={index}
-              style={{
-                lineHeight: "1.8",
-                paddingBottom: "6px",
-                borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
-              }}
-            >
-              {p.pack_size}
-            </div>
-          ))}
+{
+  name: "Pack Size",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
+        >
+          {p.pack_size}
         </div>
-      ),
-      sortable: false,
-    },
-    {
-      name: "Price (INR)",
-      cell: (row) => (
-        <div>
-          {row.packs?.map((p, index) => (
-            <div
-              key={index}
-              style={{
-                lineHeight: "1.8",
-                paddingBottom: "6px",
-                borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
-              }}
-            >
-              {/* INR {Number(p.price).toFixed(2).replace(/\.00$/, "")} */}
-              INR {Number(p.price).toFixed(2).replace(/\.00$/, "")}
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+{
+  name: "Price (INR)",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{
+            lineHeight: "1.8",
+            paddingBottom: "6px",
+            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+          }}
+        >
+          INR {Number(p.price).toFixed(2)}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
 
-            </div>
-          ))}
-        </div>
-      ),
-      sortable: false,
+
+    {
+      name: "Stock",
+      cell: (row) => <div>{row.stock ?? "0"}</div>,
     },
+{
+  name: "Pack Size",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
+        >
+          {p.pack_size}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+{
+  name: "Price (INR)",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{
+            lineHeight: "1.8",
+            paddingBottom: "6px",
+            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+          }}
+        >
+          INR {Number(p.price).toFixed(2)}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+
     {
       name: "Stock",
       cell: (row) => <div>{row.stock ?? "0"}</div>,
@@ -164,10 +201,13 @@ const columns = [
     formData.append("category", "GC-HS Solvents");
 
     try {
-      const response = await fetch("https://api.dimerscientific.com/get_category_products.php", {
-        method: "POST",
-        body: formData,
-      });
+      const response = await fetch(
+        "https://api.dimerscientific.com/get_category_products.php",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       const data = await response.json();
 
@@ -204,23 +244,39 @@ const columns = [
         <div className="shop-left-right ml-130 mr-130">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
-              <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
-                <img src="/assets/img/productdetails/GC-HS_solvent.svg" alt="product-thumb" />
+              <div
+                className="productthumb mb-40 wow fadeInRighLeft"
+                data-wow-delay=".4s"
+              >
+                <img
+                  src="/assets/img/productdetails/GC-HS_solvent.svg"
+                  alt="product-thumb"
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6">
-              <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
+              <div
+                className="product mb-40 ml-20 wow fadeInRighRight"
+                data-wow-delay=".4s"
+              >
                 <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-3 mb-lg-4">GC-HS solvents</h5>
+                  <h5 className="product-dtitle mb-3 mb-lg-4">
+                    GC-HS solvents
+                  </h5>
                   <p className="pd-description">
-                    The determination of Organic Volatile Impurities (OVI) utilizes the GC-Headspace technique,
-                    which necessitates the use of organic solvents to dissolve or extract the sample. These solvents
-                    must be free of impurities to prevent interference with the GC-HS analysis. Methods for identifying
-                    and quantifying these solvents in pharmaceutical products, addressing potential human health risks,
-                    are detailed in Chapter 467 of the USP and Chapter 2.4.24 of the European Pharmacopoeia. To enhance
-                    the accuracy of GC-HS analysis, we have developed a range of GC-HS solvents specifically designed
-                    to be free from volatile impurities that could cause interference.
+                    The determination of Organic Volatile Impurities (OVI)
+                    utilizes the GC-Headspace technique, which necessitates the
+                    use of organic solvents to dissolve or extract the sample.
+                    These solvents must be free of impurities to prevent
+                    interference with the GC-HS analysis. Methods for
+                    identifying and quantifying these solvents in pharmaceutical
+                    products, addressing potential human health risks, are
+                    detailed in Chapter 467 of the USP and Chapter 2.4.24 of the
+                    European Pharmacopoeia. To enhance the accuracy of GC-HS
+                    analysis, we have developed a range of GC-HS solvents
+                    specifically designed to be free from volatile impurities
+                    that could cause interference.
                   </p>
                 </div>
               </div>
@@ -245,7 +301,9 @@ const columns = [
                         <div className="pd-check-circle">
                           <span className="pd-check-mark">✓</span>
                         </div>
-                        <p className="pd-feature-text">{renderFeatureText(feature)}</p>
+                        <p className="pd-feature-text">
+                          {renderFeatureText(feature)}
+                        </p>
                       </div>
                     </div>
                   ))}
@@ -254,21 +312,20 @@ const columns = [
             </div>
           </div>
         </div>
-
-        {/* Product Table */}
-        <div className="row mb-5 mx-3">
-          <div className="col-12">
-            <div className="text-center">
-              <h2 className="mb-3">Products</h2>
-            </div>
-            {loading ? (
-              <p className="text-center">Loading products...</p>
-            ) : (
-              <DataTable columns={columns} data={productData} />
-            )}
-          </div>
-        </div>
       </div>
+       {/* Product Table */}
+          <div className="row mb-5 mx-3">
+            <div className="col-12">
+              <div className="text-center">
+                <h2 className="mb-3">Products</h2>
+              </div>
+              {loading ? (
+                <p className="text-center">Loading products...</p>
+              ) : (
+                <DataTable columns={columns} data={productData} />
+              )}
+            </div>
+          </div>
     </section>
   );
 };

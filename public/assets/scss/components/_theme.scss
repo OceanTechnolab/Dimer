@@ -1052,3 +1052,90 @@ a.industry-button:hover{
   padding: 10px;
   border-radius: 10px;
 }
+
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+}
+.product-card:hover {
+  border: 1px solid var(--tp-icon-blue);
+  transform: translateY(-5px);
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.brochure-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.view-button {
+  padding: 10px 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.view-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Default - Desktop view */
+.chemistry-area h5 {
+  text-align: center;
+  margin: 10px 15vw;
+  font-size: 22px;
+  max-width: 100%;
+  background-image: url('/assets/img/shape/shape-bg-05.png');
+  padding: 100px 0;
+}
+
+/* Mobile view - screen width up to 768px */
+@media (max-width: 768px) {
+  .chemistry-area h5 {
+    margin: 20px auto;
+    font-size: 18px;
+    max-width: 90%;
+    padding: 0 10px;
+  }
+}
+
+.chemistry-area h5:hover {
+  color: var(--tp-icon-blue);
+}

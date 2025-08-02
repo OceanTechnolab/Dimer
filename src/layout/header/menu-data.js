@@ -113,7 +113,7 @@ const menu_data = [
           { link: "/hplc", title: "HPLC Solvents" },
           { link: "/ion-pairing", title: "Ion Pairing Reagents" },
           { link: "/bile-salts", title: "Bile Salts & SLS" },
-          { link: "/gc-reference-standards", title: "GC reference standards" }
+          { link: "/gc-reference-standards", title: "GC reference standards" },
         ]
       },
       {
@@ -121,22 +121,10 @@ const menu_data = [
       title: "Elementa",
       has_dropdown: true,
       sub_menus: [
-        { link: "/biological-buff", title: "Biological buffers" },
-        { link: "/building-blocks", title: "Building Blocks" },
-        { link: "/solar", title: "Solar Chemicals" },
-        { link: "/battery", title: "Battery materials" },
+        { link: "/chemistry", title: "Chemistry" }
+
       ]
       },
-      {
-      link: "/chemistry",
-      title: "Chemistry",
-      has_dropdown: true,
-      sub_menus: [
-        { link: "/asymmetric-synthesis", title: "Asymmetric Synthesis" },
-        { link: "/material-science", title: "Material Science" },
-        { link: "/cell-culture", title: "Cell Culture" },
-      ]
-    }
       // {
       //   link: "/service-3",
       //   title: "Chromapure",
@@ -172,7 +160,7 @@ const menu_data = [
       { link: "/coa", title: "COA" },
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
-       { link: "/label-identification", title: "Label Identification Guide" },
+      { link: "/label-identification", title: "Label Identification Guide" },
       { link: "/conditions", title: "Terms & conditions" },
       { link: "/privacy-policy", title: "Privacy & Policy" },
       { link: "/applications", title: "Applications " },
@@ -180,7 +168,7 @@ const menu_data = [
       //{ link: "/blog-details", title: "Career " },
     ],
   },
-  /*{
+  {
     id: 6,
     mega_menu: false,
     has_dropdown: true,
@@ -193,6 +181,14 @@ const menu_data = [
       { link: "/blog-details", title: "Road Show" },
       { link: "/blog-details", title: "CSR Activities" },
     ],
-  },*/
+  },
+  {
+    id: 7,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Contact",
+    link: "/contact",
+    active: "",
+  }
 ];
 export default menu_data;
