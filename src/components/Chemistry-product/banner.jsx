@@ -19,10 +19,16 @@ const Banner = () => {
             </div>
             <div className="col-xl-5 col-lg-12 col-md-12 col-12">
               <div className="tp-breadcrumb__link text-xl-end">
-                <span>
-
-                  <a href="/">Home</a>/<li className="breadcrumb-item active" aria-current="page">Chemistry</li>
-                </span>
+                <nav aria-label="breadcrumb">
+                  <ol className="breadcrumb" style={{ display: "inline-flex", alignItems: "center", padding: 0, margin: 0, background: "none" }}>
+                    <li className="breadcrumb-item">
+                      <a href="/">Home</a>
+                    </li>
+                    <li className="breadcrumb-item active" aria-current="page" style={{ marginLeft: 4 }}>
+                      Chemistry
+                    </li>
+                  </ol>
+                </nav>
               </div>
             </div>
           </div>
