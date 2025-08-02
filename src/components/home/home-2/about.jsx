@@ -168,7 +168,7 @@ const About = () => {
             <div className="">
               <div className="about-card py-5 rounded position-relative">
                 {/* Header */}
-                <span className="tp-section__sub-title left-line">
+                <span className="tp-section__sub-title left-line mb-20">
                   About Us
                 </span>
 

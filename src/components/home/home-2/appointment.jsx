@@ -97,7 +97,7 @@ const Appointment = () => {
         <div className="container">
           
           <div className="text-center tp-section mb-5">
-            <span className="tp-section__sub-title left-line right-line">
+            <span className="tp-section__sub-title left-line right-line mb-20">
             Get In Touch
           </span>
             <h2 className="tp-section__title mb-4">

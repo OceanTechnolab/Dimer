@@ -4,6 +4,7 @@ import '../styles/HeaderTwo.css';
 import '../styles/productDetail.css';
 import '../styles/About.css'
 import '../styles/Mission.css'
+import '../styles/MilestoneAndCertificate.css'
 
 
 if (typeof window !== "undefined") {

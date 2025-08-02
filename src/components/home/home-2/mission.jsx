@@ -28,8 +28,8 @@ function Mission() {
   return (
     <section className="mission-area pt-130 pb-130">
       <div className="container">
-        <div className="text-center tp-section mb-5">
-          <span className="tp-section__sub-title left-line right-line">
+        <div className="text-center tp-section">
+          <span className="tp-section__sub-title left-line right-line  mb-20">
             Our Commitment and Vision
           </span>
           <h2 className="tp-section__title mb-4">

@@ -1,0 +1,62 @@
+.certificate-container {
+  cursor: pointer;
+}
+
+.certificate-img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.4s ease,
+              filter 0.3s ease;
+  border-radius: 12px;
+  filter: brightness(0.95);
+}
+
+.certificate-img:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  filter: brightness(1.02);
+}
+
+.certificate-img.selected {
+  transform: translateY(-35px) scale(1.08);
+  box-shadow: 0 20px 40px rgba(255, 96, 0, 0.15);
+  border: 1px solid #FF6000;
+  filter: brightness(1.1);
+}
+
+.certificate-img.selected:hover {
+  transform: translateY(-40px) scale(1.1);
+  box-shadow: 0 25px 50px rgba(255, 96, 0, 0.2);
+}
+
+.certificate-title {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #495057;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(248, 249, 250, 0.8);
+  backdrop-filter: blur(5px);
+  border: 1px solid transparent;
+}
+
+.certificate-title.selected {
+  color: #FF6000;
+  background: rgba(255, 96, 0, 0.05);
+  border: 1px solid rgba(255, 96, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 96, 0, 0.1);
+}
+
+.certificate-container:hover .certificate-title {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.certificate-container:hover .certificate-title.selected {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 15px rgba(255, 96, 0, 0.15);
+}
