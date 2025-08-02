@@ -76,6 +76,7 @@
 // ];
 // export default menu_data;
 
+
 const menu_data = [
   {
     id: 1,
@@ -103,32 +104,52 @@ const menu_data = [
     sub_menus: [
       {
         link: "/service",
-        title: "Analytical Solvents",
+        title: "Chromapure",
         has_dropdown: true,
         sub_menus: [
+          { link: "/analyte", title: "Analytical Solvents" },
           { link: "/gc-hs", title: "GC-HS Solvents" },
           { link: "/lc-ms", title: "LC-MS Solvents" },
           { link: "/hplc", title: "HPLC Solvents" },
           { link: "/ion-pairing", title: "Ion Pairing Reagents" },
-          { link: "/bile-salts", title: "Bile Salts & SLS" }
+          { link: "/bile-salts", title: "Bile Salts & SLS" },
+          { link: "/gc-reference-standards", title: "GC reference standards" }
         ]
       },
       {
-        link: "/gc-reference-standards",
-        title: "GC reference standards",
-        has_dropdown: false
+       link: "/elementa",
+      title: "Elementa",
+      has_dropdown: true,
+      sub_menus: [
+        { link: "/biological-buff", title: "Biological buffers" },
+        { link: "/building-blocks", title: "Building Blocks" },
+        { link: "/solar", title: "Solar Chemicals" },
+        { link: "/battery", title: "Battery materials" },
+      ]
       },
       {
-        link: "/service-3",
-        title: "Specialty chemicals",
-        has_dropdown: true,
-        sub_menus: [
-          { link: "/buffers", title: "Biological Buffers" },
-          { link: "/building-blocks", title: "Building Blocks" },
-          { link: "/solar", title: "Solar Chemicals" },
-          { link: "/battery", title: "Battery Materials" }
-        ]
-      },
+      link: "/chemistry",
+      title: "Chemistry",
+      has_dropdown: true,
+      sub_menus: [
+        { link: "/asymmetric-synthesis", title: "Asymmetric Synthesis" },
+        { link: "/material-science", title: "Material Science" },
+        { link: "/cell-culture", title: "Cell Culture" },
+      ]
+    }
+      // {
+      //   link: "/service-3",
+      //   title: "Chromapure",
+      //   has_dropdown: true,
+      //   sub_menus: [
+      //     { link: "/gc-hs", title: "GC-HS Solvents" },
+      //     { link: "/lc-ms", title: "LC-MS Solvents" },
+      //     { link: "/hplc", title: "HPLC Solvents" },
+      //     { link: "/ion-pairing", title: "Ion Pairing Reagents" },
+      //     { link: "/bile-salts", title: "Bile Salts & SLS" },
+      //     { link: "/gc-reference-standards", title: "GC standards" }
+      //   ]
+      // },
     ],
   },
   {
@@ -136,7 +157,7 @@ const menu_data = [
     mega_menu: false,
     has_dropdown: false,
     title: "Manufacturing",
-    link: "/research",
+    link: "/manufacturing",
     active: "",
   },
   {
@@ -147,18 +168,19 @@ const menu_data = [
     link: "/blog",
     active: "",
     sub_menus: [
-      { link: "/blog", title: "Product literature" },
+      //{ link: "/blog", title: "Product literature" },
       { link: "/coa", title: "COA" },
-      { link: "/blog-details", title: "Certificates " },
+      { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
        { link: "/label-identification", title: "Label Identification Guide" },
-      { link: "/blog-details", title: "Terms & conditions" },
-      { link: "/blog-details", title: "Applications " },
-      { link: "/blog-details", title: "Custom synthesis" },
-      { link: "/blog-details", title: "Career " },
+      { link: "/conditions", title: "Terms & conditions" },
+      { link: "/privacy-policy", title: "Privacy & Policy" },
+      { link: "/applications", title: "Applications " },
+      //{ link: "/blog-details", title: "Custom synthesis" },
+      //{ link: "/blog-details", title: "Career " },
     ],
   },
-  {
+  /*{
     id: 6,
     mega_menu: false,
     has_dropdown: true,
@@ -171,6 +193,6 @@ const menu_data = [
       { link: "/blog-details", title: "Road Show" },
       { link: "/blog-details", title: "CSR Activities" },
     ],
-  },
+  },*/
 ];
 export default menu_data;

@@ -1,79 +1,155 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import DataTable from "../../common/DataTable";
+import { Tooltip } from 'react-tooltip';  
 
 const IonPairingArea = () => {
   const [productData, setProductData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const features = [
-    "Specialized reagents for ion pairing chromatography.",
-    "High purity and low background for sensitive detection.",
-    "Consistent performance for reproducible results.",
-    "Suitable for a wide range of analytical applications."
+    "Enhance Retention of Polar/Ionic Compounds: Allow separation of analytes that would otherwise elute too quickly in reversed-phase HPLC.",
+    "Form Ion Pairs with Charged Analytes: Improve interaction with the non-polar stationary phase, leading to better separation.",
+    "Versatile Reagent Types (Anionic/Cationic): Suitable for both acidic and basic compounds depending on their charge.",
+    "Improve Peak Shape and Resolution: Yield sharper, more symmetrical peaks, reducing tailing and overlap.",
+    "Extend the Use of Reversed Phase Columns: Eliminate the need for ion-exchange columns for ionic compounds.",
+    "Compatible with Gradient Elution: Allow flexibility in method development and faster analysis times.",
+    "Applicable Across Various Industries: Useful in pharmaceuticals, food testing, environmental analysis, and clinical research."
   ];
 
-  const columns = [
+    const columns = [
     {
-      name: "Code",
+      name: "Product Code",
       selector: (row) => row.ProductCode,
-      sortable: true,
+      sortable: false,
+      grow: 2,
+       cell: (row) => {
+      const tooltipId = `tooltip-${row.ProductCode}`;
+      return (
+        <>
+          <span
+            data-tooltip-id={tooltipId}
+            data-tooltip-content={`${row.product_name}`}
+          >
+            {row.ProductCode}
+          </span>
+          <Tooltip id={tooltipId} place="top" />
+        </>
+      );
+    },
     },
     {
       name: "Product Description",
       selector: (row) => row.product_name,
-      sortable: true,
+      sortable: false,
+      grow: 2,
+       cell: (row) => {
+          const tooltipId = `desc-tooltip-${row.ProductCode}`;
+          const productName = row.product_name || "Unnamed Product";
+      
+          return (
+            <>
+              <span
+                data-tooltip-id={tooltipId}
+                data-tooltip-content={` ${productName}`}
+              >
+                {productName}
+              </span>
+              <Tooltip id={tooltipId} place="top" />
+            </>
+          );
+        },
     },
     {
       name: "CAS No.",
       selector: (row) => row.CASNo,
-      sortable: true,
-    },
-    {
-      name: "Grade",
-      selector: (row) => row.Grade,
-      sortable: true,
-    },
-    {
-      name: "Pack Size",
-      selector: (row) => row.PackSize,
-      sortable: true,
-    },
-    {
-      name: "PDF",
-      selector: (row) =>
-        row.msds_url ? (
-          <a
-            href={row.msds_url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="Download PDF"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              style={{ width: "24px", height: "24px", color: "#2e7d32" }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M12 12v6m0 0l-3-3m3 3l3-3m-6-6h6"
-              />
-            </svg>
-          </a>
-        ) : (
-          "N/A"
-        ),
       sortable: false,
     },
+{
+  name: "Pack Size",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{ lineHeight: "1.8", paddingBottom: "6px", borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none" }}
+        >
+          {p.pack_size}
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+{
+  name: "Price (INR)",
+  cell: (row) => (
+    <div>
+      {row.packs?.map((p, index) => (
+        <div
+          key={index}
+          style={{
+            lineHeight: "1.8",
+            paddingBottom: "6px",
+            borderBottom: index !== row.packs.length - 1 ? "1px solid #eee" : "none",
+          }}
+        >
+                       INR {Number(p.price).toFixed(2).replace(/\.00$/, "")}
+
+        </div>
+      ))}
+    </div>
+  ),
+  sortable: false,
+},
+
+
+    {
+      name: "Stock",
+      cell: (row) => <div>{row.stock ?? "0"}</div>,
+      sortable: false,
+    },
+    {
+      name: "HSN Code",
+      cell: (row) => <div>{row.hsn_code || "-"}</div>,
+      sortable: false,
+    },
+    {
+      name: "GST",
+      cell: (row) => <div>{row.gst || "-"}</div>,
+      sortable: false,
+    },
+ {
+  name: "MSDS",
+  selector: (row) =>
+    row.msds_url ? (
+      <a
+        href={row.msds_url}
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Download MSDS PDF"
+        style={{
+          display: "inline-flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "4px 8px",
+          borderRadius: "4px",
+          backgroundColor: "#eaf7f0",
+          border: "1px solid #2e7d32",
+          color: "#2e7d32",
+          fontSize: "14px",
+          gap: "4px",
+          textDecoration: "none",
+        }}
+      >
+        ⬇️ 
+      </a>
+    ) : (
+      "N/A"
+    ),
+  sortable: false,
+},
+
   ];
 
   useEffect(() => {
@@ -107,63 +183,50 @@ const IonPairingArea = () => {
     }
   };
 
+  const renderFeatureText = (feature) => {
+    const colonIndex = feature.indexOf(":");
+    if (colonIndex === -1) return feature;
+    const title = feature.substring(0, colonIndex);
+    const description = feature.substring(colonIndex);
+    return (
+      <>
+        <strong>{title}</strong>
+        {description}
+      </>
+    );
+  };
+
   return (
     <section className="shop-area pt-120 pb-70">
       <div className="container">
         <div className="shop-left-right ml-130 mr-130">
-          <div className="row">
-            {/* Left - Product Image */}
+          <div className="row align-items-center">
             <div className="col-lg-6 col-md-6">
-              <div
-                className="productthumb mb-40 wow fadeInRighLeft"
-                data-wow-delay=".4s"
-              >
-                <img
-                  src="/assets/img/productdetails/gchc.png"
-                  alt="product-thumb"
-                />
+              <div className="productthumb mb-40 wow fadeInRighLeft" data-wow-delay=".4s">
+                <img src="/assets/img/productdetails/Ion Pairing Reagents.svg" alt="product-thumb" />
               </div>
             </div>
-
-            {/* Right - Description */}
             <div className="col-lg-6 col-md-6">
-              <div
-                className="product mb-40 ml-20 wow fadeInRighRight"
-                data-wow-delay=".4s"
-              >
+              <div className="product mb-40 ml-20 wow fadeInRighRight" data-wow-delay=".4s">
                 <div className="product__details-content mb-40">
-                  <h5 className="product-dtitle mb-30">ION PAIRING REAGENTS</h5>
+                  <h5 className="product-dtitle mb-3 mb-lg-4">Ion Pairing Reagents</h5>
                   <p className="pd-description">
-                    Our ion pairing reagents are designed for use in chromatography to enhance separation and detection of ionic compounds. They are of the highest purity, ensuring minimal background and consistent results in analytical applications.
+                    Ion pairing reagents are chemicals used in analytical chemistry, especially in High-Performance Liquid Chromatography (HPLC), to improve the separation of ionic compounds. These reagents form neutral or less charged ion pairs with analytes, enhancing their retention on reverse-phase columns.
                   </p>
-
-                  <div className="row">
-                    {features.map((feature, index) => (
-                      <div key={index} className="col-sm-6 mb-3">
-                        <div className="pd-arrow-point">
-                          <span className="pd-arrow-icon">➤</span>
-                          <p className="pd-arrow-text">{feature}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Features & Benefits */}
+          {/* Features */}
           <div className="row mb-5">
             <div className="col-12">
               <div className="pd-feature-section">
                 <div className="pd-bg-circle-1"></div>
                 <div className="pd-bg-circle-2"></div>
-
                 <div className="text-center mb-4">
                   <h2>Features & Benefits</h2>
                   <div className="pd-section-underline"></div>
                 </div>
-
                 <div className="row">
                   {features.map((feature, index) => (
                     <div key={index} className="col-md-6 mb-3">
@@ -171,7 +234,7 @@ const IonPairingArea = () => {
                         <div className="pd-check-circle">
                           <span className="pd-check-mark">✓</span>
                         </div>
-                        <p className="pd-feature-text">{feature}</p>
+                        <p className="pd-feature-text">{renderFeatureText(feature)}</p>
                       </div>
                     </div>
                   ))}
@@ -179,20 +242,19 @@ const IonPairingArea = () => {
               </div>
             </div>
           </div>
-
-          {/* Product Table */}
-          <div className="row mb-5">
-            <div className="col-12">
-              <div className="text-center">
-                <h2 className="mb-3">Products</h2>
-              </div>
-              {loading ? (
-                <p className="text-center">Loading products...</p>
-              ) : (
-                <DataTable columns={columns} data={productData} />
-              )}
-            </div>
+        </div>
+      </div>
+      {/* Product Table */}
+      <div className="row mb-5 mx-3">
+        <div className="col-12">
+          <div className="text-center">
+            <h2 className="mb-3">Products</h2>
           </div>
+          {loading ? (
+            <p className="text-center">Loading products...</p>
+          ) : (
+            <DataTable columns={columns} data={productData} />
+          )}
         </div>
       </div>
     </section>

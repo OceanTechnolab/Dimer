@@ -1,15 +1,13 @@
 import VideoPopup from "@/modals/video-popup";
 import Link from "next/link";
 import React, { useState } from "react";
-import { href } from "react-router-dom";
 
 const Aboutfirst = () => {
   // about content data
   const about_content = {
     about_bg: "/assets/img/shape/shape-bg-05.png",
-    about_img: "/assets/img/about/about-bg-02.png",
-    popup_video: "https://www.youtube.com/shorts/WeMXeXlkSN0",
-    about_thumb: "/assets/img/about/about-bg-03.png",
+    about_img: "/assets/img/about/about-1.webp",
+    about_thumb: "/assets/img/about/custom.webp",
     title: "Driving Innovation in Research & Development Chemistry",
     sub_title: "About",
     des_1: (
@@ -70,15 +68,6 @@ const Aboutfirst = () => {
                   data-wow-delay=".3s"
                 >
                   <img src={about_img} alt="about-thumb" />
-                  <div className="about-video">
-                    <button
-                      onClick={() => setIsVideoOpen(true)}
-                      className="popup-video"
-                      href={popup_video}
-                    >
-                      <i className="fa-solid fa-play"></i>
-                    </button>
-                  </div>
                   <div className="about-thumb-shape d-none d-md-block">
                     <img src={about_thumb} alt="about-shape" />
                   </div>
@@ -98,7 +87,7 @@ const Aboutfirst = () => {
                     <p className=" mr-20 mb-35">{dex_2}</p>
                   </div>
                   <div className="about-content__btn">
-                    <Link href="/about" className="tp-btn">
+                    <Link href="/contact" className="tp-btn">
                       {btn}
                     </Link>
                   </div>
@@ -107,44 +96,7 @@ const Aboutfirst = () => {
             </div>
           </div>
         </div>
-        <div className="cta-area pt-75 ">
-          <div className="container">
-            <div className="row wow fadeInUp" data-wow-delay=".3s">
-              <div className="col-lg-12">
-                <div
-                  className="tp-cta-bg p-relative theme-light-bg pt-65 pb-70"
-                  style={{
-                    backgroundImage: `url(${booking_bg})`,
-                  }}
-                >
-                  <div className="cta-content ml-90">
-                    <div className="tp-section">
-                      <span className="tp-section__sub-title sub-title-white left-line-white mb-20">
-                        {b_sub_title}
-                      </span>
-                    </div>
-                    <h2 className="cta-title mb-30">{b_title}</h2>
-                    <div className="cta-btn">
-                      <button className="tp-btn-second">{b_btn}</button>
-                    </div>
-                    <div className="cta-shape d-none d-md-block">
-                      <img src={b_img} alt="cta-logo-shape" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
-
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"WeMXeXlkSN0"}
-      />
-      {/* video modal end */}
     </>
   );
 };
