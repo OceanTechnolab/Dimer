@@ -1,0 +1,49 @@
+/* styles/About.css */
+
+.about-card {
+  padding-top: 3rem !important;  /* Bootstrap pt-5 is 3rem */
+  padding-bottom: 3rem !important; /* optional, matches py-5 */
+  border-radius: 0.5rem; /* .rounded is usually 0.25rem, increase if needed */
+  position: relative;
+}
+
+.about-key-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #ffc107;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-key-icon i {
+  color: #fff;
+  font-size: 12px;
+}
+
+.about-key-text {
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.stats-box {
+  background-color: #2c3e50;
+  border-radius: 12px;
+  padding: 1.5rem; /* p-4 in bootstrap is 1.5rem */
+  text-align: center;
+}
+
+.stats-number {
+  color: #ffc107;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stats-label {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

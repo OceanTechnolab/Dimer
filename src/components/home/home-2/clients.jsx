@@ -3,12 +3,26 @@ import React from "react";
 
 // brands_img
 const brands_img = [
-  { img: "/assets/img/brand/brand-01.png" },
-  { img: "/assets/img/brand/brand-02.png" },
-  { img: "/assets/img/brand/brand-03.png" },
-  { img: "/assets/img/brand/brand-04.png" },
-  { img: "/assets/img/brand/brand-05.png" },
-  { img: "/assets/img/brand/brand-04.png" },
+  { img: "/assets/img/brand/brand-01.svg" },
+  { img: "/assets/img/brand/brand-02.svg" },
+  { img: "/assets/img/brand/brand-03.svg" },
+  { img: "/assets/img/brand/brand-04.svg" },
+  { img: "/assets/img/brand/brand-05.svg" },
+  { img: "/assets/img/brand/brand-06.svg" },
+  { img: "/assets/img/brand/brand-07.svg" },
+  { img: "/assets/img/brand/brand-08.svg" },
+  { img: "/assets/img/brand/brand-09.svg" },
+  { img: "/assets/img/brand/brand-10.svg" },
+  { img: "/assets/img/brand/brand-11.svg" },
+  { img: "/assets/img/brand/brand-12.svg" },
+  { img: "/assets/img/brand/brand-13.svg" },
+  { img: "/assets/img/brand/brand-14.svg" },
+  { img: "/assets/img/brand/brand-15.svg" },
+  { img: "/assets/img/brand/brand-16.svg" },
+  { img: "/assets/img/brand/brand-17.svg" },
+  { img: "/assets/img/brand/brand-18.svg" },
+  { img: "/assets/img/brand/brand-19.svg" },
+  { img: "/assets/img/brand/brand-20.svg" },
 ];
 
 const Brands = ({ style_2 = false, border_style = false }) => {
@@ -25,7 +39,7 @@ const Brands = ({ style_2 = false, border_style = false }) => {
 
         .sliding-track {
           display: inline-flex;
-          animation: slide 20s linear infinite;
+          animation: slide 40s linear infinite;
           gap: 30px;
         }
 
@@ -108,6 +122,7 @@ const Brands = ({ style_2 = false, border_style = false }) => {
           <span className="tp-section__sub-title left-line mb-45">
             our Clients
           </span>
+          
           <div className={`${border_style ? "brand-border pt-60 pb-60" : ""}`}>
             <div className="continuous-slider">
               <div className="sliding-track">

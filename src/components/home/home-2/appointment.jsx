@@ -83,7 +83,6 @@
 
 // export default Appointment;
 
-
 //new
 
 import React from "react";
@@ -92,10 +91,27 @@ const Appointment = () => {
   return (
     <>
       <section
-        className="appoinment-area grey-bg mb-100 tp-box-space ml-30 mr-30"
+        className="appoinment-area pt-125 grey-bg mb-100 tp-box-space ml-30 mr-30"
         style={{ backgroundImage: `url("/assets/img/shape/shape-bg-08.png")` }}
       >
         <div className="container">
+          
+          <div className="text-center tp-section mb-5">
+            <span className="tp-section__sub-title left-line right-line">
+            Get In Touch
+          </span>
+            <h2 className="tp-section__title mb-4">
+              Ready to Advance Your Chemistry?
+            </h2>
+            <p
+              className="lead mb-0 mx-auto"
+              style={{ maxWidth: "700px", color: "#666", lineHeight: "1.6" }}
+            >
+              Connect with Dimer Scientific and experience unparalleled support
+              and quality in your research journey.
+            </p>
+          </div>
+
           <div className="row align-items-end">
             <div className="col-xl-4 col-lg-12 col-md-12">
               <div className="appoint-thumb">
@@ -115,42 +131,46 @@ const Appointment = () => {
                     <div className="row">
                       <div className="col-lg-6">
                         <div className="visitor-form__input">
-                         <input name="name" type="text" placeholder="Enter your Name" />
+                          <input
+                            name="name"
+                            type="text"
+                            placeholder="Enter your Name"
+                          />
                         </div>
                       </div>
                       <div className="col-lg-6">
                         <div className="visitor-form__input">
                           <input
-                  name="email"
-                  type="email"
-                  placeholder="Enter your mail"
-                />
+                            name="email"
+                            type="email"
+                            placeholder="Enter your mail"
+                          />
                         </div>
                       </div>
                       <div className="col-lg-6">
                         <div className="visitor-form__input">
-                         <input
-                  name="number"
-                  type="text"
-                  placeholder="Enter your number"
-                />
+                          <input
+                            name="number"
+                            type="text"
+                            placeholder="Enter your number"
+                          />
                         </div>
                       </div>
                       <div className="col-lg-6">
                         <div className="visitor-form__input">
-                         <input
-                  name="website"
-                  type="text"
-                  placeholder="Enter your website"
-                />
+                          <input
+                            name="website"
+                            type="text"
+                            placeholder="Enter your website"
+                          />
                         </div>
                       </div>
                       <div className="col-lg-12">
                         <div className="visitor-form__input">
-                         <textarea
-                  name="message"
-                  placeholder="Type your comment"
-                ></textarea>
+                          <textarea
+                            name="message"
+                            placeholder="Type your comment"
+                          ></textarea>
                         </div>
                       </div>
                       <div className="col-lg-4 col-md-4 col-12">

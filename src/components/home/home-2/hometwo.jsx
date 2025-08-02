@@ -54,6 +54,7 @@ import HeaderTwo from "@/layout/header/header-two";
 import Clients from "./clients";
 import { Milestone } from "lucide-react";
 import MilestoneAndCertificate from "./milestoneAndCertificate";
+import Mission from "./mission";
 
 const HomeTwo = () => {
   return (
@@ -63,9 +64,10 @@ const HomeTwo = () => {
       <About />
       <Service />
       {/* <Gallery /> */}
+      <Mission/>
       <MilestoneAndCertificate/>
-      <Counter cls="pt-80 pb-100" />
       <Choose />
+      <Counter cls="pt-80 pb-100" />
       <Appointment />
       {/* <Brands border_style={true} /> */}
       {/* <Team /> */}
