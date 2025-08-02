@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProductCard = ({ heading, description, brochureText = "download broch", onView }) => {
+const ProductCard = ({ heading, description, onView }) => {
     return (
         <div className="product-card">
             <h2 className="heading">{heading}</h2>
