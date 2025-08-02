@@ -160,7 +160,7 @@ const menu_data = [
       { link: "/coa", title: "COA" },
       { link: "/certificates", title: "Certificates " },
       { link: "/periodic-table", title: "Periodic table " },
-       { link: "/label-identification", title: "Label Identification Guide" },
+      { link: "/label-identification", title: "Label Identification Guide" },
       { link: "/conditions", title: "Terms & conditions" },
       { link: "/privacy-policy", title: "Privacy & Policy" },
       { link: "/applications", title: "Applications " },
@@ -168,7 +168,7 @@ const menu_data = [
       //{ link: "/blog-details", title: "Career " },
     ],
   },
-  /*{
+  {
     id: 6,
     mega_menu: false,
     has_dropdown: true,
@@ -181,6 +181,14 @@ const menu_data = [
       { link: "/blog-details", title: "Road Show" },
       { link: "/blog-details", title: "CSR Activities" },
     ],
-  },*/
+  },
+  {
+    id: 7,
+    mega_menu: false,
+    has_dropdown: false,
+    title: "Contact",
+    link: "/contact",
+    active: "",
+  }
 ];
 export default menu_data;
